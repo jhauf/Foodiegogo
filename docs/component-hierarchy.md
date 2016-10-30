@@ -14,22 +14,18 @@
  - Log Out  (link to AuthFormContainer)
 
 **HomeContainer**
- - Navbar
  - CampaignIndexContainer
   + CampaignIndexItems
 
 **CampaignDetailContainer**
- - Navbar
  - PerkIndex
   + PerkIndexItems
-  * CampaignContributionsComponent
+ - CampaignContributionsComponent
 
 **NewCampaignContainer**
-   - NavBar
    - CampaignForm
-   
+
 **ProfileContainer**
- - NavBar
  - UserCampaignsComponent
  - UserContributionsComponent
 
@@ -39,10 +35,11 @@
 
 |Path   | Component   |
 |-------|-------------|
+| "/" | "NavBar" |
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
 | "/home/campaigns" | "CampaignIndexContainer"
 | "/campaigns/:campaignId" | "CampaignDetailContainer" |
 | "/new-campaign" | "NewCampaignContainer" |
-| "/user/:userId" | "ProfileContainer" |
+| "/users/:userId" | "ProfileContainer" |
