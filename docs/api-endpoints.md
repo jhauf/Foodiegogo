@@ -12,13 +12,17 @@
 
 - `POST /api/users`
 - `PATCH /api/users`
-- `GET /api/users/:id`
-
 
 ### Session
 
 - `POST /api/session`
 - `DELETE /api/session`
+
+
+### Profiles
+- `GET /api/profiles/:id`
+- `PATCH /api/profiles/:id`
+
 
 ### Campaigns
 

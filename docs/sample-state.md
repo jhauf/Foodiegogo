@@ -4,14 +4,20 @@
   currentUser: {
     id: 1,
     username: "janehauf"
-    picture_url: “my_picture.jpg”,
-    description: “Just a NorCal girl who loves food”
   },
   forms: {
     signUp: {errors: []},
     logIn: {errors: []},
     createNewCampaign: {errors: []}
   },
+  profile: {
+   1: {
+   fname: "Jane",
+   lname: "Hauf",
+   description: “Just a NorCal girl who loves food”,
+   picture_url: “my_picture.jpg”,
+   }
+ },
   campaigns: {
     1: {
       name: "Monty’s Deli",

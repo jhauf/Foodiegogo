@@ -5,10 +5,19 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
-picture_url     | string    |
-description     | text      |
+fname           | string    | not null
+lname           | string    | not null
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
+
+## profiles
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+picture_url     | string    |
+description     | text      |
+user_id         | integer   |
+
 
 ## campaigns
 column name    | data type | details
