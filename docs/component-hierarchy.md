@@ -39,7 +39,6 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
-| "/home/campaigns" | "CampaignIndexContainer"
 | "/campaigns/:campaignId" | "CampaignDetailContainer" |
 | "/new-campaign" | "NewCampaignContainer" |
 | "/users/:userId" | "ProfileContainer" |
