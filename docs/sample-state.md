@@ -34,7 +34,7 @@
   contributions: {
     1: {
       date: 7/12/16,
-      amount: $20,
+      amount: 20,
       campaign_id: 1,
       contributor_id: 2
     }
