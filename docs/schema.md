@@ -16,7 +16,7 @@ column name     | data type | details
 id              | integer   | not null, primary key
 picture_url     | string    |
 description     | text      |
-user_id         | integer   |
+user_id         | integer   | not null, foreign key (references users), indexed
 
 
 ## campaigns

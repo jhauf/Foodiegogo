@@ -41,4 +41,4 @@
 | "/home" | "HomeContainer" |
 | "/campaigns/:campaignId" | "CampaignDetailContainer" |
 | "/new-campaign" | "NewCampaignContainer" |
-| "/users/:userId" | "ProfileContainer" |
+| "/profiles/:profileId" | "ProfileContainer" |
