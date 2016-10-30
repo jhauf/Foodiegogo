@@ -7,14 +7,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "engines": {
     "node": "6.2.1",
     "npm": "3.9.3"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -26,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/jhauf/Foodiegogo/issues"
   },
-  "homepage": "https://github.com/jhauf/Foodiegogo#readme"
+  "homepage": "https://github.com/jhauf/Foodiegogo#readme",
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "lodash": "^4.16.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "webpack": "^1.13.3"
+  }
 }
