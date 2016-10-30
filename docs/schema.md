@@ -43,6 +43,9 @@ picture_url     | string    |
 campaign_id     | integer   | not null, foreign key (references campaigns), indexed
 contribution_id | integer   | not null, foreign key (references contributions), indexed
 
+
+### Bonus
+
 ## categories
 column name | data type | details
 ------------|-----------|-----------------------
