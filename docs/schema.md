@@ -44,7 +44,7 @@ campaign_id     | integer   | not null, foreign key (references campaigns), inde
 contribution_id | integer   | not null, foreign key (references contributions), indexed
 
 
-### Bonus
+## Bonus
 
 ## categories
 column name | data type | details
