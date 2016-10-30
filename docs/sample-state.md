@@ -1,52 +1,4 @@
 ```js
-Component Hierarchy
-AuthFormContainer
-•	AuthForm
-
-NavBar (logged out)
-•	Foodiegogo (link to HomeContainer)
-•	Log In  (link to AuthFormContainer)
-•	Sign Up (link to AuthFormContainer)
-
-NavBar (logged in)
-•	Foodiegogo (link to HomeContainer)
-•	New Project (link to NewProjectContainer)
-•	Log Out  (link to AuthFormContainer)
-
-HomeContainer
-•	Home
-•	Navbar
-•	Campaign Index Container
-◦	Campaign Index Items
-
-CampaignDetailContainer
-•	NavBar
-•	Perk Index
-◦	PerkIndexItems
-•	CampaignContributionsComponent
-
-Profile Container
-•	NavBar
-•	UserCampaignsComponent
-•	UserContributionsComponent
-
-New Campaign Container
-•	NavBar
-•	Campaign Form
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {
   currentUser: {
@@ -63,19 +15,19 @@ New Campaign Container
   campaigns: {
     1: {
       name: "Monty’s Deli",
-      description: " An authentic Jewish delicatessen open seven days a week, where traditional recipes are made expertly in house with great love and care.",
+      description: " An authentic Jewish delicatessen open seven days a week.",
       goal: 60000,
       current_amt: 32000,
       campaigner_id: 1,
       picture_url: "sandwich.jpg",
       perks: {
-1: {
-  name: “T-shirt” ,
-  amount: $20,
-  campaign_id: 1,
-  contribution_id: 1,
-  picture_url: “shirt.jpg”
-}
+        1: {
+          name: “T-shirt” ,
+          amount: $20,
+          campaign_id: 1,
+          contribution_id: 1,
+          picture_url: “shirt.jpg”
+        }
       },
     }
   },
