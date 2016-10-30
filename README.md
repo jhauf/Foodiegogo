@@ -1,6 +1,6 @@
 # Foodiegogo
 
-[Foodiegogo live][heroku]
+Foodiegogo [live][heroku]
 
 [heroku]: http://www.foodiegogo.co
 

@@ -47,7 +47,7 @@ the API.
 
 ### Phase 3: Contributions (2 day)
 
-**Objective:** Contributions belong to Campaigns and that can be created and read through the API.
+**Objective:** Contributions belong to Campaigns and can be created and read through the API.
 
 ### Phase 4: Perks (1 day)
 
@@ -55,8 +55,8 @@ the API.
 
 ### Phase 5: Profiles (1 day)
 
-**Objective:** A profile belongs to a user and displays their name, picture, campaigns and contributions.
+**Objective:** A Profile belongs to a User and displays their name, picture, Campaigns and Contributions.
 
 ### Bonus Features: Categories (1 day)
 
-**Objective:** Campaigns can be tagged with multiple categories, category tags are searchable
+**Objective:** Campaigns can be tagged with multiple Categories. Category tags are searchable.
