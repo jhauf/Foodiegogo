@@ -35,9 +35,8 @@
     1: {
       date: 7/12/16,
       amount: $20,
-      author_id: 1,
       campaign_id: 1,
-      contributor_id: 1
+      contributor_id: 2
     }
   }
 }
