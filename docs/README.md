@@ -55,8 +55,8 @@ the API.
 
 ### Phase 5: Profiles (1 day)
 
-**objective:** A profile belongs to a user and displays their name, picture, campaigns and contributions.
+**Objective:** A profile belongs to a user and displays their name, picture, campaigns and contributions.
 
 ### Bonus Features: Categories (1 day)
 
-**objective:** Campaigns can be tagged with multiple categories, category tags are searchable
+**Objective:** Campaigns can be tagged with multiple categories, category tags are searchable
