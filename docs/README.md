@@ -7,7 +7,7 @@
 [trello]: https://trello.com/b/ALgfuX0Q/freshernote
 
 ## Minimum Viable Product
-IndieStarter is a web application inspired by Foodiegogo built using Ruby on Rails and React/Redux. At the end of Week 9, this app will satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient
+Foodiegogo is a web application inspired by Indiegogo built using Ruby on Rails and React/Redux. At the end of Week 9, this app will satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient
 CSS styling:
 
 - [ ] New account creation, login, and guest/demo login
@@ -28,11 +28,11 @@ CSS styling:
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: wireframes
+[components]: component-hierarchy.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
 
 ## Implementation Timeline
 
