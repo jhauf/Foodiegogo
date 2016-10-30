@@ -13,7 +13,7 @@ session_token   | string    | not null, indexed, unique
 column name    | data type | details
 ---------------|-----------|-----------------------
 id             | integer   | not null, primary key
-name           | string    | not null
+name           | string    | not null, indexed, unique
 goal_amt       | integer   | not null
 current_amt    | integer   | not null
 short_desc     | string    | not null

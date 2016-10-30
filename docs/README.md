@@ -4,14 +4,14 @@
 [Trello link][trello]
 
 [heroku]: http://www.foodiegogo.co
-[trello]: https://trello.com/b/ALgfuX0Q/freshernote
+[trello]: https://trello.com/b/nFAxZOQw/foodiegogo
 
 ## Minimum Viable Product
 Foodiegogo is a web application inspired by Indiegogo built using Ruby on Rails and React/Redux. At the end of Week 9, this app will satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient
 CSS styling:
 
 - [ ] New account creation, login, and guest/demo login
-- [ ] A production README, replacing this README (NB: check out the sample production README -- you'll write this later)
+- [ ] A production README
 - [ ] Hosting on Heroku
 - [ ] Profiles
 - [ ] Campaigns
@@ -59,4 +59,4 @@ the API.
 
 ### Bonus Features: Categories (1 day)
 
-**objective:** Campaigns can be tagged with multiple categories, categories tags are searchable
+**objective:** Campaigns can be tagged with multiple categories, category tags are searchable
