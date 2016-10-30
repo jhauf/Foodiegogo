@@ -3,7 +3,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://www.foodiegogo.co
 [trello]: https://trello.com/b/ALgfuX0Q/freshernote
 
 ## Minimum Viable Product
