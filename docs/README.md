@@ -53,7 +53,7 @@ the API.
 
 **Objective:** Perks belong to Campaigns and Contributions.
 
-### Phase 5: Profiles (1 day)
+### Phase 5: Profiles (2 day)
 
 **Objective:** A Profile belongs to a User and displays their name, picture, Campaigns and Contributions.
 

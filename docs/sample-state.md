@@ -11,13 +11,13 @@
     createNewCampaign: {errors: []}
   },
   profile: {
-   1: {
-   fname: "Jane",
-   lname: "Hauf",
-   description: “Just a NorCal girl who loves food”,
-   picture_url: “my_picture.jpg”,
+    1: {
+      fname: "Jane",
+      lname: "Hauf",
+      description: “Just a NorCal girl who loves food”,
+      picture_url: “my_picture.jpg”
    }
- },
+  },
   campaigns: {
     1: {
       name: "Monty’s Deli",
@@ -35,14 +35,13 @@
           picture_url: “shirt.jpg”
         }
       },
-    }
-  },
-  contributions: {
-    1: {
-      date: 7/12/16,
-      amount: 20,
-      campaign_id: 1,
-      contributor_id: 2
+      contributions: {
+        1: {
+          date: 7/12/16,
+          amount: 20,
+          contributor_id: 2
+        }
+      }
     }
   }
 }
