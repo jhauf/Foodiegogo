@@ -45,12 +45,12 @@ class Navbar extends React.Component {
   loggedOut() {
     return (
     <nav className="links">
-      <button onClick={this.handleClickLogin}>
+      <Link to="/" onClick={this.handleClickLogin}>
         Log In
-      </button>
-      <button onClick={this.handleClickSignup}>
+      </Link>
+      <Link to="/" onClick={this.handleClickSignup}>
         Sign Up
-      </button>
+      </Link>
 
       <Modal
         isOpen={this.state.modalOpen}
@@ -64,7 +64,7 @@ class Navbar extends React.Component {
   loggedIn(currentUser, logout) {
     return (<div className="links" >
       <div>
-      {currentUser.fname}
+      {currentUser.FirstName}
       </div>
       <button onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
     </div>);

@@ -15,8 +15,8 @@
   },
   profile: {
     1: {
-      fname: "Jane",
-      lname: "Hauf",
+      FirstName: "Jane",
+      LastName: "Hauf",
       description: “Just a NorCal girl who loves food”,
       picture_url: “my_picture.jpg”
    }

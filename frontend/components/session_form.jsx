@@ -6,8 +6,8 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			fname: "",
-			lname: "",
+			FirstName: "",
+			LastName: "",
 			password: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,19 +40,25 @@ class SessionForm extends React.Component {
 
 	nameField() {
 		if (this.props.type === false) {
-			return <div> <label> First Name:
+			return <div>
+				<h1>Sign Up</h1>
+				<label>
 				<input type="text"
-					value={this.state.fname}
-					onChange={this.update("fname")}
+					placeholder="First Name"
+					value={this.state.FirstName}
+					onChange={this.update("FirstName")}
 					className="login-input" />
 			</label>
-			<label> Last Name:
+			<label>
 				<input type="text"
-					value={this.state.lname}
-					onChange={this.update("lname")}
+					placeholder="Last Name"
+					value={this.state.LastName}
+					onChange={this.update("LastName")}
 					className="login-input" />
 			</label>
 			</div>;
+		} else {
+			return <h1>Sign In</h1>;
 		}
 	}
 
@@ -77,21 +83,23 @@ class SessionForm extends React.Component {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					{this.renderErrors()}
 					<div className="login-form">
 						{this.nameField()}
-						<label> Username:
+						<label>
 							<input type="text"
+								placeholder="Username"
 								value={this.state.username}
 								onChange={this.update("username")}
 								className="login-input" />
 						</label>
-						<label> Password:
+						<label>
 							<input type="password"
+								placeholder="Password"
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input" />
 						</label>
+						<h4 className="errors"> {this.renderErrors()} </h4>
 						<input type="submit" value="Submit"/>
 						<button onClick={this.handleGuest}>Guest Login</button>
 					</div>

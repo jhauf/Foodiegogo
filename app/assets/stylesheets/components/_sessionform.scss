@@ -13,4 +13,11 @@
   padding: 20px;
   border: 0px;
   justify-content: space-between;
+  flex: column;
+  border: 0;
+  align-items: space-between;
+}
+
+.errors {
+  color: red;
 }
