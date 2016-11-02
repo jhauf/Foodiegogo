@@ -26,6 +26,7 @@
  .splash {
    background: url(splash_page.jpeg) no-repeat;
  }
+
 .navbar {
   font-family: arial;
   background-color: rgb(252,252,252);
@@ -42,10 +43,19 @@
   padding: 15px;
 }
 
+
+.header-button {
+  height: 20px;
+  display: flex;
+}
+
 .login-signup {
   font-size: 20px;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
 }
 
