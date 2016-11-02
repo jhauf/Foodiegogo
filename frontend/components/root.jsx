@@ -25,13 +25,15 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path="/" component={App}/>
-          <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-            <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
-              <Route path="/home" component={Home}/>
+        <Route path="/" component={App}>
+            <Route path="/home" component={Home}/>
+        </Route>
       </Router>
     </Provider>
   );
 };
 
 export default Root;
+
+// <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+// <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>

@@ -1,3 +1,4 @@
+/* PHASE 0: Reset */
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -39,6 +40,7 @@ button {
   */
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 
 button,

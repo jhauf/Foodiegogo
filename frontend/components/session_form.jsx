@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleGuest = this.handleGuest.bind(this);
+		this.renderErrors = this.renderErrors.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -36,23 +37,15 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
-	navLink() {
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
-		} else {
-			return <Link to="/login">log in instead</Link>;
-		}
-	}
 
 	nameField() {
-		if (this.props.formType === "signup") {
+		if (this.props.type === false) {
 			return <div> <label> First Name:
 				<input type="text"
 					value={this.state.fname}
 					onChange={this.update("fname")}
 					className="login-input" />
 			</label>
-			<br/>
 			<label> Last Name:
 				<input type="text"
 					value={this.state.lname}
@@ -84,9 +77,6 @@ class SessionForm extends React.Component {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Foodiegogo!
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
 					{this.renderErrors()}
 					<div className="login-form">
 						{this.nameField()}
@@ -96,7 +86,6 @@ class SessionForm extends React.Component {
 								onChange={this.update("username")}
 								className="login-input" />
 						</label>
-						<br/>
 						<label> Password:
 							<input type="password"
 								value={this.state.password}
@@ -104,9 +93,7 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<input type="submit" value="Submit"/>
-						<br/>
 						<button onClick={this.handleGuest}>Guest Login</button>
-						<br/>
 					</div>
 				</form>
 			</div>
