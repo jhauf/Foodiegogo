@@ -1,28 +1,57 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Modal from 'react-modal';
 
-const loggedOut = () => (
-  <nav className="navbar">
-    <button className="new-campaign-button">Start a Campaign</button>
-    <Link to="/login" activeClassName="current">Log In</Link>
-    &nbsp;&nbsp;
-    <Link to="/signup" activeClassName="current">Sign Up</Link>
-  </nav>
-);
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.loggedIn = this.loggedIn.bind(this);
+    this.loggedOut = this.loggedOut.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      modalOpen: false
+    };
+  }
 
-const loggedIn = (currentUser, logout) => (
-    <div className="navbar" >
-    <button className="new-campaign-button">Start a Campaign</button>
-    <br/>
-    {currentUser.fname}
-    <br/>
-    <button className="header-button" onClick={logout}>Log Out</button>
-    </div>
-);
+  handleClick() {
+    this.setState({ modalOpen: true});
+  }
 
+  loggedOut() {
+    return (
+    <nav className="links">
+      <div onClick={this.handleClick}>
+        Log In
+      </div>
+      &nbsp;&nbsp;
+      <div onClick={this.handleClick}>
+        Sign Up
+      </div>
 
-const Navbar = ({ currentUser, logout }) => (
-  currentUser ? loggedIn(currentUser, logout) : loggedOut()
-);
+      <Modal
+        isOpen={this.state.modalOpen}>
+        onRequestClose={}
+        ...content
+      </Modal>
+    </nav>);
+  }
+
+  loggedIn(currentUser, logout) {
+    return (<div className="links" >
+      <br/>
+      {currentUser.fname}
+      <br/>
+      <button onClick={logout}>Log Out</button>
+    </div>);
+  }
+
+  render() {
+    return this.props.currentUser ? this.loggedIn(this.props.currentUser, this.props.logout) : this.loggedOut();
+  }
+}
+
 
 export default Navbar;
+
+// <button className="new-campaign-button">Start a Campaign</button>
+// <button className="new-campaign-button">Start a Campaign</button>

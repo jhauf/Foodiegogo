@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NavBarContainer from './navbar_container';
+import NavbarContainer from './navbar_container';
 
 const App = ({ children }) => (
   <div>

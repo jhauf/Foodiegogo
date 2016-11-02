@@ -6,7 +6,7 @@ const Home = () => (
 
 export default Home;
 
-//Splash page
+// Splash page
 // Campaign Index Container, refer to pokemon
 // need to build campaigns
 // onenter, fetch all campaigns
