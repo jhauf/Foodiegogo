@@ -18,11 +18,14 @@
    font-size: 14px;
    font-weight: 400;
    background: #eee;
-   margin: 0 auto;
+   background: url(splash_page.jpeg) no-repeat;
    background-size: 1268px;
+   margin: 0 auto;
  }
 
- /*background: url(splash_page.jpeg) no-repeat;*/
+ .splash {
+   background: url(splash_page.jpeg) no-repeat;
+ }
 .navbar {
   font-family: arial;
   background-color: rgb(252,252,252);

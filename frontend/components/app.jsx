@@ -9,11 +9,13 @@ const App = ({ children }) => (
       <GreetingContainer />
     </header>
     {children}
-    <video id="background-video" loop autoPlay>
-      <source src="https://www.youtube.com/watch?v=QsyzkkI_g14" type="video/mp4"/>
-      Your browser does not support the video tag.
-    </video>
+    <div className="splash"></div>
   </div>
 );
 
 export default App;
+
+// <video id="background-video" loop autoPlay>
+//   <source src="../../assets/images/video.mp4" type="video/mp4"/>
+//   Your browser does not support the video tag.
+// </video>
