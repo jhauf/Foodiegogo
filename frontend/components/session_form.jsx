@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
 			password: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleGuest = this.handleGuest.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -74,6 +75,11 @@ class SessionForm extends React.Component {
 		);
 	}
 
+	handleGuest(e) {
+		e.preventDefault();
+		this.props.guestLogin();
+	}
+
 	render() {
 		return (
 			<div className="login-form-container">
@@ -97,9 +103,10 @@ class SessionForm extends React.Component {
 								onChange={this.update("password")}
 								className="login-input" />
 						</label>
-						<input type="button" onClick={this.props.guestLogin}/>
+						<input type="submit" value="Submit"/>
 						<br/>
-						<input type="submit" value="Submit" />
+						<button onClick={this.handleGuest}>Guest Login</button>
+						<br/>
 					</div>
 				</form>
 			</div>
@@ -107,6 +114,6 @@ class SessionForm extends React.Component {
 	}
 
 }
-// <button onClick={this.props.guestLogin}>Guest Login</button>
+// <input type="button" onClick={this.props.guestLogin}/>
 
 export default withRouter(SessionForm);
