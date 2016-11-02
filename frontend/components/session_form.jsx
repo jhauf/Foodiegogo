@@ -6,6 +6,8 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
+			fname: "",
+			lname: "",
 			password: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,6 +43,25 @@ class SessionForm extends React.Component {
 		}
 	}
 
+	nameField() {
+		if (this.props.formType === "signup") {
+			return <div> <label> First Name:
+				<input type="text"
+					value={this.state.fname}
+					onChange={this.update("fname")}
+					className="login-input" />
+			</label>
+			<br/>
+			<label> Last Name:
+				<input type="text"
+					value={this.state.lname}
+					onChange={this.update("lname")}
+					className="login-input" />
+			</label>
+			</div>;
+		}
+	}
+
 	renderErrors() {
 		return(
 			<ul>
@@ -62,7 +83,7 @@ class SessionForm extends React.Component {
 					Please {this.props.formType} or {this.navLink()}
 					{this.renderErrors()}
 					<div className="login-form">
-						<br/>
+						{this.nameField()}
 						<label> Username:
 							<input type="text"
 								value={this.state.username}
@@ -76,6 +97,7 @@ class SessionForm extends React.Component {
 								onChange={this.update("password")}
 								className="login-input" />
 						</label>
+						<input type="button" onClick={this.props.guestLogin}/>
 						<br/>
 						<input type="submit" value="Submit" />
 					</div>
@@ -85,5 +107,6 @@ class SessionForm extends React.Component {
 	}
 
 }
+// <button onClick={this.props.guestLogin}>Guest Login</button>
 
 export default withRouter(SessionForm);

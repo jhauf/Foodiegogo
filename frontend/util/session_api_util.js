@@ -13,7 +13,7 @@ export const login = (user, success, error) => {
 export const signup = (user, success, error) => {
 	$.ajax({
 		method: 'POST',
-		url: '/api/user',
+		url: '/api/users',
 		data: user,
 		success,
 		error
@@ -26,7 +26,7 @@ export const logout = success => {
 		url: '/api/session',
 		success,
 		error: () => {
-		  console.log("Logout error in SessionApiUtil#logout");
+		  console.log("Logout error");
 		}
 	});
 };

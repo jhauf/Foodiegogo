@@ -1,9 +1,12 @@
 ```js
 
 {
-  currentUser: {
-    id: 1,
-    username: "janehauf"
+  session: {
+    currentUser: {
+      id: 1,
+      username: "janehauf"
+    },
+    errors: []
   },
   forms: {
     signUp: {errors: []},
