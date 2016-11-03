@@ -13,8 +13,3 @@ const App = ({ children }) => (
 );
 
 export default App;
-
-// <video id="background-video" loop autoPlay>
-//   <source src="../../assets/images/video.mp4" type="video/mp4"/>
-//   Your browser does not support the video tag.
-// </video>

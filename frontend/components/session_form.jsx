@@ -100,7 +100,7 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<h4 className="errors"> {this.renderErrors()} </h4>
-						<button className="signinupbutton">Submit</button>
+						<input type="submit" value="submit" className="signinupbutton"/>
 						<Link to ="/" onClick={this.handleGuest}>Sign in as a Guest</Link>
 					</div>
 				</form>
@@ -109,6 +109,5 @@ class SessionForm extends React.Component {
 	}
 
 }
-// <input type="button" onClick={this.props.guestLogin}/>
 
 export default withRouter(SessionForm);
