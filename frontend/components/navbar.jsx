@@ -35,6 +35,7 @@ class Navbar extends React.Component {
   }
   onModalClose() {
     this.setState({modalOpen: false});
+    this.props.clearErrors();
   }
 
   onLogOut(logout) {
@@ -54,7 +55,7 @@ class Navbar extends React.Component {
 
       <Modal
         isOpen={this.state.modalOpen}
-        onRequestClose={this.onModalClose}
+        onRequestClose={this.onModalClose.bind(this)}
         style={ModalStyle}>
         <SessionFormContainer type={this.state.signIn}/>
       </Modal>
