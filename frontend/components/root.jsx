@@ -28,9 +28,9 @@ const Root = ({ store }) => {
       <Router history={hashHistory}>
         <Route path="/" component={App} >
           <IndexRoute component={CampaignIndexContainer} />
-            <Route path="/campaigns" component={CampaignIndexContainer} />
-            <Route path="/campaigns/:campaignId" component={CampaignShowContainer} />
-            <Route path="/campaigns/:campaignId/edit" component={CampaignFormContainer} />
+            <Route path="campaigns" component={CampaignIndexContainer} />
+            <Route path="campaigns/:campaignId" component={CampaignShowContainer} />
+            <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} />
         </Route>
       </Router>
     </Provider>
