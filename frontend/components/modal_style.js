@@ -9,17 +9,17 @@ module.exports = {
   },
   content : {
     position                   : 'absolute',
-    top                        : '100px',
-    left                       : '100px',
-    right                      : '100px',
-    bottom                     : '100px',
+    top                        : '40px',
+    left                       : '40px',
+    right                      : '40px',
+    bottom                     : '40px',
     border                     : '1px solid #ccc',
     background                 : '#fff',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : '0px'
 
   }
 };

@@ -100,8 +100,8 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<h4 className="errors"> {this.renderErrors()} </h4>
-						<input type="submit" value="Submit"/>
-						<button onClick={this.handleGuest}>Guest Login</button>
+						<button className="signinupbutton">Submit</button>
+						<Link to ="/" onClick={this.handleGuest}>Sign in as a Guest</Link>
 					</div>
 				</form>
 			</div>

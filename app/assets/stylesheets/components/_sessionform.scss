@@ -1,9 +1,10 @@
 
 .ReactModal__Content {
-  max-width: 300px;
-  max-height: 300px;
-  width: 300px;
-  height: 300px;
+  max-width: 400px;
+  min-width: 500px;
+  width: 40%;
+  min-height: 500px;
+  max-height: 650px;
   margin: 0 auto;
   border: 0;
 }
@@ -16,8 +17,47 @@
   flex: column;
   border: 0;
   align-items: space-between;
+  font-size: 30px;
+  font-family: arial;
+  text-align: center;
+  padding: 70px;
+}
+
+.login-form-box h1 {
+  font-size: 32px;
+  margin: 40px;
+}
+
+.login-form-box a {
+  font-size: 16px;
+  text-decoration: underline;
 }
 
 .errors {
   color: red;
+}
+
+input[type=text] {
+    width: 95%;
+    height: 40px;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+input[type=password] {
+    width: 95%;
+    height: 40px;
+    padding: 5px;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.login-form li {
+  font-size: 16px;
+  padding: 2px;
 }

@@ -5,7 +5,7 @@ import NavbarContainer from './navbar_container';
 const App = ({ children }) => (
   <div>
     <header className="navbar">
-      <Link to="/" className="header-link">Foodiegogo</Link>
+      <Link to="/" className="header-link">foodiegogo</Link>
       <NavbarContainer />
     </header>
     {children}
