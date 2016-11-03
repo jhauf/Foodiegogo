@@ -65,7 +65,7 @@ class Navbar extends React.Component {
   loggedIn(currentUser, logout) {
     return (<div className="links" >
       <div>
-      {currentUser.FirstName}
+      {currentUser.fname}
       </div>
       <button onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
     </div>);

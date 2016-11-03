@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20161103054140) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
-    t.string   "FirstName",       null: false
-    t.string   "LastName",        null: false
+    t.string   "fname",           null: false
+    t.string   "lname",           null: false
     t.string   "picture_url"
     t.text     "description"
     t.string   "password_digest", null: false

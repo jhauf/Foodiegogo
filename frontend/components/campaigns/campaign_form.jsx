@@ -6,7 +6,7 @@ class CampaignForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
     // use campaign in store if updating; start with blank campaign if new
-    this.state = this.props.campaign || { title: "", body: "" };
+    this.state = this.props.campaign || { name: "", goal_amt: "", description: "" };
   }
 
   componentDidMount() {
@@ -16,7 +16,7 @@ class CampaignForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState(newProps.campaign || { title: "", body: "" });
+    this.setState(newProps.campaign || { name: "", goal_amt: "" });
   }
 
   update(field) {
@@ -36,17 +36,31 @@ class CampaignForm extends React.Component {
       <div>
         <h3>{text}</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>Title
+          <label>Name
             <input
               type="text"
-              value={this.state.title}
-              onChange={this.update('title')} />
+              value={this.state.name}
+              onChange={this.update('name')} />
           </label>
 
-          <label>
+          <label>Goal Amount
+            <input
+              type="text"
+              value={this.state.goal_amt}
+              onChange={this.update('goal_amt')} />
+          </label>
+
+          <label> Description
             <textarea
               value={this.state.description}
               onChange={this.update('description')} />
+          </label>
+
+          <label>End Date
+            <input
+              type="text"
+              value={this.state.end_date}
+              onChange={this.update('end_date')} />
           </label>
 
           <input type="submit" value={text} />

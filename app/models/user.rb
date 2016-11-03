@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-validates :username, :password_digest, :session_token, :FirstName, :LastName, presence: true
+validates :username, :password_digest, :session_token, :fname, :lname, presence: true
 validates :password, length: {minimum: 6, allow_nil: true}
 
 has_many :campaigns

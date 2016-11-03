@@ -12,9 +12,10 @@ class CampaignShow extends React.Component {
 
   render () {
     const campaign = this.props.campaign;
+    debugger
     return (
       <div>
-        <h3>{campaign.title}</h3>
+        <h3>{campaign.name}</h3>
         <p>{campaign.description}</p>
         <Link to="/">Back to Index</Link>
       </div>
