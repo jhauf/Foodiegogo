@@ -6,7 +6,6 @@ const App = ({ children }) => (
   <div>
     <header className="navbar">
       <Link to="/" className="header-link">foodiegogo</Link>
-      <Link to="campaigns/new">Create a Campaign</Link>
       <NavbarContainer />
     </header>
     {children}

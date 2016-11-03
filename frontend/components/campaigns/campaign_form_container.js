@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 import CampaignForm from './campaign_form';
-import { fetchCampaign, updateCampaign } from '../../actions/campaign_actions';
+import { fetchCampaign, updateCampaign, createCampaign } from '../../actions/campaign_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  campaigns: state.campaigns[ownProps.params.campaignId]
+  campaign: state.campaigns[ownProps.params.campaignId],
+  formType: ownProps.formType
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchCampaign: id => dispatch(fetchCampaign(id)),
-  action: campaign => dispatch(updateCampaign(campaign))
+  updateCampaign: campaign => dispatch(updateCampaign(campaign)),
+  createCampaign: campaign => dispatch(createCampaign(campaign))
 });
 
 export default connect(

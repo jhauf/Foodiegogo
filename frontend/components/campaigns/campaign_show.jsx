@@ -16,8 +16,11 @@ class CampaignShow extends React.Component {
     return (
       <div>
         <h3>{campaign.name}</h3>
+        <h4>{campaign.goal_amt}</h4>
+        <h4>{campaign.current_amt}</h4>
+        <h4>{campaign.end_date}</h4>
         <p>{campaign.description}</p>
-        <Link to="/">Back to Index</Link>
+        <Link to="/campaigns">Back to Index</Link>
       </div>
     );
   }

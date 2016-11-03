@@ -21,10 +21,9 @@ class CampaignIndex extends React.Component {
           }
         </ul>
       </div>
+
     );
   }
 }
 
 export default CampaignIndex;
-
-// <CampaignForm formType="new" action={this.props.createCampaign} />

@@ -6,7 +6,13 @@ class CampaignForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
     // use campaign in store if updating; start with blank campaign if new
-    this.state = this.props.campaign || { name: "", goal_amt: "", description: "" };
+    this.state = this.props.campaign || {
+      name: "",
+      goal_amt: "",
+      description: "",
+      end_date: "",
+      picture_url: ""
+    };
   }
 
   componentDidMount() {
@@ -16,7 +22,13 @@ class CampaignForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState(newProps.campaign || { name: "", goal_amt: "" });
+    return this.setState(newProps.campaign || {
+      name: "",
+      goal_amt: "",
+      description: "",
+      end_date: "",
+      picture_url: ""
+    });
   }
 
   update(field) {
@@ -27,43 +39,67 @@ class CampaignForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state);
+    this.props.route.path === 'campaigns/new' ? this.props.createCampaign(this.state) : this.props.updateCampaign(this.state);
   }
 
+
   render () {
-    const text = this.props.formType === 'new' ? "Create Campaign" : "Update Campaign";
+    const text = this.props.route.path === 'campaigns/new' ? "Create Campaign" : "Update Campaign";
     return (
       <div>
+        <form className="campaign_form" onSubmit={this.handleSubmit}>
+        <ul>
         <h3>{text}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Name
+          <li>
+          <label>
             <input
               type="text"
               value={this.state.name}
-              onChange={this.update('name')} />
+              onChange={this.update('name')}
+              placeholder="Name"/>
           </label>
+          </li>
 
-          <label>Goal Amount
+          <li>
+          <label> $
             <input
               type="text"
               value={this.state.goal_amt}
-              onChange={this.update('goal_amt')} />
+              onChange={this.update('goal_amt')}
+              placeholder="Goal"
+              />
           </label>
+          </li>
 
+          <li>
           <label> Description
             <textarea
               value={this.state.description}
-              onChange={this.update('description')} />
+              onChange={this.update('description')}
+              />
           </label>
+          </li>
 
+          <li>
           <label>End Date
             <input
-              type="text"
+              type="date"
               value={this.state.end_date}
               onChange={this.update('end_date')} />
           </label>
+          </li>
 
-          <input type="submit" value={text} />
+          <li>
+          <label>Upload a Picture
+            <input
+              type="file"
+              value={this.state.end_date}
+              onChange={this.update('end_date')} />
+          </label>
+          </li>
+
+          <input className="formbutton" type="submit" value={text} />
+        </ul>
         </form>
       </div>
     );

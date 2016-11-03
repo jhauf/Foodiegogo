@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import SessionFormContainer from './session_form_container';
+import CampaignForm from '/Users/appacademy/Desktop/Foodiegogo/frontend/components/campaigns/campaign_form.jsx';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class Navbar extends React.Component {
   loggedOut() {
     return (
     <nav className="links">
+      <Link to="campaigns/new">Create a Campaign</Link>
       <Link to="/" onClick={this.handleClickLogin}>
         Log In
       </Link>
@@ -71,7 +73,9 @@ class Navbar extends React.Component {
     </div>);
   }
 
+
   render() {
+    <Link to="campaigns/new">Create a Campaign</Link>;
     return this.props.currentUser ? this.loggedIn(this.props.currentUser, this.props.logout) : this.loggedOut();
   }
 }

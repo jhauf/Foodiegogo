@@ -1,0 +1,45 @@
+.campaign_form {
+  background-color: white;
+  width: 40%;
+  justify-content: space-between;
+  flex: column;
+  border: 0;
+  align-items: space-between;
+  font-size: 20px;
+  font-family: avenir;
+  text-align: center;
+  padding: 70px;
+  margin: 0 auto;
+}
+
+.campaign_form h1 {
+  margin: 0 15px;
+}
+
+.campaign_form li {
+  font-size: 18px;
+  margin: 1px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.campaign_form li:nth-child(3) {
+  display: block;
+  height: 100px;
+}
+
+.campaign_form li:nth-child(4) {
+  display: block;
+  height: 100px;
+}
+
+.campaign_form li:nth-child(5) {
+  display: block;
+  height: 90px;
+}
+
+.campaign_form li:nth-child(6) {
+  display: block;
+  height: 90px;
+}
