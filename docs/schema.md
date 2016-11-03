@@ -21,7 +21,7 @@ name           | string    | not null, indexed, unique
 goal_amt       | integer   | not null
 current_amt    | integer   | not null
 description    | text      | not null
-end_date       | text      | not null
+end_date       | date      | not null
 picture_url    | string    | not null
 campaigner_id  | integer   | not null, foreign key (references users), indexed
 

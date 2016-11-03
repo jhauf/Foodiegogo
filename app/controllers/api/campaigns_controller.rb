@@ -1,0 +1,44 @@
+class Api::CampaignsController < ApplicationController
+  def index
+    @campaigns = Campaign.all
+  end
+
+  def show
+    @campaign = Campaign.find(params[:id])
+  end
+
+  def create
+    @campaign = Campaign.new(campaign_params)
+    if @campaign.save
+      render :show
+    else
+      render json: @campaign.errors.full_messages, status: 422
+    end
+  end
+
+  def update
+    @campaign = Campaign.find(params[:id])
+
+    if @campaign.update(campaign_params)
+      render :show
+    else
+      render json: @campaign.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    @campaign = Campaign.find(params[:id])
+
+    if @campaign.destroy
+      render :show
+    else
+      render json: @campaign.errors.full_messages, status: 422
+    end
+  end
+
+  private
+
+  def campaign_params
+    params.require(:campaign).permit(:name, :goal_amt, :current_amt, :description, :end_date, :picture_url, :campaigner_id)
+  end
+end
