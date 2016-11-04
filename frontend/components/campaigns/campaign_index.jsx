@@ -1,16 +1,12 @@
 import React from 'react';
 import CampaignIndexItem from './campaign_index_item';
-import CampaignForm from './campaign_form';
 
 class CampaignIndex extends React.Component {
-  componentDidMount() {
-    this.props.fetchCampaigns();
-  }
 
   render () {
     return (
       <div>
-        <ul>
+        <ul className="campaignIndex">
           {
             this.props.campaigns.map(campaign => (
               <CampaignIndexItem

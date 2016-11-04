@@ -12,7 +12,6 @@ class CampaignShow extends React.Component {
 
   render () {
     const campaign = this.props.campaign;
-    debugger
     return (
       <div>
         <h3>{campaign.name}</h3>
@@ -20,10 +19,12 @@ class CampaignShow extends React.Component {
         <h4>{campaign.current_amt}</h4>
         <h4>{campaign.end_date}</h4>
         <p>{campaign.description}</p>
+        <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link>
         <Link to="/campaigns">Back to Index</Link>
       </div>
     );
   }
 }
+// <Link to=`/campaigns/{campaign.id}/edit`>Edit</Link>
 
 export default CampaignShow;

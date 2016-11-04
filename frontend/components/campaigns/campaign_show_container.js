@@ -3,9 +3,8 @@ import CampaignShow from './campaign_show';
 import { fetchCampaign } from '../../actions/campaign_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
-    campaign: state.campaigns[ownProps.params.campaignId]
+    campaign: state.campaigns[parseInt(ownProps.params.campaignId)]
   };
 };
 

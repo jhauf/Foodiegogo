@@ -1,4 +1,6 @@
 import React from 'react';
+import UploadButton from '../uploadbutton';
+
 
 class CampaignForm extends React.Component {
   constructor(props) {
@@ -16,12 +18,23 @@ class CampaignForm extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.params) {
+    if (this.props.params.campaignId) {
       this.props.fetchCampaign(this.props.params.campaignId);
     }
   }
 
-  componentWillReceiveProps(newProps) {
+  postImage(image) {
+  const data = {picture_url: image.url};
+  $.post(
+    "/api/images",
+    data,
+    function (image) {
+    this.setState({ picture_url: image });
+    }
+  );
+}
+
+  componentWillReceiveProps (newProps) {
     return this.setState(newProps.campaign || {
       name: "",
       goal_amt: "",
@@ -90,12 +103,9 @@ class CampaignForm extends React.Component {
           </li>
 
           <li>
-          <label>Upload a Picture
-            <input
-              type="file"
-              value={this.state.end_date}
-              onChange={this.update('end_date')} />
-          </label>
+            <label>
+              <UploadButton postImage={this.postImage}/>
+            </label>
           </li>
 
           <input className="formbutton" type="submit" value={text} />
@@ -107,3 +117,13 @@ class CampaignForm extends React.Component {
 }
 
 export default CampaignForm;
+// type="file"
+// value={this.state.picture_url}
+// onChange={this.update('picture_url')} />
+
+// <label>Upload a Picture
+// <input
+//   type="file"
+//   value={this.state.end_date}
+//   onChange={this.update('end_date')} />
+// </label>

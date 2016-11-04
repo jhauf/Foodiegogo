@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import SessionFormContainer from './session_form_container';
-import CampaignForm from '/Users/appacademy/Desktop/Foodiegogo/frontend/components/campaigns/campaign_form.jsx';
+import CampaignForm from './campaigns/campaign_form';
 
 class Navbar extends React.Component {
   constructor(props) {

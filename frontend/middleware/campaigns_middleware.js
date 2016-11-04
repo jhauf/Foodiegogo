@@ -33,12 +33,16 @@ const CampaignsMiddleware = ({getState, dispatch}) => next => action => {
       fetchCampaign(action.id, receiveCampaignSuccess);
       return next(action);
     case CREATE_CAMPAIGN:
-      createCampaign(action.campaign, receiveCampaignSuccess);
+      success = campaign => {
+        dispatch(receiveCampaign(campaign));
+        hashHistory.push(`/campaigns/${campaign.id}`);
+      };
+      createCampaign(action.campaign, success);
       return next(action);
     case UPDATE_CAMPAIGN:
       success = campaign => {
         dispatch(receiveCampaign(campaign));
-        hashHistory.push("/");
+        hashHistory.push(`/campaigns/${campaign.id}`);
       };
       updateCampaign(action.campaign, success);
       return next(action);
