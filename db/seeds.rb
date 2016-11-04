@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 guest = User.create!(username: "guest", password: "password", fname: "Guest", lname: "lname");
-# campaign = Campaign.create(name: "name", goal_amt: 100, description: "description", end_date: "2017/10/1")
+campaign = Campaign.create(name: "name", goal_amt: 100, description: "description", end_date: "2017/10/1")

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavbarContainer from './navbar_container';
+import Splash from './splash';
 
 const App = ({ children }) => (
   <div>
@@ -8,6 +9,7 @@ const App = ({ children }) => (
       <Link to="/" className="header-link">foodiegogo</Link>
       <NavbarContainer />
     </header>
+    // <Splash/>
     {children}
   </div>
 );

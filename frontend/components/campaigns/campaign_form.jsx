@@ -23,16 +23,16 @@ class CampaignForm extends React.Component {
     }
   }
 
-  postImage(image) {
-  const data = {picture_url: image.url};
-  $.post(
-    "/api/images",
-    data,
-    function (image) {
-    this.setState({ picture_url: image });
-    }
-  );
-}
+//   postImage(image) {
+//   const data = {picture_url: image.url};
+//   $.post(
+//     "/api/images",
+//     data,
+//     function (image) {
+//     this.setState({ picture_url: image });
+//     }
+//   );
+// }
 
   componentWillReceiveProps (newProps) {
     return this.setState(newProps.campaign || {
