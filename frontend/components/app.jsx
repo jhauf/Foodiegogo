@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NavbarContainer from './navbar_container';
-import Splash from './splash';
+import NavbarContainer from './navbar/navbar_container';
+import Splash from './splash/splash';
 
 
 

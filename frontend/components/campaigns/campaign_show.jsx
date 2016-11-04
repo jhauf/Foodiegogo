@@ -24,6 +24,7 @@ class CampaignShow extends React.Component {
         <h4>{campaign.current_amt}</h4>
         <h4>{campaign.end_date}</h4>
         <p>{campaign.description}</p>
+        <img src={campaign.picture_url}/>
         <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link>
         <Link to="/campaigns">Back to Index</Link>
       </div>

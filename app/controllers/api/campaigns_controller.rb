@@ -16,6 +16,8 @@ class Api::CampaignsController < ApplicationController
     end
   end
 
+
+
   def update
     @campaign = Campaign.find(params[:id])
 

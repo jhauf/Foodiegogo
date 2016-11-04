@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
-import ModalStyle from './modal_style';
-import SessionFormContainer from './session_form_container';
-import CampaignForm from './campaigns/campaign_form';
+import ModalStyle from './../session/modal_style';
+import SessionFormContainer from './../session/session_form_container';
+import CampaignForm from './../campaigns/campaign_form';
 
 
 class Navbar extends React.Component {

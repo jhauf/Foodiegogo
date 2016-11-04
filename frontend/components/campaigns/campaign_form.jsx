@@ -1,5 +1,5 @@
 import React from 'react';
-import UploadButton from '../uploadbutton';
+import $ from 'jquery';
 
 
 class CampaignForm extends React.Component {
@@ -14,7 +14,7 @@ class CampaignForm extends React.Component {
       current_amt: 0,
       description: "",
       end_date: "",
-      picture_url: ""
+      picture_url: "",
     };
   }
 
@@ -24,16 +24,18 @@ class CampaignForm extends React.Component {
     }
   }
 
-//   postImage(image) {
-//   const data = {picture_url: image.url};
-//   $.post(
-//     "/api/images",
-//     data,
-//     function (image) {
-//     this.setState({ picture_url: image });
-//     }
-//   );
-// }
+  upload (e) {
+    e.preventDefault();
+    const that = this;
+    cloudinary.openUploadWidget({upload_preset: "a4fzicsk", cloud_name: 'dps0ohgkp'}, (error, results) => {
+      if (!error){
+        that.setState({picture_url: results[0].url});
+      } else {
+        console.log(error);
+      }
+    });
+  }
+
 
   componentWillReceiveProps (newProps) {
     return this.setState(newProps.campaign || {
@@ -103,14 +105,12 @@ class CampaignForm extends React.Component {
               onChange={this.update('end_date')} />
           </label>
           </li>
-
-          <li>
-            <label>
-              <UploadButton postImage={this.postImage}/>
-            </label>
-          </li>
-
           <input className="formbutton" type="submit" value={text} />
+          <li className="photo">
+            {this.state.picture_url === "" ?
+              <button className= "upload-form" onClick={this.upload.bind(this)}>Upload new image!</button> :
+              <img src={this.state.picture_url}/>}
+          </li>
         </ul>
         </form>
       </div>
@@ -119,13 +119,3 @@ class CampaignForm extends React.Component {
 }
 
 export default CampaignForm;
-// type="file"
-// value={this.state.picture_url}
-// onChange={this.update('picture_url')} />
-
-// <label>Upload a Picture
-// <input
-//   type="file"
-//   value={this.state.end_date}
-//   onChange={this.update('end_date')} />
-// </label>

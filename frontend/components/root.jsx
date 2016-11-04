@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import SessionFormContainer from './session_form_container';
+import SessionFormContainer from './session/session_form_container';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
