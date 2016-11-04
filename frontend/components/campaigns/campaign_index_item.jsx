@@ -11,13 +11,15 @@ const editLink = id => {
 
 const CampaignIndexItem = ({ campaign, router, deleteCampaign }) => {
   return (
-  <li>
+  <li className="campaignitem">
+    <h1>{campaign.name}</h1>
     <Link to={`/campaigns/${campaign.id}`}>
-      {campaign.name}
+      <li className="indexpicture"><img src={campaign.picture_url}/></li>
     </Link>
-    <button onClick={editLink(campaign.id)}>Edit</button>
-    <button onClick={() => deleteCampaign(campaign.id)}>Delete</button>
   </li>);
 };
 
 export default CampaignIndexItem;
+
+// <button onClick={editLink(campaign.id)}>Edit</button>
+// <button onClick={() => deleteCampaign(campaign.id)}>Delete</button>

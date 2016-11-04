@@ -3,11 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .campaignIndex {
-  padding: 40px;
-  border: 10px;
+  display: flex;
+  font-size: 20px;
+  flex-wrap: wrap;
 }
 
-.campaignIndex a {
-  font-size: 20px;
-  border: 100px;
+.campaignitem {
+  width: 400px;
+  padding: 60px 40px;
 }

@@ -4,7 +4,8 @@ import { fetchCampaign, fetchCampaigns } from '../../actions/campaign_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    campaign: state.campaigns[parseInt(ownProps.params.campaignId)]
+    campaign: state.campaigns[parseInt(ownProps.params.campaignId)],
+    currentUser: state.session.currentUser
   };
 };
 

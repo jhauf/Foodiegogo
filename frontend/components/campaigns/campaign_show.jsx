@@ -25,8 +25,10 @@ class CampaignShow extends React.Component {
         <h4>{campaign.end_date}</h4>
         <p>{campaign.description}</p>
         <img src={campaign.picture_url}/>
-        <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link>
         <Link to="/campaigns">Back to Index</Link>
+        {this.props.currentUser === campaign.campaigner_id ?
+          <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link> :
+          <div></div>}
       </div>
     );
   }

@@ -1,45 +1,167 @@
-.campaign_form {
-  background-color: white;
-  width: 40%;
-  justify-content: space-between;
-  flex: column;
-  border: 0;
-  align-items: space-between;
-  font-size: 20px;
-  font-family: avenir;
-  text-align: center;
-  padding: 70px;
-  margin: 0 auto;
+
+
+.campaignform {
+    font: 95% avenir;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.campaignform h1 {
+    background: #43D1AF;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
 }
 
-.campaign_form h1 {
-  margin: 0 15px;
+.campaignform input[type="text"],
+.campaignform input[type="date"],
+.campaignform input[type="datetime"],
+.campaignform input[type="email"],
+.campaignform input[type="number"],
+.campaignform input[type="search"],
+.campaignform input[type="time"],
+.campaignform input[type="url"],
+.campaignform textarea,
+.campaignform select
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
 }
 
-.campaign_form li {
-  font-size: 18px;
-  margin: 1px;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.campaign_form li:nth-child(3) {
-  display: block;
-  height: 100px;
+.campaignform input[type="text"]:focus,
+.campaignform input[type="date"]:focus,
+.campaignform input[type="datetime"]:focus,
+.campaignform input[type="email"]:focus,
+.campaignform input[type="number"]:focus,
+.campaignform input[type="search"]:focus,
+.campaignform input[type="time"]:focus,
+.campaignform input[type="url"]:focus,
+.campaignform textarea:focus,
+.campaignform select:focus
+
+{
+    box-shadow: 0 0 5px #43D1AF1;
+    padding: 3%;
+    border: 1px solid #43D1AF1;
 }
 
-.campaign_form li:nth-child(4) {
-  display: block;
-  height: 100px;
+.campaignform input[type="submit"],
+.campaignform input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF1;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
 }
 
-.campaign_form li:nth-child(5) {
-  display: block;
-  height: 90px;
+.campaignform input[type="submit"]:hover,
+.campaignform input[type="button"]:hover{
+    background: #2EBC99;
 }
 
-.campaign_form li:nth-child(6) {
-  display: block;
-  height: 90px;
+
+.campaignform {
+    font: 95% avenir;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.campaignform h1 {
+    background: white;
+    padding: 20px 0;
+    font-size: 200%;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    margin: -16px -16px 16px -16px;
+}
+
+.campaignform input[type="text"],
+.campaignform input[type="date"],
+.campaignform input[type="datetime"],
+.campaignform input[type="email"],
+.campaignform input[type="number"],
+.campaignform input[type="search"],
+.campaignform input[type="time"],
+.campaignform input[type="url"],
+.campaignform textarea,
+.campaignform select
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.campaignform input[type="text"]:focus,
+.campaignform input[type="date"]:focus,
+.campaignform input[type="datetime"]:focus,
+.campaignform input[type="email"]:focus,
+.campaignform input[type="number"]:focus,
+.campaignform input[type="search"]:focus,
+.campaignform input[type="time"]:focus,
+.campaignform input[type="url"]:focus,
+.campaignform textarea:focus,
+.campaignform select:focus
+
+{
+    box-shadow: 0 0 5px #43D1AF1;
+    padding: 3%;
+    border: 1px solid #43D1AF1;
+}
+
+.campaignform input[type="submit"],
+.campaignform input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF1;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+}
+
+.campaignform input[type="submit"]:hover,
+.campaignform input[type="button"]:hover{
+  background: #43D1AF;
+  transition: background .2s ease-in;
 }

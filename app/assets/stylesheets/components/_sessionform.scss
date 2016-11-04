@@ -3,29 +3,23 @@
   max-width: 400px;
   min-width: 500px;
   width: 40%;
-  min-height: 500px;
-  max-height: 700px;
+  min-height: 300px;
+  max-height: 600px;
   margin: 0 auto;
-  border: 0;
+  display: flex;
+  align-items: center;
 }
 
 .login-form-box {
   display: flex;
-  padding: 20px;
   border: 0px;
   justify-content: space-between;
   flex: column;
   border: 0;
-  align-items: space-between;
-  font-size: 30px;
+  font-size: 20px;
   font-family: avenir;
   text-align: center;
-  padding: 70px;
-}
-
-.login-form-box h1 {
-  font-size: 32px;
-  margin: 15px;
+  padding: 30px;
 }
 
 .login-form-box a {
@@ -60,4 +54,88 @@ input[type=password] {
 .login-form li {
   font-size: 16px;
   padding: 2px;
+}
+
+
+
+.sessionform {
+    font: 95% avenir;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.sessionform h1 {
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    margin: -16px -16px 16px -16px;
+}
+
+.sessionform input[type="text"],
+.sessionform input[type="date"],
+.sessionform input[type="datetime"],
+.sessionform input[type="email"],
+.sessionform input[type="number"],
+.sessionform input[type="search"],
+.sessionform input[type="time"],
+.sessionform input[type="url"],
+.sessionform textarea,
+.sessionform select
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.sessionform input[type="text"]:focus,
+.sessionform input[type="date"]:focus,
+.sessionform input[type="datetime"]:focus,
+.sessionform input[type="email"]:focus,
+.sessionform input[type="number"]:focus,
+.sessionform input[type="search"]:focus,
+.sessionform input[type="time"]:focus,
+.sessionform input[type="url"]:focus,
+.sessionform textarea:focus,
+.sessionform select:focus
+
+{
+    box-shadow: 0 0 5px #43D1AF1;
+    padding: 3%;
+    border: 1px solid #43D1AF1;
+}
+
+.sessionform input[type="submit"],
+.sessionform input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF1;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+}
+
+.sessionform input[type="submit"]:hover,
+.sessionform input[type="button"]:hover{
+  background: #43D1AF;
+  transition: background .2s ease-in;
 }

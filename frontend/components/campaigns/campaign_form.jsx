@@ -15,6 +15,7 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
+      campaigner_id: this.props.currentUser
     };
   }
 
@@ -61,12 +62,12 @@ class CampaignForm extends React.Component {
 
 
   render () {
-    const text = this.props.route.path === 'campaigns/new' ? "Create Campaign" : "Update Campaign";
+    const text = this.props.route.path === 'campaigns/new' ? "Create A Campaign" : "Update A Campaign";
     return (
       <div>
-        <form className="campaign_form" onSubmit={this.handleSubmit}>
+        <form className="campaignform" onSubmit={this.handleSubmit}>
         <ul>
-        <h3>{text}</h3>
+        <h1>{text}</h1>
           <li>
           <label>
             <input
@@ -105,12 +106,12 @@ class CampaignForm extends React.Component {
               onChange={this.update('end_date')} />
           </label>
           </li>
-          <input className="formbutton" type="submit" value={text} />
           <li className="photo">
             {this.state.picture_url === "" ?
               <button className= "upload-form" onClick={this.upload.bind(this)}>Upload new image!</button> :
               <img src={this.state.picture_url}/>}
           </li>
+          <input className="formbutton" type="submit" value="submit" />
         </ul>
         </form>
       </div>

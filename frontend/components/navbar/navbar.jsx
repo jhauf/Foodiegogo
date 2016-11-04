@@ -70,7 +70,7 @@ class Navbar extends React.Component {
   }
 
   loggedIn(currentUser, logout) {
-    return (<div className="links" >
+    return (<div className="loggedin" >
       <div>
       {currentUser.fname}
       </div>

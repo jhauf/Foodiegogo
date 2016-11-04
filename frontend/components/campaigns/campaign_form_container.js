@@ -4,8 +4,9 @@ import { fetchCampaign, updateCampaign, createCampaign } from '../../actions/cam
 
 const mapStateToProps = (state, ownProps) => ({
   campaign: state.campaigns[ownProps.params.campaignId],
-  formType: ownProps.formType
+  currentUser: state.session.currentUser
 });
+
 
 const mapDispatchToProps = dispatch => ({
   fetchCampaign: id => dispatch(fetchCampaign(id)),
