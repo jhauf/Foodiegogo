@@ -6,6 +6,7 @@ import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
 import App from './app';
+import {fetchCampaigns} from '../actions/campaign_actions';
 
 
 const Root = ({ store }) => {
@@ -23,14 +24,19 @@ const Root = ({ store }) => {
      }
    };
 
+   const fetchOnEnter = () => {
+     fetchCampaigns();
+   };
+
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path="/" component={App}>
-          <IndexRoute component={CampaignIndexContainer} />
-            <Route path="/campaigns" component={CampaignIndexContainer} />
-            <Route path="/campaigns/:campaignId" component={CampaignShowContainer} />
-            <Route path="/campaigns/:campaignId/edit" component={CampaignFormContainer} />
+        <Route path="/" component={App} onEnter={fetchOnEnter}>
+            <Route path="campaigns" component={CampaignIndexContainer} />
+              <Route path="campaigns/new" component={CampaignFormContainer} />
+            <Route path="campaigns/:campaignId" component={CampaignShowContainer} />
+            <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} />
         </Route>
       </Router>
     </Provider>

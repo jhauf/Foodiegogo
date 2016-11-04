@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router';
 
 class CampaignShow extends React.Component {
+
+
   componentDidMount() {
-    this.props.fetchCampaign(this.props.params.campaignId);
+    if (this.props.params.campaignId) {
+      this.props.fetchCampaigns();
+      this.props.fetchCampaign(parseInt(this.props.params.campaignId));
+    }
   }
 
   componentWillReceiveProps(nextProps) {
-    this.props.fetchCampaign(nextProps.params.campaignId);
+    this.props.fetchCampaign(parseInt(nextProps.params.campaignId));
   }
 
   render () {

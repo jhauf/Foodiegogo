@@ -3,13 +3,15 @@ import { Link } from 'react-router';
 import NavbarContainer from './navbar_container';
 import Splash from './splash';
 
+
+
 const App = ({ children }) => (
   <div>
     <header className="navbar">
       <Link to="/" className="header-link">foodiegogo</Link>
       <NavbarContainer />
     </header>
-    // <Splash/>
+    <Splash/>
     {children}
   </div>
 );

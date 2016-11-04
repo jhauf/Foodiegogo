@@ -11,6 +11,7 @@ class CampaignForm extends React.Component {
     this.state = this.props.campaign || {
       name: "",
       goal_amt: "",
+      current_amt: 0,
       description: "",
       end_date: "",
       picture_url: ""
@@ -38,9 +39,10 @@ class CampaignForm extends React.Component {
     return this.setState(newProps.campaign || {
       name: "",
       goal_amt: "",
+      current_amt: 0,
       description: "",
       end_date: "",
-      picture_url: ""
+      picture_url: "",
     });
   }
 

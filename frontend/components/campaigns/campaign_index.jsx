@@ -3,6 +3,10 @@ import CampaignIndexItem from './campaign_index_item';
 
 class CampaignIndex extends React.Component {
 
+  componentDidMount() {
+    this.props.fetchCampaigns();
+  }
+
   render () {
     return (
       <div>

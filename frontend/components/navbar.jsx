@@ -5,6 +5,7 @@ import ModalStyle from './modal_style';
 import SessionFormContainer from './session_form_container';
 import CampaignForm from './campaigns/campaign_form';
 
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,10 @@ class Navbar extends React.Component {
       modalOpen: false,
       signIn: false
     };
+  }
+
+  componentDidMount() {
+    this.props.fetchCampaigns();
   }
 
   handleClickLogin() {

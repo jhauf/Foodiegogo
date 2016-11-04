@@ -2,16 +2,22 @@ html {
 	min-height: 100%;
 }
 
-body {
-	font-size: 14px;
-	font-weight: 400;
-	background-position: 50% 15%;
-	min-height: 100%;
+// body {
+// }
+.splashpage {
 	background: url('http://res.cloudinary.com/dps0ohgkp/image/upload/v1478212509/newsplash_um8u7a.jpg') no-repeat white;
 	background-size: 100%;
-	margin: 0 auto;
+	font-weight: 400;
+	background-position: 10% 15%;
+	min-height: 600px;
 }
 
+.splashpage li {
+	margin: 0 auto;
+	padding: 10px;
+	background-color: pink;
+	display: flex;
+}
 
 button:hover {
 	background-color: #6495ED;
@@ -19,6 +25,22 @@ button:hover {
 }
 
 
+
+.explorebutton {
+	background: #D85071;
+	display: block;
+	height: 45px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 18px;
+	color: black;
+	width: 100px;
+	font-family: avenir;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 0 auto;
+}
 .formbutton {
 	background: #FAEBD7;
 	display: block;
