@@ -4,10 +4,22 @@
   background-color: rgb(252,252,252);
   margin: 0 0px;
   display: flex;
-  font-size: 30px;
+  font-size: 26px;
   justify-content: space-between;
-  padding: 15px;
   background-color: #E62C47;
+  padding: 0px 15px;
+}
+
+.logout {
+  font-weight: 400;
+  background-color: $sky-blue ;
+}
+
+
+.name {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0 15px;
 }
 
 .links {
@@ -16,7 +28,11 @@
   align-items: center;
   color: white;
   font-weight: 600;
+  justify-content: space-between;
 }
+
+
+
 
 .loggedin {
   font-size: 24px;
@@ -36,4 +52,5 @@
   display: inline;
   padding: 0px 20px;
   color: white;
+  padding: 5px 5px 5px 5px;
 }

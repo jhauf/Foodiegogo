@@ -8,7 +8,7 @@
     background: #F7F7F7;
 }
 .campaignform h1 {
-    background: #43D1AF;
+    background-color: #43D1AF;
     padding: 20px 0;
     font-size: 140%;
     font-weight: 300;
@@ -69,8 +69,8 @@
     -moz-box-sizing: border-box;
     width: 100%;
     padding: 3%;
-    background: #43D1AF1;
-    border-bottom: 2px solid #30C29E;
+    background-color: #43D1AF1;
+    border-bottom: 2px solid #43D1AF;
     border-top-style: none;
     border-right-style: none;
     border-left-style: none;
@@ -152,8 +152,8 @@
     -moz-box-sizing: border-box;
     width: 100%;
     padding: 3%;
-    background: #43D1AF1;
-    border-bottom: 2px solid #30C29E;
+    background-color: #43D1AF;
+    border-bottom: 2px solid #43D1AF;
     border-top-style: none;
     border-right-style: none;
     border-left-style: none;
@@ -162,6 +162,12 @@
 
 .campaignform input[type="submit"]:hover,
 .campaignform input[type="button"]:hover{
-  background: #43D1AF;
+  background: #2EBC99;
   transition: background .2s ease-in;
+}
+
+.back {
+  font-size: 20px;
+  margin: 0 auto;
+  text-decoration: underline;
 }

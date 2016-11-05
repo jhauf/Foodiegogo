@@ -52,7 +52,6 @@ class Navbar extends React.Component {
   loggedOut() {
     return (
     <nav className="links">
-      <Link to="campaigns/new">Create a Campaign</Link>
       <Link to="/" onClick={this.handleClickLogin}>
         Log In
       </Link>
@@ -70,11 +69,11 @@ class Navbar extends React.Component {
   }
 
   loggedIn(currentUser, logout) {
-    return (<div className="loggedin" >
-      <div>
-      {currentUser.fname}
-      </div>
-      <button onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
+    return (<div className="links" >
+    <Link to="campaigns/new">Create a Campaign</Link>
+    <Link to="/campaigns" className="explore">Explore</Link>
+      <div className="name">{currentUser.fname}</div>
+      <button className="logout" onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
     </div>);
   }
 
@@ -87,6 +86,3 @@ class Navbar extends React.Component {
 
 
 export default Navbar;
-
-// <button className="new-campaign-button">Start a Campaign</button>
-// <button className="new-campaign-button">Start a Campaign</button>

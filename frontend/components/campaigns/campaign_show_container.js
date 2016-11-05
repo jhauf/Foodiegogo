@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CampaignShow from './campaign_show';
-import { fetchCampaign, fetchCampaigns, removeCampaign } from '../../actions/campaign_actions';
+import { fetchCampaign, fetchCampaigns, deleteCampaign } from '../../actions/campaign_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,10 +9,11 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
+
 const mapDispatchToProps = dispatch => ({
   fetchCampaign: id => dispatch(fetchCampaign(id)),
   fetchCampaigns: id => dispatch(fetchCampaigns()),
-  deleteCampaign: campaign => dispatch(removeCampaign(campaign))
+  deleteCampaign: id => dispatch(deleteCampaign(id))
 });
 
 export default connect(

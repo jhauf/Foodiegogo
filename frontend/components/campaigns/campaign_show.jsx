@@ -1,18 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class CampaignShow extends React.Component {
-
-
+  constructor(props) {
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  // this.props.fetchCampaigns();
+  }
   componentDidMount() {
     if (this.props.params.campaignId) {
-      this.props.fetchCampaigns();
       this.props.fetchCampaign(parseInt(this.props.params.campaignId));
     }
   }
 
   componentWillReceiveProps(nextProps) {
     this.props.fetchCampaign(parseInt(nextProps.params.campaignId));
+  }
+
+  handleDelete(id) {
+    this.props.deleteCampaign(parseInt(id));
+    hashHistory.push("campaigns/");
   }
 
   render () {
@@ -26,10 +33,10 @@ class CampaignShow extends React.Component {
         <p>{campaign.description}</p>
         <img src={campaign.picture_url}/>
         <Link to="/campaigns">Back to Index</Link>
-        {this.props.currentUser === campaign.campaigner_id ?
-          <div><Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link>
-            <button onClick={this.props.deleteCampaign.bind(this, campaign)}>Delete</button> </div>:
-          <div></div>}
+        {this.props.currentUser.id === campaign.campaigner_id ?
+        <div><button onClick={this.handleDelete.bind(this, campaign.id)}>Delete</button>
+        <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link> </div>:
+        <div></div>}
       </div>
     );
   }

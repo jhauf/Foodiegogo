@@ -3,8 +3,8 @@
   max-width: 400px;
   min-width: 500px;
   width: 40%;
-  min-height: 300px;
-  max-height: 600px;
+  min-height: 520px;
+  max-height: 900px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -115,9 +115,9 @@ input[type=password] {
 .sessionform select:focus
 
 {
-    box-shadow: 0 0 5px #43D1AF1;
+    box-shadow: 0 0 5px #43D1AF;
     padding: 3%;
-    border: 1px solid #43D1AF1;
+    border: 1px solid #43D1AF;
 }
 
 .sessionform input[type="submit"],
@@ -127,8 +127,8 @@ input[type=password] {
     -moz-box-sizing: border-box;
     width: 100%;
     padding: 3%;
-    background: #43D1AF1;
-    border-bottom: 2px solid #30C29E;
+    background: #43D1AF;
+    border-bottom: 2px solid #43D1AF;
     border-top-style: none;
     border-right-style: none;
     border-left-style: none;
@@ -137,6 +137,6 @@ input[type=password] {
 
 .sessionform input[type="submit"]:hover,
 .sessionform input[type="button"]:hover{
-  background: #43D1AF;
+  background: #2EBC99;
   transition: background .2s ease-in;
 }

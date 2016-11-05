@@ -2,6 +2,7 @@ import {
   receiveCampaign,
   receiveAllCampaigns,
   removeCampaign,
+  receiveErrors,
   FETCH_CAMPAIGNS,
   FETCH_CAMPAIGN,
   CREATE_CAMPAIGN,
@@ -24,31 +25,32 @@ const CampaignsMiddleware = ({getState, dispatch}) => next => action => {
   let receiveAllCampaignsSuccess = campaigns => dispatch(receiveAllCampaigns(campaigns));
   let receiveCampaignSuccess = campaign => dispatch(receiveCampaign(campaign));
   let removeCampaignSuccess = campaign => dispatch(removeCampaign(campaign));
+  const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON));
+
 
   switch (action.type) {
     case FETCH_CAMPAIGNS:
-      fetchCampaigns(receiveAllCampaignsSuccess);
+      fetchCampaigns(receiveAllCampaignsSuccess, errorCallback);
       return next(action);
     case FETCH_CAMPAIGN:
-      fetchCampaign(action.id, receiveCampaignSuccess);
+      fetchCampaign(action.id, receiveCampaignSuccess, errorCallback);
       return next(action);
     case CREATE_CAMPAIGN:
       success = campaign => {
         dispatch(receiveCampaign(campaign));
         hashHistory.push(`/campaigns/${campaign.id}`);
       };
-      createCampaign(action.campaign, success);
+      createCampaign(action.campaign, success, errorCallback);
       return next(action);
     case UPDATE_CAMPAIGN:
       success = campaign => {
         dispatch(receiveCampaign(campaign));
         hashHistory.push(`/campaigns/${campaign.id}`);
       };
-      updateCampaign(action.campaign, success);
+      updateCampaign(action.campaign, success, errorCallback);
       return next(action);
     case DELETE_CAMPAIGN:
-    debugger
-      deleteCampaign(action.id, removeCampaignSuccess);
+      deleteCampaign(action.id, removeCampaignSuccess, errorCallback);
       return next(action);
     default:
       return next(action);

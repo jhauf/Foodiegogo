@@ -19,12 +19,6 @@ class SessionForm extends React.Component {
 		this.redirectIfLoggedIn();
 	}
 
-	redirectIfLoggedIn() {
-		if (this.props.loggedIn) {
-			this.props.router.push("/home");
-		}
-	}
-
 	update(field) {
 		return e => this.setState({
 			[field]: e.currentTarget.value
@@ -36,7 +30,6 @@ class SessionForm extends React.Component {
 		const user = this.state;
 		this.props.processForm({user});
 	}
-
 
 	nameField() {
 		if (this.props.type === false) {
@@ -100,7 +93,7 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<h4 className="errors"> {this.renderErrors()} </h4>
-						<input type="submit" value="submit" className="formbutton"/>
+						<input type="submit" value="Submit" className="formbutton"/>
 						<Link to ="/" onClick={this.handleGuest}>Sign in as a Guest</Link>
 					</div>
 				</form>

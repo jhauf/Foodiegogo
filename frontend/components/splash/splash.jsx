@@ -11,7 +11,6 @@ const Splash = (props) => {
 
   if (props.location.pathname === "/") {
   return (<div className="splashpage">
-  <button className="explorebutton" onClick={redirect()}>Explore</button>
   </div>);
   } else {
     return (<div></div>);

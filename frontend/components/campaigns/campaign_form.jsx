@@ -1,11 +1,13 @@
 import React from 'react';
 import $ from 'jquery';
+import { Link } from 'react-router';
 
 
 class CampaignForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
 
     // use campaign in store if updating; start with blank campaign if new
     this.state = this.props.campaign || {
@@ -15,7 +17,7 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
-      campaigner_id: this.props.currentUser
+      campaigner_id: parseInt(this.props.currentUser.id)
     };
   }
 
@@ -46,6 +48,7 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
+      campaigner_id: parseInt(this.props.currentUser.id)
     });
   }
 
@@ -59,6 +62,22 @@ class CampaignForm extends React.Component {
     e.preventDefault();
     this.props.route.path === 'campaigns/new' ? this.props.createCampaign(this.state) : this.props.updateCampaign(this.state);
   }
+
+  renderErrors() {
+    if (this.props.errors) {
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    } else {
+      return <div></div>;
+    }
+	}
 
 
   render () {
@@ -79,12 +98,12 @@ class CampaignForm extends React.Component {
           </li>
 
           <li>
-          <label> $
+          <label>
             <input
               type="text"
               value={this.state.goal_amt}
               onChange={this.update('goal_amt')}
-              placeholder="Goal"
+              placeholder="$ Goal"
               />
           </label>
           </li>
@@ -108,10 +127,14 @@ class CampaignForm extends React.Component {
           </li>
           <li className="photo">
             {this.state.picture_url === "" ?
-              <button className= "upload-form" onClick={this.upload.bind(this)}>Upload new image!</button> :
+              <button className= "uploadbutton" onClick={this.upload.bind(this)}>Upload a picture!</button> :
               <img src={this.state.picture_url}/>}
           </li>
-          <input className="formbutton" type="submit" value="submit" />
+          <h4 className="errors"> {this.renderErrors()} </h4>
+          <input className="formbutton" type="submit" value="Submit"/>
+          <li>
+          <Link to="/" className="back">go back</Link>
+          </li>
         </ul>
         </form>
       </div>

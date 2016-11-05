@@ -16,13 +16,13 @@ const Root = ({ store }) => {
        replace('/');
      }
    };
-
-   const _redirectIfLoggedIn = (nextState, replace) => {
-     const currentUser = store.getState().session.currentUser;
-     if (currentUser) {
-       replace('/home');
-     }
-   };
+   // 
+  //  const _redirectIfLoggedIn = (nextState, replace) => {
+  //    const currentUser = store.getState().session.currentUser;
+  //    if (currentUser) {
+  //      replace('/home');
+  //    }
+  //  };
 
    const fetchOnEnter = () => {
      fetchCampaigns();
@@ -33,10 +33,10 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={App} onEnter={fetchOnEnter}>
-            <Route path="campaigns" component={CampaignIndexContainer} />
-              <Route path="campaigns/new" component={CampaignFormContainer} />
-            <Route path="campaigns/:campaignId" component={CampaignShowContainer} />
-            <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} />
+            <Route path="campaigns" component={CampaignIndexContainer} onEnter={_ensureLoggedIn}/>
+              <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
+            <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
+            <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>

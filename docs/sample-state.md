@@ -8,11 +8,6 @@
     },
     errors: []
   },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createNewCampaign: {errors: []}
-  },
   profile: {
     1: {
       fname: "Jane",
@@ -46,7 +41,8 @@
         }
       }
     }
-  }
+  },
+  errors: []
 }
 
 ```

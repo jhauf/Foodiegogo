@@ -3,32 +3,35 @@ html {
 }
 
 .splashpage {
-	background: url('http://res.cloudinary.com/dps0ohgkp/image/upload/v1478212509/newsplash_um8u7a.jpg') no-repeat white;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/dps0ohgkp/image/upload/c_crop,h_3840,q_100,x_0,y_-500/v1478318777/splashpic_jgt1cw.jpg') no-repeat white;
+	background-size: contain;
 	font-weight: 400;
-	background-position: 10% 15%;
-	min-height: 1000px;
+	background-position: 50% 10%;
+	min-height: 500px;
 	display: flex;
+	padding: 60px;
 	align-items: center;
 	justify-content: center;
 }
 
 button:hover {
-	background-color: #43D1AF;
+	background-color: #3d79e5;
 	transition: background .2s ease-in;
 }
 
 .explorebutton {
-	display: flex;
-	padding: 15px 20px;
-	background: #6495ED;
-	border-radius: 10px;
-	border-bottom: 2px solid #30C29E;
+	padding: 0px 10px;
+	background: #F7F7F7;
+	border-radius: 5px;
 	color: #fff;
-	font-size: 24px;
+	font-size: 22px;
 	font-family: avenir;
-	box-shadow: .5px .5px .5px #888888;
-	background-position: 10% 15%;
+	font-weight: 500;
+	color: #E91616;
+}
+.explore {
+	font-size: 20px;
+	font-family: avenir;
 }
 
 .formbutton {
@@ -41,10 +44,22 @@ button:hover {
 	font-size: 18px;
 	color: black;
 	width: 20%;
-	background-color: $sky-blue;
+	background-color: #43D1AF;
 }
 
-.formbutton:hover {
-	background-color: #43D1AF;
+
+.uploadbutton {
+	background-color: $sky-blue;
+	margin: 10px auto;
+	color: white;
+	padding: 5px;
+	border-radius:4px;
+	border-bottom: 2px solid #3d79e5;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+}
+.uploadbutton:hover {
+	background-color: #3d79e5;
 	transition: background .2s ease-in;
 }

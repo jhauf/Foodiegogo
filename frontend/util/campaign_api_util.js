@@ -13,21 +13,23 @@ export const fetchCampaign = (id, success) => {
   });
 };
 
-export const createCampaign = (campaign, success) => {
+export const createCampaign = (campaign, success, error) => {
   $.ajax({
     url: "api/campaigns",
     type: "POST",
     data: { campaign },
-    success
+    success,
+    error
   });
 };
 
-export const updateCampaign = (campaign, success) => {
+export const updateCampaign = (campaign, success, error) => {
   $.ajax({
     url: `api/campaigns/${campaign.id}`,
     type: "PATCH",
     data: { campaign },
-    success
+    success,
+    error
   });
 };
 

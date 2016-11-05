@@ -1,9 +1,16 @@
 import { RECEIVE_ALL_CAMPAIGNS,
          RECEIVE_CAMPAIGN,
-         REMOVE_CAMPAIGN } from '../actions/campaign_actions';
+         REMOVE_CAMPAIGN,
+        RECEIVE_ERRORS } from '../actions/campaign_actions';
 import merge from 'lodash/merge';
 
-const CampaignsReducer = (oldState = {}, action) => {
+const nullCampaigns = Object.freeze({
+  campaigns: null,
+  errors: []
+});
+
+
+const CampaignsReducer = (oldState = nullCampaigns, action) => {
   switch (action.type) {
     case RECEIVE_ALL_CAMPAIGNS:
       return merge({}, action.campaigns);
@@ -13,6 +20,9 @@ const CampaignsReducer = (oldState = {}, action) => {
       let newState = merge({}, oldState);
       delete newState[action.campaign.id];
       return newState;
+    case RECEIVE_ERRORS:
+      const errors = action.errors;
+      return merge({}, nullCampaigns, {errors});
     default:
       return oldState;
   }
