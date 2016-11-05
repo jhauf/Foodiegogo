@@ -47,6 +47,7 @@ const CampaignsMiddleware = ({getState, dispatch}) => next => action => {
       updateCampaign(action.campaign, success);
       return next(action);
     case DELETE_CAMPAIGN:
+    debugger
       deleteCampaign(action.id, removeCampaignSuccess);
       return next(action);
     default:

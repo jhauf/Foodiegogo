@@ -27,7 +27,8 @@ class CampaignShow extends React.Component {
         <img src={campaign.picture_url}/>
         <Link to="/campaigns">Back to Index</Link>
         {this.props.currentUser === campaign.campaigner_id ?
-          <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link> :
+          <div><Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link>
+            <button onClick={this.props.deleteCampaign.bind(this, campaign)}>Delete</button> </div>:
           <div></div>}
       </div>
     );
