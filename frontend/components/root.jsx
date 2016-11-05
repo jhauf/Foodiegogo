@@ -37,12 +37,13 @@ const Root = ({ store }) => {
               <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
             <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
-        </Route>
+      </Route>
       </Router>
     </Provider>
   );
 };
 
+// <Route path="campaigns/:campaignId/add_perks" component={PerksFormContainer} onEnter={_ensureLoggedIn}/>
 export default Root;
 
 // <Route path="/home" component={Home} onEnter={_ensureLoggedIn} />

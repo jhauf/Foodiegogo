@@ -17,7 +17,8 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
-      campaigner_id: parseInt(this.props.currentUser.id)
+      campaigner_id: parseInt(this.props.currentUser.id),
+      perks: {"test"}
     };
   }
 
@@ -50,7 +51,8 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
-      campaigner_id: parseInt(this.props.currentUser.id)
+      campaigner_id: parseInt(this.props.currentUser.id),
+      perks: {"test"}
     });
   }
 
@@ -79,6 +81,8 @@ class CampaignForm extends React.Component {
 
   render () {
     const text = this.props.route.path === 'campaigns/new' ? "Create A Campaign" : "Update A Campaign";
+    const backLink = this.props.route.path === 'campaigns/new' ? <Link to="/campaigns">All Campaigns</Link> :
+    <Link to={"/campaigns/" + this.props.params.campaignId}>Back</Link>;
     return (
       <div>
         <form className="campaignform" onSubmit={this.handleSubmit}>
@@ -130,7 +134,7 @@ class CampaignForm extends React.Component {
           <h4 className="errors"> {this.renderErrors()} </h4>
           <input className="formbutton" type="submit" value="Submit"/>
           <li>
-          <Link to="/campaigns" className="back">back to all campaigns</Link>
+          {backLink}
           </li>
         </ul>
         </form>

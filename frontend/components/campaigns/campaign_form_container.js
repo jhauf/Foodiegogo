@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   campaign: state.campaigns[ownProps.params.campaignId],
   currentUser: state.session.currentUser,
   errors: state.errors
-};
+  };
 };
 
 
