@@ -41,7 +41,7 @@ class Navbar extends React.Component {
   }
   onModalClose() {
     this.setState({modalOpen: false});
-    this.props.clearErrors();
+    this.props.clearSessionErrors();
   }
 
   onLogOut(logout) {

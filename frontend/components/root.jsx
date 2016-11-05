@@ -6,7 +6,7 @@ import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
 import App from './app';
-import {fetchCampaigns} from '../actions/campaign_actions';
+import { fetchCampaigns } from '../actions/campaign_actions';
 
 
 const Root = ({ store }) => {
@@ -16,7 +16,7 @@ const Root = ({ store }) => {
        replace('/');
      }
    };
-   // 
+   //
   //  const _redirectIfLoggedIn = (nextState, replace) => {
   //    const currentUser = store.getState().session.currentUser;
   //    if (currentUser) {

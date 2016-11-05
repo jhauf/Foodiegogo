@@ -1,4 +1,4 @@
-import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
+import { receiveCurrentUser, receiveSessionErrors } from '../actions/session_actions';
 
 export const login = (user, success, error) => {
 	$.ajax({

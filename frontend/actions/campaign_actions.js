@@ -6,7 +6,8 @@ export const CREATE_CAMPAIGN = "CREATE_CAMPAIGN";
 export const UPDATE_CAMPAIGN = "UPDATE_CAMPAIGN";
 export const DELETE_CAMPAIGN = "DELETE_CAMPAIGN";
 export const REMOVE_CAMPAIGN = "REMOVE_CAMPAIGN";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_CAMPAIGN_ERRORS = "RECEIVE_CAMPAIGN_ERRORS";
+export const CLEAR_CAMPAIGN_ERRORS = "CLEAR_CAMPAIGN_ERRORS";
 
 
 export const fetchCampaigns = () => ({
@@ -48,7 +49,11 @@ export const removeCampaign = campaign => ({
   campaign
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+export const clearCampaignErrors = () => ({
+  type: CLEAR_CAMPAIGN_ERRORS
+});
+
+export const receiveCampaignErrors = errors => ({
+  type: RECEIVE_CAMPAIGN_ERRORS,
   errors
 });

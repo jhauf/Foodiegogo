@@ -15,9 +15,6 @@ class SessionForm extends React.Component {
 		this.renderErrors = this.renderErrors.bind(this);
 	}
 
-	componentDidUpdate() {
-		this.redirectIfLoggedIn();
-	}
 
 	update(field) {
 		return e => this.setState({
@@ -104,3 +101,8 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
+
+
+// componentDidUpdate() {
+// 	this.redirectIfLoggedIn();
+// }

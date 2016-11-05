@@ -5,10 +5,11 @@ class CampaignShow extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-  // this.props.fetchCampaigns();
   }
-  componentDidMount() {
+
+  componentWillMount() {
     if (this.props.params.campaignId) {
+      this.props.fetchCampaigns();
       this.props.fetchCampaign(parseInt(this.props.params.campaignId));
     }
   }
@@ -23,22 +24,21 @@ class CampaignShow extends React.Component {
   }
 
   render () {
-    const campaign = this.props.campaign;
-    return (
-      <div>
-        <h3>{campaign.name}</h3>
-        <h4>{campaign.goal_amt}</h4>
-        <h4>{campaign.current_amt}</h4>
-        <h4>{campaign.end_date}</h4>
-        <p>{campaign.description}</p>
-        <img src={campaign.picture_url}/>
+    return this.props.campaign ?
+    (<div>
+        <h3>{this.props.campaign.name}</h3>
+        <h4>{this.props.campaign.goal_amt}</h4>
+        <h4>{this.props.campaign.current_amt}</h4>
+        <h4>{this.props.campaign.end_date}</h4>
+        <p>{this.props.campaign.description}</p>
+        <img src={this.props.campaign.picture_url}/>
         <Link to="/campaigns">Back to Index</Link>
-        {this.props.currentUser.id === campaign.campaigner_id ?
-        <div><button onClick={this.handleDelete.bind(this, campaign.id)}>Delete</button>
-        <Link to={"/campaigns/" + campaign.id + "/edit"}>Edit</Link> </div>:
+        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+        <div><button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete</button>
+        <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit</Link> </div>:
         <div></div>}
       </div>
-    );
+    ) : (<div></div>);
   }
 }
 // <Link to=`/campaigns/{campaign.id}/edit`>Edit</Link>

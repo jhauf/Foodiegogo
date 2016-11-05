@@ -22,10 +22,12 @@ class CampaignForm extends React.Component {
   }
 
   componentDidMount() {
+    this.props.clearCampaignErrors();
     if (this.props.params.campaignId) {
       this.props.fetchCampaign(this.props.params.campaignId);
     }
   }
+
 
   upload (e) {
     e.preventDefault();
@@ -63,22 +65,17 @@ class CampaignForm extends React.Component {
     this.props.route.path === 'campaigns/new' ? this.props.createCampaign(this.state) : this.props.updateCampaign(this.state);
   }
 
+
+
   renderErrors() {
     if (this.props.errors) {
-      return(
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-              {error}
-            </li>
-          ))}
-        </ul>
+      return (
+        this.props.errors.map((error) => {
+          return (<li className="errors" key={error}>{error}</li>);
+        })
       );
-    } else {
-      return <div></div>;
     }
-	}
-
+  }
 
   render () {
     const text = this.props.route.path === 'campaigns/new' ? "Create A Campaign" : "Update A Campaign";
@@ -133,7 +130,7 @@ class CampaignForm extends React.Component {
           <h4 className="errors"> {this.renderErrors()} </h4>
           <input className="formbutton" type="submit" value="Submit"/>
           <li>
-          <Link to="/" className="back">go back</Link>
+          <Link to="/campaigns" className="back">back to all campaigns</Link>
           </li>
         </ul>
         </form>
