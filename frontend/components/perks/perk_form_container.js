@@ -8,6 +8,12 @@ const mapDispatchToProps = dispatch => ({
   updatePerk: perk => dispatch(updatePerk(perk))
 });
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+  perk: state.perks[ownProps.params.perkId],
+  };
+};
+
 export default connect(
   null,
   mapDispatchToProps

@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { Link } from 'react-router';
 
+// this.props.perk is undefined, fix later
 class PerkForm extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +30,7 @@ class PerkForm extends React.Component {
 
   componentWillReceiveProps (newProps) {
     return this.setState(newProps.perk || {
+      id: parseInt(this.props.params.perkId),
       name: "",
       donation_amt: 0,
       picture_url: "",
