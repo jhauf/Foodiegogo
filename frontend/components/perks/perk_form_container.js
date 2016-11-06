@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import PerkForm from './perk_form.jsx';
-import { createPerk, fetchPerks } from '../../actions/perk_actions';
+import { createPerk, fetchPerks, updatePerk } from '../../actions/perk_actions';
 
 const mapDispatchToProps = dispatch => ({
   createPerk: perk => dispatch(createPerk(perk)),
-  fetchPerks: () => dispatch(fetchPerks())
+  fetchPerks: () => dispatch(fetchPerks()),
+  updatePerk: perk => dispatch(updatePerk(perk))
 });
 
 export default connect(

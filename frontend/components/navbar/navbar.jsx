@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import Modal from 'react-modal';
 import ModalStyle from './../session/modal_style';
 import SessionFormContainer from './../session/session_form_container';
@@ -46,6 +46,7 @@ class Navbar extends React.Component {
 
   onLogOut(logout) {
     logout();
+    hashHistory.push("/");
     this.setState({modalOpen: false});
   }
 

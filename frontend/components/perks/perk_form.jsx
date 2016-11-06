@@ -7,6 +7,7 @@ class PerkForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = this.props.perk || {
+      id: parseInt(this.props.params.perkId),
       name: "",
       donation_amt: 0,
       picture_url: "",
@@ -26,6 +27,15 @@ class PerkForm extends React.Component {
     });
   }
 
+  componentWillReceiveProps (newProps) {
+    return this.setState(newProps.perk || {
+      name: "",
+      donation_amt: 0,
+      picture_url: "",
+      campaign_id: parseInt(this.props.params.campaignId)
+    });
+  }
+
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
@@ -33,8 +43,9 @@ class PerkForm extends React.Component {
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-    this.props.createPerk(this.state);
+    this.props.route.path === 'campaigns/:campaignId/perk/new' ? this.props.createPerk(this.state) : this.props.updatePerk(this.state);
   }
 
   render () {
@@ -87,7 +98,6 @@ export default PerkForm;
 // <h4 className="errors"> {this.renderErrors()} </h4>
 // <Link to={"/campaigns/" + this.state.campaign_id}>Back</Link>;
 
-// this.props.route.path === 'campaigns/campaignId/perk/new' ? this.props.createPerk(this.state) : this.props.updatePerk(this.state);
 
 
 // this.renderErrors = this.renderErrors.bind(this);

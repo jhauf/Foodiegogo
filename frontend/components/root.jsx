@@ -41,7 +41,7 @@ const Root = ({ store }) => {
             <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
-            <Route path="campaigns/:campaignId/perk/edit" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
+            <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
       </Route>
       </Router>
     </Provider>

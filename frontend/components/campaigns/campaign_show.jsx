@@ -45,6 +45,9 @@ class CampaignShow extends React.Component {
           {perks.map((perk, i) => (
             <li key={`perk-${i}`}>
               {perk.name}
+              {perk.donation_amt}
+              <li className="indexpicture"><img src={perk.picture_url}/></li>
+              <Link to={"/campaigns/" + perk.campaign_id + "/perk/" + perk.id + "/edit"}>Edit Perk</Link>
             </li>
           ))}
         </ul>
