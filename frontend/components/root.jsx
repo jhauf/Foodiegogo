@@ -2,9 +2,11 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session/session_form_container';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import PerkFormContainer from '/Users/janehauf/Desktop/Foodiegogo/frontend/components/perks/perk_form_container.js';
 import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
+
 import App from './app';
 import { fetchCampaigns } from '../actions/campaign_actions';
 
@@ -37,13 +39,15 @@ const Root = ({ store }) => {
               <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
             <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
+            <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
+            <Route path="campaigns/:campaignId/perk/edit" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
       </Route>
       </Router>
     </Provider>
   );
 };
 
-// <Route path="campaigns/:campaignId/add_perks" component={PerksFormContainer} onEnter={_ensureLoggedIn}/>
+
 export default Root;
 
 // <Route path="/home" component={Home} onEnter={_ensureLoggedIn} />

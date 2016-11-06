@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {signup, login, logout} from './actions/session_actions';
 import Modal from 'react-modal';
+import { createPerk } from './actions/perk_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  Modal.setAppElement(document.body)
+  Modal.setAppElement(document.body);
   const root = document.getElementById('root');
   window.store = store;
   ReactDOM.render(<Root store={store}/>, root);
+  window.createPerk = createPerk;
 });

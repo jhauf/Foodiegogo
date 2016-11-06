@@ -1,11 +1,12 @@
-export const CREATE_PERKS = "CREATE_PERKS";
+export const CREATE_PERK = "CREATE_PERK";
+export const RECEIVE_PERK = "RECEIVE_PERK";
 
-export const createPerks = perks => ({
-  type: CREATE_PERKS,
-  perks
+export const createPerk = perk => ({
+  type: CREATE_PERK,
+  perk
 });
 
-export const receivePerks = perks => ({
-  type: RECEIVE_PERKS,
-  perks
+export const receivePerk = perk => ({
+  type: RECEIVE_PERK,
+  perk
 })

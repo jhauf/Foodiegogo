@@ -17,8 +17,7 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
-      campaigner_id: parseInt(this.props.currentUser.id),
-      perks: {"test"}
+      campaigner_id: parseInt(this.props.currentUser.id)
     };
   }
 
@@ -51,8 +50,7 @@ class CampaignForm extends React.Component {
       description: "",
       end_date: "",
       picture_url: "",
-      campaigner_id: parseInt(this.props.currentUser.id),
-      perks: {"test"}
+      campaigner_id: parseInt(this.props.currentUser.id)
     });
   }
 

@@ -36,7 +36,7 @@ class CampaignShow extends React.Component {
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
         <div><button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete</button>
         <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit</Link>
-        <Link to={"/campaigns/add_perks"}>Add Perks</Link></div>:
+        <Link to={"/campaigns/" + this.props.campaign.id + "/perk/new"}>Add A Perk</Link></div>:
         <div></div>}
       </div>
     ) : (<div></div>);

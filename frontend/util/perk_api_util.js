@@ -1,10 +1,10 @@
 
-export const createPerks = (perks, success, error) => {
-  // $.ajax({
-  //   url: `api/campaigns/${campaign.id}`,
-  //   type: "POST",
-  //   data: {perks},
-  //   success,
-  //   error
-  // })
+export const createPerk = (perk, success, error) => {
+  $.ajax({
+    url: `api/perks`,
+    type: "POST",
+    data: { perk },
+    success,
+    error
+  });
 };

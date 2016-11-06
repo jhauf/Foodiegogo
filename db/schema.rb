@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103054140) do
+ActiveRecord::Schema.define(version: 20161105223159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20161103054140) do
     t.string  "picture_url"
     t.integer "campaigner_id"
   end
+
+  create_table "perks", force: :cascade do |t|
+    t.string  "name",            null: false
+    t.integer "donation_amt",    null: false
+    t.string  "picture_url"
+    t.integer "campaign_id"
+    t.integer "contribution_id"
+  end
+
+  add_index "perks", ["campaign_id"], name: "index_perks_on_campaign_id", using: :btree
+  add_index "perks", ["contribution_id"], name: "index_perks_on_contribution_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
