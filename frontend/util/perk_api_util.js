@@ -8,3 +8,11 @@ export const createPerk = (perk, success, error) => {
     error
   });
 };
+
+export const fetchPerks = (success) => {
+  $.ajax({
+    url: `api/perks`,
+    type: "GET",
+    success
+  });
+};

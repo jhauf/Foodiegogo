@@ -1,5 +1,7 @@
 class Api::PerksController < ApplicationController
-
+  def index
+    @perks = Perk.all
+  end
   def show
     @perk = Perk.find(params[:id])
   end

@@ -33,13 +33,11 @@ class PerkForm extends React.Component {
   }
 
   handleSubmit(e) {
-
     e.preventDefault();
     this.props.createPerk(this.state);
   }
 
   render () {
-    debugger
     const text = this.props.route.path === 'campaigns/:campaignId/perk/new' ? "Create A Perk" : "Update A Perk";
     return (
       <div>

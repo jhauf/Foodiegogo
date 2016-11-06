@@ -9,7 +9,7 @@ import CampaignShowContainer from './campaigns/campaign_show_container';
 
 import App from './app';
 import { fetchCampaigns } from '../actions/campaign_actions';
-
+import { fetchPerks } from '../actions/perk_actions';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -28,6 +28,7 @@ const Root = ({ store }) => {
 
    const fetchOnEnter = () => {
      fetchCampaigns();
+     fetchPerks();
    };
 
 
