@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session/session_form_container';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import PerkFormContainer from '/Users/janehauf/Desktop/Foodiegogo/frontend/components/perks/perk_form_container.js';
+import PerkFormContainer from './perks/perk_form_container.js';
 import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
