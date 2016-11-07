@@ -67,7 +67,9 @@ class CampaignShow extends React.Component {
         <h4>{this.props.campaign.current_amt}</h4>
         <h4>{this.props.campaign.end_date}</h4>
         <p>{this.props.campaign.description}</p>
-        <img src={this.props.campaign.picture_url}/>
+          <video controls src={this.props.campaign.video_url}>
+            Your user agent does not support the HTML5 Video element.
+          </video>
         <h4> {this.renderPerks()} </h4>
         <Link to="/campaigns">Back to Index</Link>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?

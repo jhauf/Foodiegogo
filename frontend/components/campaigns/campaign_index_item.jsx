@@ -12,10 +12,11 @@ const editLink = id => {
 const CampaignIndexItem = ({ campaign, router, deleteCampaign }) => {
   return (
   <li className="campaignitem">
-    <h1>{campaign.name}</h1>
     <Link to={`/campaigns/${campaign.id}`}>
       <li className="indexpicture"><img src={campaign.picture_url}/></li>
     </Link>
+    <h1>{campaign.name}</h1>
+    <h2>{campaign.description}</h2>
   </li>);
 };
 
