@@ -12,14 +12,16 @@
 
 .logout {
   font-weight: 400;
+  font-size: 20px;
   background-color: $sky-blue ;
+  margin: 0 18px;
 }
 
 
 .name {
   font-size: 22px;
   font-weight: 500;
-  padding: 0 15px;
+  padding: 0 18px;
 }
 
 .links {
@@ -52,5 +54,5 @@
   display: inline;
   padding: 0px 20px;
   color: white;
-  padding: 5px 5px 5px 5px;
+  padding: 10px 12px 10px 12px;
 }

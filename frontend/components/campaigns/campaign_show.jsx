@@ -7,6 +7,9 @@ class CampaignShow extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.renderPerks = this.renderPerks.bind(this);
     this.matchingPerks = this.matchingPerks.bind(this);
+    this.days = this.days.bind(this);
+    this.amtWithCommas = this.amtWithCommas.bind(this);
+
   }
 
   componentWillMount() {
@@ -57,21 +60,46 @@ class CampaignShow extends React.Component {
     }
   }
 
+    amtWithCommas (amount) {
+      return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    //
+    // currentAmtWithCommas () {
+    //   return this.props.campaign.current_amt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // }
 
+
+    days() {
+    let oneDay = 24*60*60*1000;
+    let firstDate = new Date(Date.now());
+    let secondDate = new Date(this.props.campaign.end_date);
+    return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/oneDay));
+  }
+
+  pictureOrVideo () {
+    return (this.props.campaign.video_url === "" ? <img src={this.props.campaign.picture_url}/> :
+    <video controls className="video" src={this.props.campaign.video_url}>
+      Your user agent does not support the HTML5 Video element.
+    </video>);
+  }
 
   render () {
     return this.props.campaign ?
     (<div>
-        <h3>{this.props.campaign.name}</h3>
-        <h4>{this.props.campaign.goal_amt}</h4>
-        <h4>{this.props.campaign.current_amt}</h4>
-        <h4>{this.props.campaign.end_date}</h4>
-        <p>{this.props.campaign.description}</p>
-          <video controls src={this.props.campaign.video_url}>
-            Your user agent does not support the HTML5 Video element.
-          </video>
+        <h3 className="showheader">{this.props.campaign.name}</h3>
+        <div className="show">
+          <div className="vid">
+          <div>{this.pictureOrVideo()}</div>
+            <p className="description">{this.props.campaign.description}</p>
+            </div>
+          <div className="stats">
+          <h4 className="big">${this.amtWithCommas(this.props.campaign.current_amt)}</h4>
+          <h5 className="small">pledged of ${this.amtWithCommas(this.props.campaign.goal_amt)} goal</h5>
+            <h4 className="big">{this.days(this.props.campaign.end_date)}</h4>
+            <h5 className="small">days to go</h5>
+        </div>
+        </div>
         <h4> {this.renderPerks()} </h4>
-        <Link to="/campaigns">Back to Index</Link>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
         <div><button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete</button>
         <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit</Link>

@@ -41,6 +41,6 @@ class Api::CampaignsController < ApplicationController
   private
 
   def campaign_params
-    params.require(:campaign).permit(:name, :goal_amt, :current_amt, :description, :end_date, :picture_url, :campaigner_id)
+    params.require(:campaign).permit(:name, :goal_amt, :current_amt, :description, :end_date, :picture_url, :video_url, :campaigner_id)
   end
 end

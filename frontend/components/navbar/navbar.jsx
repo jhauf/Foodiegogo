@@ -71,8 +71,8 @@ class Navbar extends React.Component {
 
   loggedIn(currentUser, logout) {
     return (<div className="links" >
-    <Link to="campaigns/new">Create a Campaign</Link>
     <Link to="/campaigns" className="explore">Explore</Link>
+    <Link to="campaigns/new">Create a Campaign</Link>
       <div className="name">{currentUser.fname}</div>
       <button className="logout" onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
     </div>);

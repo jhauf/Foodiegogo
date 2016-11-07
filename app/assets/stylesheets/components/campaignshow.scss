@@ -1,0 +1,53 @@
+.showheader {
+  font-size: 34px;
+  font-family: avenir;
+  font-weight: 400;
+  padding: 20px 0 0px;
+  text-align: center;
+}
+
+.showpage {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.video {
+  width: 620px;
+  height: 380px;
+}
+
+.description {
+  width: 620px;
+  font-family: avenir;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.show {
+  display: flex;
+  padding: 25px 150px 200px;
+}
+
+.stats {
+  height: 100px;
+  justify-content: center;
+  padding: 0 0 30px;
+}
+
+.big {
+  font-family: avenir;
+  padding: 70px 0 0px 30px;
+  margin: 0px;
+  font-size: 45px;
+  border: 0px;
+  font-weight: 800;
+}
+
+.small {
+  padding: 0 0 0 30px;
+  margin: 0px;
+  font-size: 16px;
+  color: gray;
+  border: 0px;
+}
