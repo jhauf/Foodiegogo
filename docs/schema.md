@@ -34,6 +34,7 @@ date            | date      | not null
 donation_amt    | integer   | not null
 campaign_id     | integer   | not null, foreign key (references campaigns), indexed
 contributor_id  | integer   | not null, foreign key (references users), indexed
+perk_id         | integer   | not null, foreign key (references perks), indexed
 
 
 ## perks
@@ -44,7 +45,6 @@ name            | integer   | not null
 donation_amt    | string    | not null
 picture_url     | string    |
 campaign_id     | integer   | not null, foreign key (references campaigns), indexed
-contribution_id | integer   | not null, foreign key (references contributions), indexed
 
 
 ## Bonus

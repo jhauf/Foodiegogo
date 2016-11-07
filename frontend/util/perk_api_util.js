@@ -17,11 +17,12 @@ export const fetchPerks = (success) => {
   });
 };
 
-export const updatePerk = (perk, success) => {
+export const updatePerk = (perk, success, error) => {
   $.ajax({
     url: `api/perks/${perk.id}`,
     type: "PATCH",
     data: { perk },
-    success
+    success,
+    error
   });
 };

@@ -10,12 +10,13 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state, ownProps) => {
   return {
-  perk: state.perks[ownProps.params.perkId],
-  };
+  perk: state.perks[parseInt(ownProps.params.perkId)],
+  errors: state.errors
+};
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(PerkForm);
 

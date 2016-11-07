@@ -1,0 +1,26 @@
+.perk {
+  padding: 20px 25px;
+  margin: 35px;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #E0E4FB;
+  border-radius: 7px;
+  background-color: #F8F9FD;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+
+.perk li {
+  padding: 10px;
+}
+
+.first {
+  color: #586BE9;
+  font-size: 18px;
+}
+
+.second {
+  font-weight: 600;
+}

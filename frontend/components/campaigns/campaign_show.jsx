@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import PerkIndexItem from '../perks/perk_index_item';
 
 class CampaignShow extends React.Component {
   constructor(props) {
@@ -46,12 +47,11 @@ class CampaignShow extends React.Component {
       return(
         <ul>
           {perks.map((perk, i) => (
-            <li key={`perk-${i}`}>
-              {perk.name}
-              {perk.donation_amt}
-              <li className="indexpicture"><img src={perk.picture_url}/></li>
-              <Link to={"/campaigns/" + perk.campaign_id + "/perk/" + perk.id + "/edit"}>Edit Perk</Link>
-            </li>
+            <PerkIndexItem
+              key={`perk-${i}`}
+              currentUser={this.props.currentUser}
+              campaign={this.props.campaign}
+              perk={perk} />
           ))}
         </ul>
       );
@@ -60,13 +60,11 @@ class CampaignShow extends React.Component {
     }
   }
 
+
+
     amtWithCommas (amount) {
       return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    //
-    // currentAmtWithCommas () {
-    //   return this.props.campaign.current_amt.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    // }
 
 
     days() {
@@ -94,12 +92,12 @@ class CampaignShow extends React.Component {
             </div>
           <div className="stats">
           <h4 className="big">${this.amtWithCommas(this.props.campaign.current_amt)}</h4>
-          <h5 className="small">pledged of ${this.amtWithCommas(this.props.campaign.goal_amt)} goal</h5>
+          <h5 className="small1">pledged of ${this.amtWithCommas(this.props.campaign.goal_amt)} goal</h5>
             <h4 className="big">{this.days(this.props.campaign.end_date)}</h4>
-            <h5 className="small">days to go</h5>
+            <h5 className="small2">days to go</h5>
+            <h4> {this.renderPerks()} </h4>
         </div>
         </div>
-        <h4> {this.renderPerks()} </h4>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
         <div><button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete</button>
         <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit</Link>

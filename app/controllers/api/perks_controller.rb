@@ -38,6 +38,6 @@ class Api::PerksController < ApplicationController
   private
 
   def perk_params
-    params.require(:perk).permit(:name, :donation_amt, :picture_url, :campaign_id, :contribution_id)
+    params.require(:perk).permit(:name, :donation_amt, :description, :campaign_id)
   end
 end
