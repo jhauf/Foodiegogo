@@ -10,6 +10,7 @@ class CampaignIndex extends React.Component {
   render () {
     return (
       <div>
+        <li className="header">What's Popular</li>
         <ul className="campaignIndex">
           {
             this.props.campaigns.map(campaign => (

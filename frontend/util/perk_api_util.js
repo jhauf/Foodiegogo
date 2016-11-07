@@ -18,7 +18,6 @@ export const fetchPerks = (success) => {
 };
 
 export const updatePerk = (perk, success) => {
-  debugger
   $.ajax({
     url: `api/perks/${perk.id}`,
     type: "PATCH",
