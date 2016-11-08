@@ -6,7 +6,7 @@
   display: flex;
   font-size: 20px;
   flex-wrap: wrap;
-  padding: 20px 100px 0 82px;
+  padding: 20px 100px 0 100px;
   justify-content: flex-start;
 }
 
@@ -23,7 +23,7 @@
 .campaignitem img {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  height: 180px;
+  height: auto;
 }
 
 .header {
