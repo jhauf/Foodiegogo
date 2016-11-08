@@ -26,19 +26,19 @@ const Root = ({ store }) => {
   //    }
   //  };
 
-   const fetchOnEnter = () => {
-     fetchCampaigns();
-     fetchPerks();
-   };
+  //  const fetchOnEnter = () => {
+  //    fetchCampaigns();
+  //    fetchPerks();
+  //  };
 
 
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path="/" component={App} onEnter={fetchOnEnter}>
-            <Route path="campaigns" component={CampaignIndexContainer} onEnter={_ensureLoggedIn}/>
+        <Route path="/" component={App}>
+          <Route path="campaigns" component={CampaignIndexContainer}/>
               <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
-            <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
+            <Route path="campaigns/:campaignId" component={CampaignShowContainer}/>
             <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>

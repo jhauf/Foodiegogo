@@ -7,8 +7,8 @@ const PerkIndexItem = ({perk, router, campaign, currentUser}) => {
       <li className="first"> Pledge ${perk.donation_amt} or more </li>
       <li className="second"> {perk.name}</li>
       <li> {perk.description}</li>
-        {currentUser.id === campaign.campaigner_id ?
-          <li><Link to={"/campaigns/" + perk.campaign_id + "/perk/" + perk.id + "/edit"}>Edit Perk</Link></li> :
+      {currentUser.id === campaign.campaigner_id ?
+        <li className="edit"><Link to={"/campaigns/" + perk.campaign_id + "/perk/" + perk.id + "/edit"}>Edit</Link></li> :
           <div></div>}
     </li>
   );

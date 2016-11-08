@@ -75,16 +75,30 @@ class CampaignShow extends React.Component {
   }
 
   pictureOrVideo () {
-    return (this.props.campaign.video_url === "" ? <img src={this.props.campaign.picture_url}/> :
-    <video controls className="video" src={this.props.campaign.video_url}>
-      Your user agent does not support the HTML5 Video element.
-    </video>);
+    if (this.props.campaign.video_url === "") {
+      if (this.props.campaign.picture_url === "") {
+        return (<img src="http://res.cloudinary.com/dps0ohgkp/image/upload/c_scale,h_380,w_620/v1478560997/placeholder3_q1ax2h.png"/>);
+      } else {
+        return (<img src={this.props.campaign.picture_url}/>);
+      }
+    } else {
+      return (<video controls className="video" src={this.props.campaign.video_url}>
+        Your user agent does not support the HTML5 Video element.
+      </video>);
+    }
   }
 
   render () {
     return this.props.campaign ?
     (<div>
         <h3 className="showheader">{this.props.campaign.name}</h3>
+        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+          <div className="authorLinks">
+          <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit Campaign</Link>
+          <Link to={"/campaigns/" + this.props.campaign.id + "/perk/new"}>Add A Perk</Link>
+          <button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete Campaign</button>
+          </div>:
+            <div></div>}
         <div className="show">
           <div className="vid">
           <div>{this.pictureOrVideo()}</div>
@@ -98,11 +112,6 @@ class CampaignShow extends React.Component {
             <h4> {this.renderPerks()} </h4>
         </div>
         </div>
-        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
-        <div><button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete</button>
-        <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit</Link>
-        <Link to={"/campaigns/" + this.props.campaign.id + "/perk/new"}>Add A Perk</Link></div>:
-        <div></div>}
       </div>
     ) : (<div></div>);
   }

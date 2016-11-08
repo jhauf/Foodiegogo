@@ -2,7 +2,8 @@
   font-size: 34px;
   font-family: avenir;
   font-weight: 400;
-  padding: 20px 0 0px;
+  padding: 30px 0 0px;
+  margin: 80px 0 55px 0 ;
   text-align: center;
 }
 
@@ -24,9 +25,23 @@
   font-size: 20px;
 }
 
+
 .show {
   display: flex;
-  padding: 25px 150px 200px;
+  padding: 0px 150px 200px;
+}
+
+.authorLinks {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 100px 10px;
+}
+
+.authorLinks a {
+  margin: 0px 5px;
+}
+.authorLinks button {
+  margin: 0px 5px;
 }
 
 .stats {

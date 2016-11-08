@@ -22,9 +22,6 @@ class Navbar extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.props.fetchCampaigns();
-  }
 
   handleClickLogin() {
     this.setState({
@@ -87,3 +84,18 @@ class Navbar extends React.Component {
 
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+// componentDidMount() {
+//   this.props.fetchCampaigns();
+// }
