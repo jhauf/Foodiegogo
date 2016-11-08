@@ -5,14 +5,20 @@ html {
 
 .splashpage {
 	background: url('http://res.cloudinary.com/dps0ohgkp/image/upload/c_scale,h_700,q_100,w_1250/v1478212509/newsplash_um8u7a.jpg') no-repeat white;
-	background-size: cover;
+	background-size: 100vw;
 	font-weight: 400;
 	background-position: 50% 10%;
 	min-height: 800px;
 	display: flex;
 	padding: 60px;
-	align-items: center;
+	align-items: flex-start;;
 	justify-content: center;
+	padding: 0px;
+}
+
+.splashtext {
+	padding: 80px;
+	color: #696974;
 }
 
 button:hover {

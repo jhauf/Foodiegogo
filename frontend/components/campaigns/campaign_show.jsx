@@ -42,7 +42,6 @@ class CampaignShow extends React.Component {
 
   // const perks = this.matchingPerks();
   renderPerks() {
-    debugger
     if (this.props.perks) {
       return(
         <ul>

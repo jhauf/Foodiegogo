@@ -11,6 +11,7 @@ const Splash = (props) => {
 
   if (props.location.pathname === "/") {
   return (<div className="splashpage">
+  <h1 className="splashtext">A Crowdfunding Platform for people who love food</h1>
   </div>);
   } else {
     return (<div></div>);

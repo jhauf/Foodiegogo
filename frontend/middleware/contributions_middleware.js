@@ -27,7 +27,6 @@ const ContributionsMiddleware = ({getState, dispatch}) => next => action => {
       createContribution(action.contribution, success);
       return next(action);
     case FETCH_CONTRIBUTIONS:
-    debugger
       fetchContributions(action.id, successAll);
       return next(action);
     default:

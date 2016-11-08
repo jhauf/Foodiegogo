@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resources :contributions, only: [:index]
     end
     resources :perks, only: [:show, :create, :update, :destroy]
-    resources :contributions, only: [:create, :show, :index]
+    resources :contributions, only: [:create, :show]
   end
 
   root 'static_pages#root'
