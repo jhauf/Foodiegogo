@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107174442) do
+ActiveRecord::Schema.define(version: 20161108054549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_contributions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "campaigns", force: :cascade do |t|
     t.string  "name",          null: false
@@ -26,6 +31,18 @@ ActiveRecord::Schema.define(version: 20161107174442) do
     t.integer "campaigner_id"
     t.string  "video_url"
   end
+
+  create_table "contributions", force: :cascade do |t|
+    t.date    "date",           null: false
+    t.integer "donation_amt",   null: false
+    t.integer "campaign_id",    null: false
+    t.integer "contributor_id", null: false
+    t.integer "perk_id"
+  end
+
+  add_index "contributions", ["campaign_id"], name: "index_contributions_on_campaign_id", using: :btree
+  add_index "contributions", ["contributor_id"], name: "index_contributions_on_contributor_id", using: :btree
+  add_index "contributions", ["perk_id"], name: "index_contributions_on_perk_id", using: :btree
 
   create_table "perks", force: :cascade do |t|
     t.string  "name",            null: false

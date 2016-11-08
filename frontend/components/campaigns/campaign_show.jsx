@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import PerkIndexItem from '../perks/perk_index_item';
+// this.props.fetchCampaign(parseInt(this.props.params.campaignId));
+//
 
 class CampaignShow extends React.Component {
   constructor(props) {
@@ -13,14 +15,12 @@ class CampaignShow extends React.Component {
 
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.params.campaignId) {
-      this.props.fetchPerks();
       this.props.fetchCampaigns();
-      this.props.fetchCampaign(parseInt(this.props.params.campaignId));
+      this.props.fetchPerks();
     }
   }
-
   componentWillReceiveProps(nextProps) {
     this.props.fetchCampaign(parseInt(nextProps.params.campaignId));
   }

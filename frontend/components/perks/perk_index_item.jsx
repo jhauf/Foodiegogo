@@ -1,18 +1,53 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import Modal from 'react-modal';
+import ModalStyle from './../session/modal_style';
+import ContributionFormContainer from '/Users/janehauf/Desktop/Foodiegogo/frontend/components/contributions/contribution_form_container.js';
 
-const PerkIndexItem = ({perk, router, campaign, currentUser}) => {
-  return(
-    <li className="perk">
-      <li className="first"> Pledge ${perk.donation_amt} or more </li>
-      <li className="second"> {perk.name}</li>
-      <li> {perk.description}</li>
-      {currentUser.id === campaign.campaigner_id ?
-        <li className="edit"><Link to={"/campaigns/" + perk.campaign_id + "/perk/" + perk.id + "/edit"}>Edit</Link></li> :
-          <div></div>}
-    </li>
-  );
-};
+
+
+class PerkIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onModalClose = this.onModalClose.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.state = {
+      modalOpen: false
+    };
+  }
+
+  onModalClose() {
+    this.setState({modalOpen: false});
+  }
+
+  openModal() {
+    this.setState({modalOpen: true});
+  }
+
+  render() {
+    return(
+      <li className="perk" onClick={this.openModal}>
+        <li className="first"> Pledge ${this.props.perk.donation_amt} or more </li>
+        <li className="second"> {this.props.perk.name}</li>
+        <li> {this.props.perk.description}</li>
+        <Modal
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.onModalClose.bind(this)}
+          style={ModalStyle}>
+          <ContributionFormContainer campaign={this.props.campaign}/>
+        </Modal>
+        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+        <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
+        </li> :
+        <div></div>}
+      </li>);
+  }
+}
+
+
+// this.handleClickLogin = this.handleClickLogin.bind(this);
+// this.handleClickSignup = this.handleClickSignup.bind(this);
+// this.onModalClose = this.onModalClose.bind(this);
 
 
 
