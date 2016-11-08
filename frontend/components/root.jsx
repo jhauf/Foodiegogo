@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session/session_form_container';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory, IndexRedirect} from 'react-router';
 import PerkFormContainer from './perks/perk_form_container.js';
 import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
@@ -19,12 +19,16 @@ const Root = ({ store }) => {
      }
    };
    //
-  //  const _redirectIfLoggedIn = (nextState, replace) => {
-  //    const currentUser = store.getState().session.currentUser;
-  //    if (currentUser) {
-  //      replace('/home');
-  //    }
+  //  const redirect = (nextstate, replace) => {
+  //      replace('/campaigns');
   //  };
+
+   const redirect = (nextState, replace) => {
+     const currentUser = store.getState().session.currentUser;
+     if (currentUser) {
+       replace('/campaigns');
+     }
+   };
 
   //  const fetchOnEnter = () => {
   //    fetchCampaigns();
@@ -37,8 +41,8 @@ const Root = ({ store }) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <Route path="campaigns" component={CampaignIndexContainer}/>
-              <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
-            <Route path="campaigns/:campaignId" component={CampaignShowContainer}/>
+            <Route path="campaigns/new" component={CampaignFormContainer} onEnter={_ensureLoggedIn} />
+            <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>
             <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={_ensureLoggedIn}/>

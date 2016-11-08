@@ -1,6 +1,7 @@
 import React from 'react';
 import CampaignIndexItem from './campaign_index_item';
 
+
 class CampaignIndex extends React.Component {
 
   componentDidMount() {
@@ -8,7 +9,8 @@ class CampaignIndex extends React.Component {
   }
 
   render () {
-    return (
+    return this.props.currentUser ?
+    (
       <div>
         <li className="header">What's Popular</li>
         <ul className="campaignIndex">
@@ -18,13 +20,12 @@ class CampaignIndex extends React.Component {
                 key={campaign.id}
                 deleteCampaign={this.props.deleteCampaign}
                 campaign={campaign} />
-            ))
-          }
+            ))}
         </ul>
-      </div>
-
-    );
+      </div>) :
+      <div></div>;
+      }
   }
-}
+
 
 export default CampaignIndex;

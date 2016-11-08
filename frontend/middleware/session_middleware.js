@@ -5,9 +5,14 @@ import { receiveCurrentUser,
          SIGNUP } from '../actions/session_actions';
 
 import { login, signup, logout } from '../util/session_api_util';
+import { hashHistory } from 'react-router';
+
 
 export default ({getState, dispatch}) => next => action => {
-  const successCallback = user => dispatch(receiveCurrentUser(user));
+  const successCallback = user => {
+    dispatch(receiveCurrentUser(user));
+    hashHistory.push(`/campaigns/`);
+  };
   const errorCallback = xhr => dispatch(receiveSessionErrors(xhr.responseJSON));
 
   switch(action.type){

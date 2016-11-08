@@ -3,7 +3,8 @@ import CampaignIndex from './campaign_index';
 import { fetchCampaigns, deleteCampaign, createCampaign } from '../../actions/campaign_actions';
 
 const mapStateToProps = state => ({
-  campaigns: Object.keys(state.campaigns).map(id => state.campaigns[id])
+  campaigns: Object.keys(state.campaigns).map(id => state.campaigns[id]),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

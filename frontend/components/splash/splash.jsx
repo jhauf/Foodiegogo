@@ -9,7 +9,7 @@ const Splash = (props) => {
     };
   };
 
-  if (props.location.pathname === "/") {
+  if (props.location.pathname === "/" || props.location.pathname === "/campaigns/") {
   return (<div className="splashpage">
   </div>);
   } else {

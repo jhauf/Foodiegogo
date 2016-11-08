@@ -8,7 +8,7 @@ import Splash from './splash/splash';
 const App = ({ children }) => (
   <div>
     <header className="navbar">
-      <Link to="/" className="header-link">foodiegogo</Link>
+      <Link to="/campaigns/" className="header-link">foodiegogo</Link>
       <NavbarContainer />
     </header>
     <Splash/>
