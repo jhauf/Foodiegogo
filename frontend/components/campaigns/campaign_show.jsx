@@ -109,13 +109,13 @@ class CampaignShow extends React.Component {
             <h4 className="big">{this.days(this.props.campaign.end_date)}</h4>
             <h5 className="small2">days to go</h5>
             <h4> {this.renderPerks()} </h4>
+            <h5><ContributionIndex/></h5>
         </div>
         </div>
       </div>
     ) : (<div></div>);
   }
 }
-// <h5><ContributionIndex/></h5>
 // <Link to=`/campaigns/{campaign.id}/edit`>Edit</Link>
 
 export default CampaignShow;

@@ -7,14 +7,12 @@ import { createContribution,
 import { hashHistory } from 'react-router';
 
 
-// hashHistory.push(`/campaigns/${action.contribution.campaign_id}`);
-// hashHistory.push(`/campaigns/`);
-
-// hashHistory.push(`/campaigns/`);
-// hashHistory.push(`/campaigns/${action.contributions.campaign_id}`);
 const ContributionsMiddleware = ({getState, dispatch}) => next => action => {
   let success = contribution => {
       dispatch(receiveContribution(contribution));
+      const campaignId = action.contribution.campaign_id;
+      hashHistory.push(`/campaigns/`);
+      hashHistory.push(`/campaigns/${campaignId}`);
   };
 
   let successAll = contributions => {

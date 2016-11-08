@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-const editLink = id => {
-  return (e) => {
-    e.preventDefault();
-    const url = `/campaigns/${id}/edit`;
-    hashHistory.push(url);
-  };
-};
 
 const CampaignIndexItem = ({ campaign, router, deleteCampaign }) => {
   return (

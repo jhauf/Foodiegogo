@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { Link } from 'react-router';
 
-// this.props.perk is undefined, fix later
+
 class ContributionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +20,8 @@ class ContributionForm extends React.Component {
     e.preventDefault();
     this.props.createContribution(this.state);
   }
+
+
 
   render () {
     return (

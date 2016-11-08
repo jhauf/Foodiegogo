@@ -27,7 +27,7 @@ class PerkIndexItem extends React.Component {
   render() {
     return(
       <li className="perk" onClick={this.openModal}>
-        <li className="first"> Pledge ${this.props.perk.donation_amt} or more </li>
+        <li className="first"> Pledge ${this.props.perk.donation_amt} </li>
         <li className="second"> {this.props.perk.name}</li>
         <li> {this.props.perk.description}</li>
         <Modal
@@ -44,10 +44,6 @@ class PerkIndexItem extends React.Component {
   }
 }
 
-
-// this.handleClickLogin = this.handleClickLogin.bind(this);
-// this.handleClickSignup = this.handleClickSignup.bind(this);
-// this.onModalClose = this.onModalClose.bind(this);
 
 
 

@@ -2,11 +2,7 @@ import React from 'react';
 import ContributionIndexItem from './contribution_index_item';
 
 
-// componentDidMount() {
-//   this.props.fetchContributions(campaign);
-// }
 class ContributionIndex extends React.Component {
-
 
   render () {
       return (<div>
