@@ -1,0 +1,6 @@
+nextProps
+nextState
+need to get contributions' donation_amt amount from perks.donation_amt
+centering
+componentWillReceiveProps
+have the contribution update total
