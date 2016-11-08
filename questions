@@ -1,6 +1,12 @@
 nextProps
 nextState
-need to get contributions' donation_amt amount from perks.donation_amt
-centering
 componentWillReceiveProps
-have the contribution update total
+
+need to get contributions' donation_amt amount from perks.donation_amt
+need to know which campaign a contribution belongs to, have campaign_id, contribution component
+centering
+
+have the contribution form have 2 internal states, call updateCampaign with
+updated campaign total
+
+http://localhost:3000/api/campaigns/2/perks

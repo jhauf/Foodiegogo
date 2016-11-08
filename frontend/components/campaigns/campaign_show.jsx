@@ -1,28 +1,27 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import PerkIndexItem from '../perks/perk_index_item';
+import ContributionIndex from '../contributions/contribution_index';
 // this.props.fetchCampaign(parseInt(this.props.params.campaignId));
 //
+// this.renderPerks = this.renderPerks.bind(this);
+// this.matchingPerks = this.matchingPerks.bind(this);
 
 class CampaignShow extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-    this.renderPerks = this.renderPerks.bind(this);
-    this.matchingPerks = this.matchingPerks.bind(this);
     this.days = this.days.bind(this);
     this.amtWithCommas = this.amtWithCommas.bind(this);
-
   }
+
 
   componentDidMount() {
     if (this.props.params.campaignId) {
       this.props.fetchCampaigns();
-      this.props.fetchPerks();
+      this.props.fetchPerks(this.props.params.campaignId);
+      this.props.fetchContributions(this.props.params.campaignId);
     }
-  }
-  componentWillReceiveProps(nextProps) {
-    this.props.fetchCampaign(parseInt(nextProps.params.campaignId));
   }
 
   handleDelete(id) {
@@ -30,23 +29,24 @@ class CampaignShow extends React.Component {
     hashHistory.push("campaigns/");
   }
 
-  matchingPerks() {
-    let result = [];
-    Object.keys(this.props.perks).map((perkKey) => {
-      if (this.props.perks[perkKey].campaign_id === parseInt(this.props.params.campaignId)) {
-        result.push(this.props.perks[perkKey]);
-      }
-    });
-    return result;
-  }
+  // matchingPerks() {
+  //   let result = [];
+  //   Object.keys(this.props.perks).map((perkKey) => {
+  //     if (this.props.perks[perkKey].campaign_id === parseInt(this.props.params.campaignId)) {
+  //       result.push(this.props.perks[perkKey]);
+  //     }
+  //   });
+  //   return result;
+  // }
 
 
+  // const perks = this.matchingPerks();
   renderPerks() {
-    const perks = this.matchingPerks();
-    if (perks) {
+    debugger
+    if (this.props.perks) {
       return(
         <ul>
-          {perks.map((perk, i) => (
+          {this.props.perks.map((perk, i) => (
             <PerkIndexItem
               key={`perk-${i}`}
               currentUser={this.props.currentUser}
@@ -116,6 +116,14 @@ class CampaignShow extends React.Component {
     ) : (<div></div>);
   }
 }
+// <h5><ContributionIndex/></h5>
 // <Link to=`/campaigns/{campaign.id}/edit`>Edit</Link>
 
 export default CampaignShow;
+
+
+
+
+// componentWillReceiveProps(nextProps) {
+//   this.props.fetchCampaign(parseInt(nextProps.params.campaignId));
+// }

@@ -1,7 +1,9 @@
 class Api::PerksController < ApplicationController
   def index
-    @perks = Perk.all
+    @campaign = Campaign.find(params[:campaign_id])
+    @perks = @campaign.perks
   end
+
   def show
     @perk = Perk.find(params[:id])
   end

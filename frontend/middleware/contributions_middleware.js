@@ -1,20 +1,34 @@
 import { CREATE_CONTRIBUTION,
-          receiveContribution} from '../actions/contribution_actions';
-import { createContribution } from '../util/contribution_api_util';
+         FETCH_CONTRIBUTIONS,
+         receiveContribution,
+         receiveContributions } from '../actions/contribution_actions';
+import { createContribution,
+        fetchContributions } from '../util/contribution_api_util';
 import { hashHistory } from 'react-router';
 
 
+// hashHistory.push(`/campaigns/${action.contribution.campaign_id}`);
+// hashHistory.push(`/campaigns/`);
+
+// hashHistory.push(`/campaigns/`);
+// hashHistory.push(`/campaigns/${action.contributions.campaign_id}`);
 const ContributionsMiddleware = ({getState, dispatch}) => next => action => {
   let success = contribution => {
       dispatch(receiveContribution(contribution));
-      hashHistory.push(`/campaigns/`);
-      hashHistory.push(`/campaigns/${action.contribution.campaign_id}`);
+  };
+
+  let successAll = contributions => {
+      dispatch(receiveContributions(contributions));
 
   };
 
   switch (action.type) {
     case CREATE_CONTRIBUTION:
       createContribution(action.contribution, success);
+      return next(action);
+    case FETCH_CONTRIBUTIONS:
+    debugger
+      fetchContributions(action.id, successAll);
       return next(action);
     default:
       return next(action);

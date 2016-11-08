@@ -20,8 +20,9 @@ export const receivePerk = perk => ({
   perk
 });
 
-export const fetchPerks = () => ({
-  type: FETCH_PERKS
+export const fetchPerks = id => ({
+  type: FETCH_PERKS,
+  id
 });
 
 export const updatePerk = perk => ({

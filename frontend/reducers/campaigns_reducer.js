@@ -4,6 +4,7 @@ import { RECEIVE_ALL_CAMPAIGNS,
 import merge from 'lodash/merge';
 
 
+
 const CampaignsReducer = (oldState = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_CAMPAIGNS:

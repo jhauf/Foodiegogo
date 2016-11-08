@@ -9,9 +9,9 @@ export const createPerk = (perk, success, error) => {
   });
 };
 
-export const fetchPerks = (success) => {
+export const fetchPerks = (id, success) => {
   $.ajax({
-    url: `api/perks`,
+    url: `api/campaigns/${id}/perks`,
     type: "GET",
     success
   });

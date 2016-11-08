@@ -4,7 +4,7 @@ import { createPerk, fetchPerks, updatePerk } from '../../actions/perk_actions';
 
 const mapDispatchToProps = dispatch => ({
   createPerk: perk => dispatch(createPerk(perk)),
-  fetchPerks: () => dispatch(fetchPerks()),
+  fetchPerks: (id) => dispatch(fetchPerks(id)),
   updatePerk: perk => dispatch(updatePerk(perk))
 });
 

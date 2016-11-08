@@ -22,7 +22,7 @@ let successAll = perks => dispatch(receivePerks(perks));
       createPerk(action.perk, success, error);
       return next(action);
     case FETCH_PERKS:
-      fetchPerks(successAll);
+      fetchPerks(action.id, successAll);
       return next(action);
     case UPDATE_PERK:
       updatePerk(action.perk, success, error);
