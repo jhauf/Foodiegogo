@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import Modal from 'react-modal';
 import ModalStyle from './../session/modal_style';
-import ContributionFormContainer from '/Users/janehauf/Desktop/Foodiegogo/frontend/components/contributions/contribution_form_container.js';
+import ContributionFormContainer from './../contributions/contribution_form_container.js';
 
 
 

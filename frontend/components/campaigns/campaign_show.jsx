@@ -90,7 +90,7 @@ class CampaignShow extends React.Component {
 
   render () {
     return this.props.campaign ?
-    (<div>
+    (<div className="showcontainer">
         <h3 className="showheader">{this.props.campaign.name}</h3>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
           <div className="authorLinks">
