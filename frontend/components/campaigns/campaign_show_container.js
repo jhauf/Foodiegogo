@@ -4,6 +4,7 @@ import { fetchCampaign, fetchCampaigns, deleteCampaign } from '../../actions/cam
 import { fetchPerks } from '../../actions/perk_actions';
 import { fetchContributions } from '../../actions/contribution_actions';
 
+
 const mapStateToProps = (state, ownProps) => {
   return {
     campaign: state.campaigns[parseInt(ownProps.params.campaignId)],
@@ -17,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   fetchCampaigns: () => dispatch(fetchCampaigns()),
   deleteCampaign: id => dispatch(deleteCampaign(id)),
   fetchPerks: (id) => dispatch(fetchPerks(id)),
-  fetchContributions: (id) => dispatch(fetchContributions(id))
+  fetchContributions: (id) => dispatch(fetchContributions(id)),
 });
 
 export default connect(

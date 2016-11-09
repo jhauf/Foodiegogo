@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
-  perks: state.perks
+  perks: state.perks,
 });
 
 export default connect(

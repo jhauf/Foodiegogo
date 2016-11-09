@@ -19,7 +19,6 @@ class Api::ContributionsController < ApplicationController
   def index
     @campaign = Campaign.find(params[:campaign_id])
     @contributions = @campaign.contributions
-    render :index
   end
 
 
