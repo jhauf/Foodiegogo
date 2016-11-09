@@ -21,8 +21,10 @@ class CampaignShow extends React.Component {
       this.props.fetchCampaigns();
       this.props.fetchPerks(this.props.params.campaignId);
       this.props.fetchContributions(this.props.params.campaignId);
+      window.scrollTo(0, 0);
     }
   }
+
 
   handleDelete(id) {
     this.props.deleteCampaign(parseInt(id));
@@ -103,6 +105,7 @@ class CampaignShow extends React.Component {
           <div className="vid">
           <div>{this.pictureOrVideo()}</div>
             <p className="description">{this.props.campaign.description}</p>
+            <img src={this.props.campaign.picture_url}/>
             </div>
           <div className="stats">
           <h4 className="big">${this.amtWithCommas(this.props.campaign.current_amt)}</h4>
