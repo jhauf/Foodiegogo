@@ -12,12 +12,17 @@
 
 .campaignitem {
   width: 27%;
-  height: 430px;
-  border: 1px solid #EEEEEE;
+  height: 450px;
+  border: 2px solid #D3D3D3;
+  box-shadow: 2px #D3D3D3;
   margin: 20px 30px;
   border-radius: 7px;
+  opacity: .953;
 }
 
+.campaignitem:hover {
+  opacity: 1;
+}
 
 
 .campaignitem img {
@@ -27,7 +32,7 @@
 }
 
 .header {
-  padding: 150px 0 15px 115px;
+  padding: 100px 0 15px 115px;
   list-style: none;
   font-size: 28px;
 }

@@ -1,34 +1,28 @@
 import React from 'react';
 import ContributionIndexItem from './contribution_index_item';
 
-// componentDidMount() {
-//     this.props.fetchContributions(this.props.contributions[0].campaign_id);
-// }
 
-class ContributionIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
-
-render () {
-  return this.props.contributions ?
-  (
-    <div>
-      <li className="header">Contributions</li>
+const ContributionIndex = ({ contributions }) => (
+    <div className="contributionTable">
       <ul className="contributionIndex">
+        <li className="contributionheader">Contributions</li>
+        <li className="contributionIndexItem">
+          <h1>Date</h1>
+          <h1>Name</h1>
+            <h1>Amount</h1>
+        </li>
         {
-          this.props.contributions.map((contribution, i) => (
+          contributions.map((contribution, i) => (
+            <li className="contribution">
             <ContributionIndexItem
               key={`contribution-${i}`}
               contribution={contribution} />
-          ))}
+          </li>
+          ))
+        }
       </ul>
-    </div>) :
-    <div></div>;
-    }
-}
+    </div>
+);
 
 
 export default ContributionIndex;

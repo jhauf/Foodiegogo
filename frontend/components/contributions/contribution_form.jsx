@@ -21,13 +21,11 @@ class ContributionForm extends React.Component {
     this.props.createContribution(this.state);
   }
 
-
-
   render () {
     return (
       <div>
         <form className="campaignform" onSubmit={this.handleSubmit}>
-        <ul>
+        <ul className="spacing">
         <h1>Are you sure you would like to make a contribution?</h1>
           <li>
           <input className="formbutton" type="submit" value="Yes"/>

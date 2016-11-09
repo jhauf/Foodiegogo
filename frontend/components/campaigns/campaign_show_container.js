@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     campaign: state.campaigns[parseInt(ownProps.params.campaignId)],
     currentUser: state.session.currentUser,
-    perks: state.perks
+    perks: state.perks,
+    contributions: state.contributions
   };
 };
 
@@ -25,8 +26,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CampaignShow);
-
-
-// const matchingPerks = state.perks.map(perk => (
-//   perk.campaign_id === parseInt(ownProps.params.campaignId)
-// ));

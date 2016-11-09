@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
 
-const CampaignIndexItem = ({ campaign, router, deleteCampaign }) => {
-  return (
+const CampaignIndexItem = ({ campaign, router}) => (
   <li className="campaignitem">
     <Link to={`/campaigns/${campaign.id}`}>
       <li className="indexpicture">
@@ -15,8 +14,8 @@ const CampaignIndexItem = ({ campaign, router, deleteCampaign }) => {
     </Link>
     <h1>{campaign.name}</h1>
     <h2>{campaign.description}</h2>
-  </li>);
-};
+  </li>
+);
 
 export default CampaignIndexItem;
 

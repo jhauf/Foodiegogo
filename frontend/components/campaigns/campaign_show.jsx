@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import PerkIndexItem from '../perks/perk_index_item';
-import ContributionIndexContainer from '../contributions/contribution_index_container';
-// this.props.fetchCampaign(parseInt(this.props.params.campaignId));
-//
-// this.renderPerks = this.renderPerks.bind(this);
-// this.matchingPerks = this.matchingPerks.bind(this);
+import ContributionIndex from '../contributions/contribution_index';
 
 class CampaignShow extends React.Component {
   constructor(props) {
@@ -15,34 +11,19 @@ class CampaignShow extends React.Component {
     this.amtWithCommas = this.amtWithCommas.bind(this);
   }
 
-
   componentDidMount() {
-    if (this.props.params.campaignId) {
-      this.props.fetchCampaigns();
-      this.props.fetchPerks(this.props.params.campaignId);
-      this.props.fetchContributions(this.props.params.campaignId);
-      window.scrollTo(0, 0);
-    }
+    this.props.fetchCampaigns(this.props.params.campaignId);
+    this.props.fetchCampaign();
+    this.props.fetchPerks(this.props.params.campaignId);
+    this.props.fetchContributions(this.props.params.campaignId);
+    window.scrollTo(0, 0);
   }
-
 
   handleDelete(id) {
     this.props.deleteCampaign(parseInt(id));
     hashHistory.push("campaigns/");
   }
 
-  // matchingPerks() {
-  //   let result = [];
-  //   Object.keys(this.props.perks).map((perkKey) => {
-  //     if (this.props.perks[perkKey].campaign_id === parseInt(this.props.params.campaignId)) {
-  //       result.push(this.props.perks[perkKey]);
-  //     }
-  //   });
-  //   return result;
-  // }
-
-
-  // const perks = this.matchingPerks();
   renderPerks() {
     if (this.props.perks) {
       return(
@@ -63,11 +44,9 @@ class CampaignShow extends React.Component {
   }
 
 
-
     amtWithCommas (amount) {
       return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-
 
     days() {
     let oneDay = 24*60*60*1000;
@@ -105,6 +84,7 @@ class CampaignShow extends React.Component {
           <div className="vid">
           <div>{this.pictureOrVideo()}</div>
             <p className="description">{this.props.campaign.description}</p>
+            <ContributionIndex contributions={this.props.contributions}/>
             <img src={this.props.campaign.picture_url}/>
             </div>
           <div className="stats">
@@ -113,14 +93,12 @@ class CampaignShow extends React.Component {
             <h4 className="big">{this.days(this.props.campaign.end_date)}</h4>
             <h5 className="small2">days to go</h5>
             <h4> {this.renderPerks()} </h4>
-            <ContributionIndexContainer/>
         </div>
         </div>
       </div>
     ) : (<div></div>);
   }
 }
-// <Link to=`/campaigns/{campaign.id}/edit`>Edit</Link>
 
 export default CampaignShow;
 

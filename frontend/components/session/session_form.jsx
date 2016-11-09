@@ -101,8 +101,3 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
-
-
-// componentDidUpdate() {
-// 	this.redirectIfLoggedIn();
-// }

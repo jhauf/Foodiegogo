@@ -19,12 +19,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(PerkForm);
-
-
-
-// errors: state.errors
-
-
-// fetchPerk: id => dispatch(fetchPerk(id)),
-// updatePerk: campaign => dispatch(updatePerk(campaign)),
-// clearCampaignErrors: () => dispatch(clearCampaignErrors())

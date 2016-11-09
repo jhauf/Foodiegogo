@@ -51,7 +51,7 @@ class Navbar extends React.Component {
     return (
     <nav className="links">
       <Link to="/" onClick={this.handleClickLogin}>
-        Log In
+        Sign In
       </Link>
       <Link to="/" onClick={this.handleClickSignup}>
         Sign Up

@@ -9,7 +9,6 @@ class CampaignForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
 
-    // use campaign in store if updating; start with blank campaign if new
     this.state = this.props.campaign || {
       name: "",
       goal_amt: "",
@@ -24,9 +23,7 @@ class CampaignForm extends React.Component {
 
   componentDidMount() {
     this.props.clearCampaignErrors();
-    if (this.props.params.campaignId) {
-      this.props.fetchCampaign(this.props.params.campaignId);
-    }
+    this.props.fetchCampaign(this.props.params.campaignId);
   }
 
 
@@ -86,7 +83,7 @@ class CampaignForm extends React.Component {
     return (
       <div>
         <form className="campaignform" onSubmit={this.handleSubmit}>
-        <ul>
+        <ul className="spacing">
         <h1>{text}</h1>
           <li>
           <label>

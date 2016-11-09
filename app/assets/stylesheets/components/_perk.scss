@@ -1,9 +1,9 @@
 .perk {
   padding: 20px 25px;
-  margin: 20px;
+  margin: 20px 150px;
   width: 300px;
   height: auto;
-  border: 1px solid #E0E4FB;
+  border: 1px solid #586BE9;
   border-radius: 7px;
   background-color: #F8F9FD;
   font-weight: 400;
@@ -13,11 +13,12 @@
 }
 
 .perk-0 {
-  margin: 0 20px 20px 20px;
+  margin: 0 10px 20px 20px;
+  padding: 0px 25px 20px 25px;
 }
 
 .perk:hover {
-  background-color: #25CB68;
+  background-color: #21b65d;
   opacity: 1.0;
 }
 

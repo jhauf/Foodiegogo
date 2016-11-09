@@ -22,10 +22,10 @@ const Root = ({ store }) => {
 
    const fetchOnEnter = (nextState, replace) => {
      _ensureLoggedIn(nextState, replace);
-     fetchCampaign(parseInt(nextState.params.campaignId));
-     fetchCampaigns();
-     fetchPerks(parseInt(nextState.params.campaignId));
-     fetchContributions(parseInt(nextState.params.campaignId));
+     store.dispatch(fetchCampaign(parseInt(nextState.params.campaignId)));
+     store.dispatch(fetchCampaigns());
+     store.dispatch(fetchPerks(parseInt(nextState.params.campaignId)));
+     store.dispatch(fetchContributions(parseInt(nextState.params.campaignId)));
    };
 
 
