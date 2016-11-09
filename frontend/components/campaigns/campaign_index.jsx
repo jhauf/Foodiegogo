@@ -3,7 +3,9 @@ import CampaignIndexItem from './campaign_index_item';
 
 
 class CampaignIndex extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     this.props.fetchCampaigns();
   }

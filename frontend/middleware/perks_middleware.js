@@ -1,11 +1,12 @@
 import { CREATE_PERK,
           FETCH_PERKS,
           UPDATE_PERK,
+          FETCH_PERK,
           receivePerk,
           receivePerks,
           receivePerkErrors} from '../actions/perk_actions';
 
-import { createPerk, fetchPerks, updatePerk } from '../util/perk_api_util';
+import { createPerk, fetchPerks, updatePerk, fetchPerk } from '../util/perk_api_util';
 import { hashHistory } from 'react-router';
 
 
@@ -23,6 +24,9 @@ let successAll = perks => dispatch(receivePerks(perks));
       return next(action);
     case FETCH_PERKS:
       fetchPerks(action.id, successAll);
+      return next(action);
+    case FETCH_PERK:
+      fetchPerk(action.id, success);
       return next(action);
     case UPDATE_PERK:
       updatePerk(action.perk, success, error);

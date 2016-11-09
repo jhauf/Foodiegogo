@@ -34,7 +34,7 @@ class PerkIndexItem extends React.Component {
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose.bind(this)}
           style={ModalStyle}>
-          <ContributionFormContainer campaign={this.props.campaign}/>
+          <ContributionFormContainer perkKey={this.props.perkKey} campaign={this.props.campaign}/>
         </Modal>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
         <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>

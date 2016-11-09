@@ -17,6 +17,15 @@ export const fetchPerks = (id, success) => {
   });
 };
 
+export const fetchPerk = (id, success) => {
+  $.ajax({
+    url: `api/perks/${id}`,
+    type: "GET",
+    success
+  });
+};
+
+
 export const updatePerk = (perk, success, error) => {
   $.ajax({
     url: `api/perks/${perk.id}`,

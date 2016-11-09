@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import PerkIndexItem from '../perks/perk_index_item';
-import ContributionIndex from '../contributions/contribution_index';
+import ContributionIndexContainer from '../contributions/contribution_index_container';
 // this.props.fetchCampaign(parseInt(this.props.params.campaignId));
 //
 // this.renderPerks = this.renderPerks.bind(this);
@@ -48,6 +48,7 @@ class CampaignShow extends React.Component {
           {this.props.perks.map((perk, i) => (
             <PerkIndexItem
               key={`perk-${i}`}
+              perkKey={perk.id}
               currentUser={this.props.currentUser}
               campaign={this.props.campaign}
               perk={perk} />
@@ -109,7 +110,7 @@ class CampaignShow extends React.Component {
             <h4 className="big">{this.days(this.props.campaign.end_date)}</h4>
             <h5 className="small2">days to go</h5>
             <h4> {this.renderPerks()} </h4>
-            <h5><ContributionIndex/></h5>
+            <ContributionIndexContainer/>
         </div>
         </div>
       </div>

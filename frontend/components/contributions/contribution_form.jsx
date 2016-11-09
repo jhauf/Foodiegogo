@@ -9,10 +9,10 @@ class ContributionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       date: new Date(Date.now()),
-      donation_amt: 100,
       contributor_id: this.props.currentUser.id,
       campaign_id: parseInt(this.props.campaign.id),
-      perk_id: ""
+      perk_id: this.props.perkKey,
+      donation_amt: this.props.perks[this.props.perkKey].donation_amt,
     };
   }
 

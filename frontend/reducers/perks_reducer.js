@@ -5,6 +5,7 @@ import merge from 'lodash/merge';
 const PerksReducer = (oldState = [], action) => {
   switch (action.type) {
     case RECEIVE_PERK:
+    debugger
       return oldState.concat([action.perk]);
     case RECEIVE_PERKS:
       return merge([], action.perks);
