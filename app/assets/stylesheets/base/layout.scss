@@ -4,41 +4,49 @@ html {
 }
 
 .splashpage {
-	background: url('http://res.cloudinary.com/dps0ohgkp/image/upload/c_scale,h_700,q_100,w_1250/v1478212509/newsplash_um8u7a.jpg') no-repeat white;
-	background-size: 100vw;
+	background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");
+	height: 90vh;
 	font-weight: 400;
 	background-position: 50% 10%;
-	min-height: 800px;
-	display: flex;
-	padding: 60px;
-	align-items: flex-start;;
-	justify-content: center;
 	padding: 0px;
+	text-align: center;
 }
 
-.splashtext {
-	padding: 80px;
-	color: #696974;
+
+
+.splashpage h1  {
+	color:    #333366;
+	font-family: avenir;
+	font-size: 37px;
+	background: #F7F9F8;
+	position: relative;
+	top: 120px;
+	padding: 5px;
 }
 
 button:hover {
 	background-color: #3d79e5;
 	transition: background .2s ease-in;
+	color: white;
 }
 
 .explorebutton {
-	padding: 0px 10px;
-	background: #F7F7F7;
+	padding: 12px 20px;
+	background: #43D1AF;
 	border-radius: 5px;
 	color: #fff;
 	font-size: 22px;
 	font-family: avenir;
 	font-weight: 500;
-	color: #E91616;
+	color: white;
+	position: relative;
+	top: 250px;
 }
-.explore {
-	font-size: 20px;
-	font-family: avenir;
+
+.explorebutton:hover {
+	background-color: #2EBC99;
+	transition: background .2s ease-in;
+	color: white;
 }
 
 .formbutton {

@@ -1,25 +1,49 @@
 .perk {
-  padding: 20px 25px;
-  margin: 20px 150px;
-  width: 300px;
+  padding: 15px 10px;
+  margin: 20px 0 0 60px;
+  width: 250px;
   height: auto;
   border: 1px solid #586BE9;
   border-radius: 7px;
-  background-color: #F8F9FD;
+  background-color:#f2fbff;
   font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: space-around;
+  position: relative;
 }
 
 .perk-0 {
-  margin: 0 10px 20px 20px;
+  margin: 0 10px 20px 60px;
   padding: 0px 25px 20px 25px;
 }
 
-.perk:hover {
-  background-color: 3;
-  opacity: 1.0;
+
+
+
+.hoverText {
+  opacity: 1;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+}
+
+.hoverPerk {
+  width: 100%;
+  height: 100%;
+  line-height: 220px;
+}
+
+.perk:hover .hoverText {
+  visibility: visible;
+  background-color: rgba(37,203,104,.8);
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .perk li {

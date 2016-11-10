@@ -85,7 +85,7 @@ class PerkForm extends React.Component {
           </li>
           <li>
             <h4 className="errors"> {this.renderErrors()} </h4>
-          <input className="formbutton" type="submit" value="Submit"/>
+          <input className="explorebutton" type="submit" value="Submit"/>
           </li>
         </ul>
         </form>

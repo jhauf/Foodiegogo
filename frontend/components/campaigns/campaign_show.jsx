@@ -85,7 +85,7 @@ class CampaignShow extends React.Component {
           <div>{this.pictureOrVideo()}</div>
             <p className="description">{this.props.campaign.description}</p>
             <ContributionIndex contributions={this.props.contributions}/>
-            <img src={this.props.campaign.picture_url}/>
+            <img src={this.props.campaign.picture_url} className="showpic"/>
             </div>
           <div className="stats">
           <h4 className="big">${this.amtWithCommas(this.props.campaign.current_amt)}</h4>

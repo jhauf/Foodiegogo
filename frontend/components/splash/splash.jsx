@@ -1,9 +1,21 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 
-const Splash = (props) => {
-  return (props.location.pathname === "/") ?
-  (<div className="splashpage"> <h1 className="splashtext">A Crowdfunding Platform for people who love food</h1> </div>) : (<div></div>);
-};
+class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (this.props.location.pathname === "/") ?
+    (<div className="splashpage">
+    <h1> A Crowdfunding Platform for People Who Love Food</h1>
+    <button className="explorebutton" onClick={this.props.handleClickLogin}> Sign In</button>
+    <button className="explorebutton" onClick={this.props.handleGuest}> Guest Demo</button>
+  </div>) : (<div></div>);
+  }
+}
+
+
 
 export default withRouter(Splash);

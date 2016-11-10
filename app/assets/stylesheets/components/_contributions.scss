@@ -4,8 +4,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #0D2147;
+}
 
-
+.campaignform h2{
+  font-size: 100;
+  text-align: center;
+  padding: 20px;
 }
 .contributionIndexItem h2 {
   font-size: 16px;
@@ -15,7 +19,7 @@
   background: $light-gray;
   width: 20%;
   text-align: center;
-  border: 1px solid #0D2157;
+  border: 1px solid green;
   font-family: avenir;
 }
 
@@ -31,7 +35,7 @@
 }
 
 .contributionTable {
-  padding: 30px 0 170px;
+  padding: 20px 0 130px;
 
 }
 
@@ -43,16 +47,16 @@
   background: $light-gray;
   width: 20%;
   text-align: center;
-  background-color: #0D2157;
+  background-color: green;
   color: white;
   font-family: avenir;
 }
 
 .contributionheader {
-  padding: 30px;
+  padding: 100px 0 25px 0;
   text-align: center;
   font-size: 26px;
-  color: #0D2157;
+  color: black;
 }
 
 .contributionIndex {

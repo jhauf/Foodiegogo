@@ -16,6 +16,7 @@ class SessionForm extends React.Component {
 	}
 
 
+
 	update(field) {
 		return e => this.setState({
 			[field]: e.currentTarget.value
@@ -25,6 +26,7 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
+		const that = this;
 		this.props.processForm({user});
 	}
 
@@ -53,19 +55,19 @@ class SessionForm extends React.Component {
 	}
 
 	renderErrors() {
-		return(
-			<ul>
+		return (<ul>
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
 					</li>
 				))}
-			</ul>
-		);
+			</ul>);
 	}
+
 
 	handleGuest(e) {
 		e.preventDefault();
+		this.props.onModalClose();
 		this.props.guestLogin();
 	}
 

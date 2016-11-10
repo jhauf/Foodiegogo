@@ -26,7 +26,7 @@ class ContributionForm extends React.Component {
       <div>
         <form className="campaignform" onSubmit={this.handleSubmit}>
         <ul className="spacing">
-        <h1>Are you sure you would like to make a contribution?</h1>
+        <h2>Are you sure you want to make a contribution?</h2>
           <li>
           <input className="formbutton" type="submit" value="Yes"/>
           </li>

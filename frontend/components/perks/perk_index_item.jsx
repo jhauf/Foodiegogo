@@ -30,6 +30,7 @@ class PerkIndexItem extends React.Component {
         <li className="first"> Pledge ${this.props.perk.donation_amt} </li>
         <li className="second"> {this.props.perk.name}</li>
         <li> {this.props.perk.description}</li>
+        <div className="hoverPerk"><div className="hoverText">Select this Perk</div></div>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose.bind(this)}

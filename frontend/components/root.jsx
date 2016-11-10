@@ -7,7 +7,7 @@ import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
 
-import App from './app';
+import AppContainer from './app_container';
 import { fetchCampaigns, fetchCampaign } from '../actions/campaign_actions';
 import { fetchContributions } from '../actions/contribution_actions';
 import { fetchPerks } from '../actions/perk_actions';
@@ -32,7 +32,7 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path="/" component={App}>
+        <Route path="/" component={AppContainer}>
           <Route path="campaigns" component={CampaignIndexContainer} onEnter={fetchOnEnter}/>
           <Route path="campaigns/new" component={CampaignFormContainer}  onEnter={fetchOnEnter} />
           <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={fetchOnEnter}/>

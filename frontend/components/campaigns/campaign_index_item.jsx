@@ -11,9 +11,9 @@ const CampaignIndexItem = ({ campaign, router}) => (
         <img src={campaign.picture_url}/>
       }
       </li>
+      <h1>{campaign.name}</h1>
+      <h2>{campaign.description}</h2>
     </Link>
-    <h1>{campaign.name}</h1>
-    <h2>{campaign.description}</h2>
   </li>
 );
 
