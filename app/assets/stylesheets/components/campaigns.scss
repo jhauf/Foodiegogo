@@ -1,23 +1,29 @@
 // Place all the styles related to the campaigns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the campaigns controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .campaignIndex {
   display: flex;
   font-size: 20px;
   flex-wrap: wrap;
-  padding: 20px 100px 0 100px;
+  padding: 20px 100px 0 250px;
   justify-content: flex-start;
+
 }
 
 .campaignitem {
-  width: 27%;
-  height: 450px;
-  border: 2px solid #D3D3D3;
+  width: 26%;
+  height: 500px;
+  border: 3px solid #D3D3D3;
   box-shadow: 2px #D3D3D3;
-  margin: 20px 30px;
+  margin: 30px 30px;
   border-radius: 7px;
   opacity: .953;
+  background-color: #F0F0F0;
+  box-shadow: 5px 5px 2px #888888;
 }
 
 .campaignitem:hover {
@@ -32,7 +38,7 @@
 }
 
 .header {
-  padding: 100px 0 15px 115px;
+  padding: 100px 0 15px 285px;
   list-style: none;
   font-size: 28px;
 }

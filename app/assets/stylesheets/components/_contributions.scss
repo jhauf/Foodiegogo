@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #020621;
+  background-color: #0D2147;
 
 
 }
@@ -15,7 +15,8 @@
   background: $light-gray;
   width: 20%;
   text-align: center;
-  border: 1px solid #020621;
+  border: 1px solid #0D2157;
+  font-family: avenir;
 }
 
 .contributionIndexItem h2:last-child {
@@ -26,6 +27,7 @@
   background: $light-gray;
   width: 20%;
   text-align: center;
+  font-family: avenir;
 }
 
 .contributionTable {
@@ -41,15 +43,16 @@
   background: $light-gray;
   width: 20%;
   text-align: center;
-  background-color: #4444e4;
+  background-color: #0D2157;
   color: white;
+  font-family: avenir;
 }
 
 .contributionheader {
   padding: 30px;
   text-align: center;
   font-size: 26px;
-  color: #020621;
+  color: #0D2157;
 }
 
 .contributionIndex {
