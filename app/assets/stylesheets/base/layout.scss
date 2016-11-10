@@ -21,10 +21,10 @@ html {
 	background: #F3F4F6;
 	position: relative;
 	top: 140px;
-	left: 160px;
 	padding: 5px;
-	width: 935px;
+	max-width: 950px;
 	box-shadow: 2px 2px 1px gray;
+	margin: 0 130px;
 }
 
 button:hover {
