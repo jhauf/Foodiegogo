@@ -9,7 +9,6 @@ class Navbar extends React.Component {
     this.loggedIn = this.loggedIn.bind(this);
     this.loggedOut = this.loggedOut.bind(this);
     this.onLogOut = this.onLogOut.bind(this);
-
   }
 
   onLogOut(logout) {

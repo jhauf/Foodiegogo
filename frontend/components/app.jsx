@@ -52,7 +52,7 @@ class App extends React.Component {
     return <div>
       <header className="navbar">
         <Link to="/campaigns/" className="header-link">foodiegogo</Link>
-        <NavbarContainer handleClickSignup={this.handleClickSignup} handleClickLogin={this.handleClickLogin}/>
+        <NavbarContainer handleClickSignup={this.handleClickSignup} handleClickLogin={this.handleClickLogin} onModalClose={this.onModalClose}/>
       </header>
       <Splash handleGuest={this.handleGuest} handleClickLogin={this.handleClickLogin}/>
 
