@@ -12,7 +12,7 @@ foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes R
 ### Campaigns
   On the database side, the campaigns are stored in one table in the database. campaigns are rendered in two different components: the Campaign Index as well as the Campaign Show page. The Campaign's Index renders the pictures, titles and descriptions of all the campaigns. The Campaign Show page features a video, days left, current funding, goal funding, as well a Contributions Index Component which renders a list of Contribution Index Items.
 
-  ![tag screenshot](wireframes/campaign-detail-i.png)
+  ![campaigns screenshot](docs/wireframes/campaign-detail-i.png)
 
 
 ### Perks
@@ -20,9 +20,9 @@ foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes R
 
 
 ### Contributions
-  In the back-end, contributions are stored in a contributions table with an id, date, donation amount, campaign_id, contributor_id, perk_id. Each campaign's page displays a list of contributions, with the date, donation amount and contributor's name. Each time a contribution is made, the current funding of the campaign and the contributions table are updated.
+  In the backend, contributions are stored in a contributions table with an id, date, donation amount, campaign_id, contributor_id, perk_id. Each campaign's page displays a list of contributions, with the date, donation amount and contributor's name. Each time a contribution is made, the current funding of the campaign and the contributions table are updated.
 
-  ![tag screenshot](wireframes/campaign-detail-ii.png)
+  ![contributions screenshot](docs/wireframes/campaign-detail-ii.png)
 
 ### Search
   Searching by campaign name is another feature of foodiegogo. Each time a user makes a keystroke, the internal state of the Search Component is updated and afterwards, the database is re-queried, which updates the Campaigns slice of state.
