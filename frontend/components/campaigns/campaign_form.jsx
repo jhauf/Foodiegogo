@@ -81,9 +81,9 @@ class CampaignForm extends React.Component {
     const backLink = this.props.route.path === 'campaigns/new' ? <Link to="/campaigns">All Campaigns</Link> :
     <Link to={"/campaigns/" + this.props.params.campaignId}>Back</Link>;
     return (
-      <div>
+      <div className="campaignBackground">
         <form className="campaignform" onSubmit={this.handleSubmit}>
-        <ul>
+        <ul className="createcampaign">
         <h1>{text}</h1>
           <li>
           <label>

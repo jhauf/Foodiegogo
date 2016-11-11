@@ -18,11 +18,13 @@ foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes R
 ### Perks
   Perks are stored in the database with a name, donation amount, description and campaign_id. Each campaign has a number of perks which users can receive by contributing a pre-specified amount. Clicking on a perk opens the contributions form which on submit creates a new contribution.
 
+    ![contributions screenshot](docs/wireframes/campaign-detail-ii.png)
+
 
 ### Contributions
   In the backend, contributions are stored in a contributions table with an id, date, donation amount, campaign_id, contributor_id, perk_id. Each campaign's page displays a list of contributions, with the date, donation amount and contributor's name. Each time a contribution is made, the current funding of the campaign and the contributions table are updated.
 
-  ![contributions screenshot](docs/wireframes/campaign-detail-ii.png)
+
 
 ### Search
   Searching by campaign name is another feature of foodiegogo. Each time a user makes a keystroke, the internal state of the Search Component is updated and afterwards, the database is re-queried, which updates the Campaigns slice of state.
@@ -37,7 +39,7 @@ In addition to the features already implemented, I plan on adding the following 
 ### Profiles
   Each user will have a profile which will display their basic information, profile picture, the campaigns they have started as well as the campaigns they have contributed to.
 
-  ![tag screenshot](wireframes/profile.png)
+  ![tag screenshot](docs/wireframes/profile.png)
 
 ### Google Maps API
   For the restaurants, I plan to integrate my app with Google Maps to allow users to search for restaurants in their area.

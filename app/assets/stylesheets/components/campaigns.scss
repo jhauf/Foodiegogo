@@ -12,9 +12,30 @@
   padding: 50px;
 }
 
-.formbackground {
-  padding: 50px;
-  background-color: green;
+.campaignBackground {
+  background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");;
+  height: 1000px;
+}
+
+.campaignform h1{
+  color: #474040
+}
+
+
+.campaignform ul {
+  border: 1px solid gray;
+  padding: 40px;
+  position: absolute;
+  width:500px;
+  top: 100px;
+  background-color: #f6efef;
+  box-shadow: 2px 1px 1px gray;
+}
+
+.campaignform {
+  position: relative;
+  background-color: rgba(252,252,252,0);
+
 }
 
 input.search-bar {
