@@ -14,9 +14,9 @@ class CampaignIndex extends React.Component {
       <h1 className="header">Campaigns</h1>
       <div className="categories">
         <button onClick={this.props.applyFilter(BAKED_GOODS)}> Baked Goods </button>
-        <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurant</button>
-        <button onClick={this.props.applyFilter(ALCOHOLIC)}> Alcoholic Beverages</button>
-        <button onClick={this.props.applyFilter(FOR_THE_HOME)}> For the Home</button>
+        <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurants </button>
+        <button onClick={this.props.applyFilter(ALCOHOLIC)}> Alcohol </button>
+        <button onClick={this.props.applyFilter(FOR_THE_HOME)}> For the Home </button>
         <button onClick={this.props.applyFilter(PHILANTHROPY)}> Philanthropy </button>
         <button onClick={this.props.applyFilter("")}> All Campaigns </button>
       </div>

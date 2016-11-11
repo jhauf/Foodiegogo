@@ -6,32 +6,59 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.search2 {
+  display:flex;
+  justify-content: center;
+}
 
 input.search-bar {
-    width: 40%;
+    width: 125%;
     height: 40px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 20px;
     margin-top: 60px;
-}
-.search-bar {
-  position: absolute;
+    background-image: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478849027/1478870589_icon-111-search_f0b14j.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: 270px;
+    -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      border: 2px solid #DDDDDD;
 }
 
-.searchPic img {
-  width: 45px;
-  height: 45px;
-  position: relative;
-  left: 840px;
-  top: 59px;
+input.search-bar:focus {
+box-shadow: 0 0 5px #43D1AF;
+border: 2px solid #43D1AF;}
+
+
+.categories button:nth-child(1) {
+  background-color: #d82424;
 }
 
-.search {
-  display: flex;
-  justify-content: center;
+
+.categories button:nth-child(2) {
+  background-color: #499efd;
 }
+
+.categories button:nth-child(3) {
+  background-color: #2ccc7e;
+}
+
+.categories button:nth-child(4) {
+  background-color: rgb(130, 56, 206);
+}
+.categories button:nth-child(5) {
+  background-color: #0032ff;
+}
+.categories button:nth-child(6) {
+  background-color: #29a6ef;
+}
+
 
 
 .campaignIndex {
@@ -48,13 +75,15 @@ input.search-bar {
   padding: 0 0 50px 0;
 }
 .categories button {
-  height: 70px;
+  height: 80px;
   font-size: 20px;
   padding: 10px;
   border-radius: 7px;
   margin: 1px;
   background-color: #6495ed;
   color: white;
+  width: 120px;
+  text-align: center;
 }
 
 .categories button:hover {
@@ -69,10 +98,10 @@ input.search-bar {
   box-shadow: 2px #D3D3D3;
   margin: 30px 30px;
   border-radius: 7px;
-  opacity: .8;
+  opacity: .9;
   background-color: white;
   box-shadow: 3px 3px 1px #888888;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 
 }
 
@@ -96,7 +125,7 @@ input.search-bar {
 .header {
   list-style: none;
   font-size: 40px;
-  padding: 60px 0 40px 20px;
+  padding: 120px 0 40px 30px;
   text-align: center;
 }
 

@@ -5,7 +5,7 @@ html {
 
 .splashpage {
 	background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");
-	height: 94vh;
+	height: 93vh;
 	font-weight: 400;
 	background-position: 50% 10%;
 	padding: 0px;
@@ -17,20 +17,22 @@ html {
 
 
 .splashpage h1  {
-	color: #f32863;
+	color: #f7f7f7;
 	font-family: avenir;
 	font-size: 60px;
-	background: rgba(284, 283, 264, 0.85);
+	background: rgba(100, 136, 228, 0.91);
 	position: relative;
 	top: 225px;
-	padding: 5px;
+	padding: 18px;
 	margin: 0 auto;
+	width: 270px;
 }
 
 button:hover {
 	background-color: #3d79e5;
 	transition: background .2s ease-in;
 	color: white;
+	cursor: pointer;
 }
 
 .explorebutton {
@@ -43,7 +45,7 @@ button:hover {
 	font-weight: 500;
 	color: white;
 	position: relative;
-	top: 320px;
+	top: 270px;
 	margin: 5px;
 }
 
@@ -56,7 +58,7 @@ button:hover {
 
 .guestbutton {
 	padding: 12px 20px;
-	background: #fd6a49;
+	background: #0eaffd;
 	border-radius: 5px;
 	color: #fff;
 	font-size: 22px;
@@ -64,14 +66,15 @@ button:hover {
 	font-weight: 500;
 	color: white;
 	position: relative;
-	top: 320px;
+	top: 270px;
 	margin: 5px;
 }
 
 .guestbutton:hover {
-	background-color: rgba(253, 74, 74, 0.98);
+	background-color: #0e99fd;
 	transition: background .2s ease-in;
 	color: white;
+	cursor: pointer;
 }
 .formbutton {
 	display: block;

@@ -63,7 +63,7 @@ class CampaignShow extends React.Component {
         return (<img src={this.props.campaign.picture_url}/>);
       }
     } else {
-      return (<video controls className="video" src={this.props.campaign.video_url}>
+      return (<video controls autoplay className="video" src={this.props.campaign.video_url}>
         Your user agent does not support the HTML5 Video element.
       </video>);
     }

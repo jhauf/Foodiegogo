@@ -18,16 +18,15 @@ setQuery (e) {
 }
 
   render() {
-    return (<div>
-  <label className="search">
+    return (<div className="search">
+    <div className="search2">
+  <label>
       <input type="text"
         placeholder="Search"
         value={this.state.query}
         onChange={this.setQuery}
         className="search-bar" />
     </label>
-    <div className="searchPic">
-      <img src="http://res.cloudinary.com/dps0ohgkp/image/upload/v1478849027/1478870589_icon-111-search_f0b14j.png"/>
     </div>
   </div>);
   }
