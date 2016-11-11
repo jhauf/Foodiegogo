@@ -83,7 +83,7 @@ class CampaignForm extends React.Component {
     return (
       <div>
         <form className="campaignform" onSubmit={this.handleSubmit}>
-        <ul className="spacing">
+        <ul>
         <h1>{text}</h1>
           <li>
           <label>

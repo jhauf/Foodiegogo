@@ -12,8 +12,13 @@
   padding: 50px;
 }
 
+.formbackground {
+  padding: 50px;
+  background-color: green;
+}
+
 input.search-bar {
-    width: 1000px;
+    width: 900px;
     height: 50px;
     padding: 20px;
     box-sizing: border-box;
@@ -23,7 +28,7 @@ input.search-bar {
     background-image: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478849027/1478870589_icon-111-search_f0b14j.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 950px;
+    background-position: 850px;
     -webkit-transition: all 0.30s ease-in-out;
       -moz-transition: all 0.30s ease-in-out;
       -ms-transition: all 0.30s ease-in-out;
@@ -38,26 +43,26 @@ border: 2px solid #43D1AF;}
 
 
 .categories button:nth-child(1) {
-  background-color: #d82424;
+  background-color: #fb6d6d;
 }
 
 
 .categories button:nth-child(2) {
-  background-color: #499efd;
+  background-color: #62abfc;
 }
 
 .categories button:nth-child(3) {
-  background-color: #2ccc7e;
+  background-color: #53dd9a;
 }
 
 .categories button:nth-child(4) {
-  background-color: rgb(130, 56, 206);
+  background-color: #b079ea;
 }
 .categories button:nth-child(5) {
-  background-color: #0032ff;
+  background-color: #4365ef;
 }
 .categories button:nth-child(6) {
-  background-color: #29a6ef;
+  background-color: #24aeff;
 }
 
 

@@ -23,9 +23,9 @@ class ContributionForm extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="formbackground">
         <form className="campaignform" onSubmit={this.handleSubmit}>
-        <ul className="spacing">
+        <ul>
         <h2>Are you sure you want to make a contribution?</h2>
           <li>
           <input className="formbutton" type="submit" value="Yes"/>
