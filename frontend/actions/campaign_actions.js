@@ -8,7 +8,7 @@ export const DELETE_CAMPAIGN = "DELETE_CAMPAIGN";
 export const REMOVE_CAMPAIGN = "REMOVE_CAMPAIGN";
 export const RECEIVE_CAMPAIGN_ERRORS = "RECEIVE_CAMPAIGN_ERRORS";
 export const CLEAR_CAMPAIGN_ERRORS = "CLEAR_CAMPAIGN_ERRORS";
-
+export const QUERY_DATABASE = "QUERY_DATABASE";
 
 export const fetchCampaigns = () => ({
   type: FETCH_CAMPAIGNS
@@ -56,4 +56,9 @@ export const clearCampaignErrors = () => ({
 export const receiveCampaignErrors = errors => ({
   type: RECEIVE_CAMPAIGN_ERRORS,
   errors
+});
+
+export const queryDatabase = (query) => ({
+  type: QUERY_DATABASE,
+  query
 });

@@ -22,6 +22,13 @@ class App extends React.Component {
     };
   }
 
+  componentWillReceiveProps(newProps, oldProps) {
+    if (newProps.location.pathname === "/campaigns/") {
+      this.setState({
+        modalOpen: false
+      });
+    }
+  }
   handleClickLogin() {
     this.setState({
       modalOpen: true,

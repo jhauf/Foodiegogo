@@ -7,7 +7,8 @@ import {
   FETCH_CAMPAIGN,
   CREATE_CAMPAIGN,
   UPDATE_CAMPAIGN,
-  DELETE_CAMPAIGN
+  DELETE_CAMPAIGN,
+  QUERY_DATABASE
 } from '../actions/campaign_actions';
 
 import {
@@ -15,7 +16,8 @@ import {
   deleteCampaign,
   updateCampaign,
   fetchCampaigns,
-  fetchCampaign
+  fetchCampaign,
+  queryDatabase
 } from '../util/campaign_api_util';
 import { hashHistory } from 'react-router';
 
@@ -50,6 +52,9 @@ const CampaignsMiddleware = ({getState, dispatch}) => next => action => {
       return next(action);
     case DELETE_CAMPAIGN:
       deleteCampaign(action.id, removeCampaignSuccess);
+      return next(action);
+    case QUERY_DATABASE:
+      queryDatabase(action.query, receiveAllCampaignsSuccess);
       return next(action);
     default:
       return next(action);

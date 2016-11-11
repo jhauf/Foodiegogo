@@ -40,3 +40,11 @@ export const deleteCampaign = (id, success) => {
     success
   });
 };
+
+export const queryDatabase = (query, success) => {
+    $.ajax({
+      url: 'api/campaigns',
+      data: { query },
+      success
+    });
+};

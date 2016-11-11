@@ -1,6 +1,10 @@
 class Api::CampaignsController < ApplicationController
   def index
-    @campaigns = Campaign.all
+    if params[:query]
+      @campaigns = Campaign.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @campaigns = Campaign.all
+    end
   end
 
   def show
@@ -41,6 +45,6 @@ class Api::CampaignsController < ApplicationController
   private
 
   def campaign_params
-    params.require(:campaign).permit(:name, :goal_amt, :current_amt, :description, :end_date, :picture_url, :video_url, :campaigner_id)
+    params.require(:campaign).permit(:name, :goal_amt, :current_amt, :description, :end_date, :picture_url, :video_url, :campaigner_id, :category)
   end
 end

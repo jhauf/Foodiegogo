@@ -4,7 +4,7 @@ import { fetchCampaign, updateCampaign, createCampaign, clearCampaignErrors } fr
 
 const mapStateToProps = (state, ownProps) => {
   return {
-  campaign: state.campaigns[ownProps.params.c1ampaignId],
+  campaign: state.campaigns[ownProps.params.campaignId],
   currentUser: state.session.currentUser,
   errors: state.errors
   };

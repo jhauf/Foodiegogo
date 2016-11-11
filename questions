@@ -7,5 +7,38 @@ need to know which campaign a contribution belongs to, have campaign_id, contrib
 centering
 
 
-
+react carousel
 http://localhost:3000/api/campaigns/2/perks
+
+give each campaign a category column
+category component has 5 buttons with click handlers
+on click will change the query string to
+
+
+campaigns/?category=baked_goods
+
+dispatch fetchCategory(this.props.route.params)
+
+will dispatch an action
+
+const fetchCategory(category) =>  ({
+  type: "FETCH_CATEGORY",
+  category
+})
+
+which will hit the middleware which will
+send get api request to campaign index
+
+$.ajax({
+type: GET,
+url: "api/campaigns"
+data: {category}
+})
+
+@campaigns = Campaign.where("category = ?", params[:category])
+
+on success will hit the reducer which will update the state of the campaign reducer
+
+searchbar has a container which gives it access to __
+search has an internal state which is equal to the remaining search results
+searchbar onChange which will call result = fetchSearchQuery(query) which query's the database with a callback to update the internal state

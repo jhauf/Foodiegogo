@@ -5,11 +5,13 @@ html {
 
 .splashpage {
 	background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");
-	height: 90vh;
+	height: 94vh;
 	font-weight: 400;
 	background-position: 50% 10%;
 	padding: 0px;
 	text-align: center;
+	background-size:cover;
+
 }
 
 
@@ -20,11 +22,11 @@ html {
 	font-size: 37px;
 	background: #F3F4F6;
 	position: relative;
-	top: 140px;
+	top: 300px;
 	padding: 5px;
-	max-width: 950px;
+	max-width: 935px;
 	box-shadow: 2px 2px 1px gray;
-	margin: 0 130px;
+	margin: 0 auto;
 }
 
 button:hover {
@@ -43,7 +45,8 @@ button:hover {
 	font-weight: 500;
 	color: white;
 	position: relative;
-	top: 250px;
+	top: 360px;
+	margin: 5px;
 }
 
 .explorebutton:hover {
