@@ -17,15 +17,13 @@ html {
 
 
 .splashpage h1  {
-	color:    #333366;
+	color: #f32863;
 	font-family: avenir;
-	font-size: 37px;
-	background: #F3F4F6;
+	font-size: 60px;
+	background: rgba(284, 283, 264, 0.85);
 	position: relative;
-	top: 300px;
+	top: 225px;
 	padding: 5px;
-	max-width: 935px;
-	box-shadow: 2px 2px 1px gray;
 	margin: 0 auto;
 }
 
@@ -45,7 +43,7 @@ button:hover {
 	font-weight: 500;
 	color: white;
 	position: relative;
-	top: 360px;
+	top: 320px;
 	margin: 5px;
 }
 
@@ -55,6 +53,26 @@ button:hover {
 	color: white;
 }
 
+
+.guestbutton {
+	padding: 12px 20px;
+	background: #fd6a49;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 22px;
+	font-family: avenir;
+	font-weight: 500;
+	color: white;
+	position: relative;
+	top: 320px;
+	margin: 5px;
+}
+
+.guestbutton:hover {
+	background-color: rgba(253, 74, 74, 0.98);
+	transition: background .2s ease-in;
+	color: white;
+}
 .formbutton {
 	display: block;
 	margin: 0 auto 30px auto;

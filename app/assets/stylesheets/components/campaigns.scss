@@ -5,15 +5,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+input.search-bar {
+    width: 40%;
+    height: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: 60px;
+}
+.search-bar {
+  position: absolute;
+}
+
+.searchPic img {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 840px;
+  top: 59px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+
 .campaignIndex {
   display: flex;
   font-size: 20px;
   flex-wrap: wrap;
-  padding: 20px 100px 0 140px;
+  padding: 10px 100px 0 140px;
   justify-content: flex-start;
 
 }
+.categories {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+.categories button {
+  height: 70px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 1px;
+  background-color: #6495ed;
+  color: white;
+}
 
+.categories button:hover {
+  opacity: 1.6;
+  transform: scale(1.04);
+
+}
 .campaignitem {
   width: 26%;
   height: 450px;
@@ -21,13 +69,20 @@
   box-shadow: 2px #D3D3D3;
   margin: 30px 30px;
   border-radius: 7px;
-  opacity: .9;
-  background-color: #F0F0F0;
+  opacity: .8;
+  background-color: white;
   box-shadow: 3px 3px 1px #888888;
+  transition: all .2s ease-in-out;
+
 }
 
+
+
+
 .campaignitem:hover {
-  opacity: 1;
+  opacity: 1.6;
+  transform: scale(1.07);
+
 }
 
 
@@ -37,14 +92,16 @@
   height: auto;
 }
 
+// padding: 100px 0 15px 170px;
 .header {
-  padding: 100px 0 15px 170px;
   list-style: none;
-  font-size: 28px;
+  font-size: 40px;
+  padding: 60px 0 40px 20px;
+  text-align: center;
 }
 
 .campaignitem h1 {
-  padding: 10px 7px;
+  padding: 10px 2px;
   font-size: 15px;
   font-weight: 600;
 }

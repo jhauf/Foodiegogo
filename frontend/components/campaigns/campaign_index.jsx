@@ -11,15 +11,14 @@ class CampaignIndex extends React.Component {
   render() {
     return <div>
       <SearchContainer/>
-      <li className="header">What's Popular</li>
+      <h1 className="header">Campaigns</h1>
       <div className="categories">
-      <h1>Categories</h1>
-      <button onClick={this.props.applyFilter(BAKED_GOODS)}> Baked Goods </button>
-      <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurant</button>
-      <button onClick={this.props.applyFilter(ALCOHOLIC)}> Alcoholic Beverages</button>
-      <button onClick={this.props.applyFilter(FOR_THE_HOME)}> For the Home</button>
-      <button onClick={this.props.applyFilter(PHILANTHROPY)}> Philanthropy </button>
-      <button onClick={this.props.applyFilter("")}> All Campaigns </button>
+        <button onClick={this.props.applyFilter(BAKED_GOODS)}> Baked Goods </button>
+        <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurant</button>
+        <button onClick={this.props.applyFilter(ALCOHOLIC)}> Alcoholic Beverages</button>
+        <button onClick={this.props.applyFilter(FOR_THE_HOME)}> For the Home</button>
+        <button onClick={this.props.applyFilter(PHILANTHROPY)}> Philanthropy </button>
+        <button onClick={this.props.applyFilter("")}> All Campaigns </button>
       </div>
       <ul className="campaignIndex">
         {
