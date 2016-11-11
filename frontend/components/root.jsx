@@ -20,12 +20,16 @@ const Root = ({ store }) => {
      }
    };
 
-   const fetchOnEnter = (nextState, replace) => {
+   const fetchCampaignOnEnter = (nextState, replace) => {
      _ensureLoggedIn(nextState, replace);
      store.dispatch(fetchCampaign(parseInt(nextState.params.campaignId)));
-     store.dispatch(fetchCampaigns());
      store.dispatch(fetchPerks(parseInt(nextState.params.campaignId)));
      store.dispatch(fetchContributions(parseInt(nextState.params.campaignId)));
+   };
+
+   const fetchCampaignsOnEnter = (nextState, replace) => {
+     _ensureLoggedIn(nextState, replace);
+     store.dispatch(fetchCampaigns());
    };
 
 
@@ -33,12 +37,12 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={AppContainer}>
-          <Route path="campaigns" component={CampaignIndexContainer} onEnter={fetchOnEnter}/>
-          <Route path="campaigns/new" component={CampaignFormContainer}  onEnter={fetchOnEnter} />
-          <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={fetchOnEnter}/>
-          <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={fetchOnEnter}/>
-          <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={fetchOnEnter}/>
-          <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={fetchOnEnter}/>
+          <Route path="campaigns" component={CampaignIndexContainer} onEnter={fetchCampaignsOnEnter}/>
+          <Route path="campaigns/new" component={CampaignFormContainer}  onEnter={fetchCampaignOnEnter} />
+          <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={fetchCampaignOnEnter}/>
+          <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={fetchCampaignOnEnter}/>
+          <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={fetchCampaignOnEnter}/>
+          <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={fetchCampaignOnEnter}/>
       </Route>
       </Router>
     </Provider>
@@ -47,28 +51,3 @@ const Root = ({ store }) => {
 
 
 export default Root;
-
-// <Route path="/home" component={Home} onEnter={_ensureLoggedIn} />
-// <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-// <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn}/>
-
-
-//  fetchCampaign(parseInt(nextState.params.))
-
-
-//
-//  const redirect = (nextstate, replace) => {
-//      replace('/campaigns');
-//  };
-
-//  const redirect = (nextState, replace) => {
-//    const currentUser = store.getState().session.currentUser;
-//    if (currentUser) {
-//      replace('/campaigns');
-//    }
-//  };
-
-//  const fetchOnEnter = () => {
-//    fetchCampaigns();
-//    fetchPerks();
-//  };

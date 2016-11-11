@@ -37,6 +37,7 @@ const CampaignsMiddleware = ({getState, dispatch}) => next => action => {
       fetchCampaign(action.id, receiveCampaignSuccess);
       return next(action);
     case CREATE_CAMPAIGN:
+    debugger
       success = campaign => {
         dispatch(receiveCampaign(campaign));
         hashHistory.push(`/campaigns/${campaign.id}`);
