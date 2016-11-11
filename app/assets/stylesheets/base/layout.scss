@@ -13,7 +13,26 @@ html {
 	background-size:cover;
 
 }
+.modalbutton {
+	padding: 2%;
+	background: #0eaffd;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 22px;
+	font-family: avenir;
+	font-weight: 500;
+	color: white;
+	width: 150px;
+	margin: 10px 5px;
+}
 
+
+.modalbutton:hover {
+	background-color: #0e99fd;
+	transition: background .2s ease-in;
+	color: white;
+	cursor: pointer;
+}
 
 
 .splashpage h1  {

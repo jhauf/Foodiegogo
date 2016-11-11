@@ -20,13 +20,11 @@ setQuery (e) {
   render() {
     return (<div className="search">
     <div className="search2">
-  <label>
       <input type="text"
         placeholder="Search"
         value={this.state.query}
         onChange={this.setQuery}
         className="search-bar" />
-    </label>
     </div>
   </div>);
   }
