@@ -39,14 +39,14 @@ class PerkIndexItem extends React.Component {
           <ContributionFormContainer perkKey={this.props.perkKey} campaign={this.props.campaign}/>
         </Modal>
       </li>
-      {this.props.currentUser.id === this.props.campaign.campaigner_id ?
-        <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
-      </li> :
-      <div></div>}
       </div>);
   }
 }
 
+// {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+//   <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
+// </li> :
+// <div></div>}
 
 
 
