@@ -24,7 +24,7 @@ class ContributionForm extends React.Component {
   render () {
     return (
       <div className="formbackground">
-        <form className="campaignform" onSubmit={this.handleSubmit}>
+        <form className="perkform" onSubmit={this.handleSubmit}>
         <ul>
         <h2>Are you sure you want to make a contribution?</h2>
           <li>

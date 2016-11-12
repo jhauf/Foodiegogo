@@ -36,15 +36,16 @@ html {
 
 
 .splashpage h1  {
-	color: #f7f7f7;
+	color: #ff0432;
 	font-family: avenir;
 	font-size: 60px;
-	background: rgba(100, 136, 228, 0.91);
+	background: rgba(252, 252, 252, 0.3);
+	border-radius: 5px;
 	position: relative;
 	top: 225px;
 	padding: 18px;
 	margin: 0 auto;
-	width: 270px;
+	width: 500px;
 }
 
 button:hover {

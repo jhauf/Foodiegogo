@@ -15,6 +15,8 @@
 .campaignBackground {
   background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");;
   height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .campaignform h1{
@@ -29,6 +31,8 @@
   width:500px;
   top: 100px;
   background-color: #f6efef;
+  right: 0;
+  left: 0;
   box-shadow: 2px 1px 1px gray;
 }
 
@@ -40,7 +44,7 @@
 
 input.search-bar {
     width: 900px;
-    height: 50px;
+    height: 60px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -92,8 +96,8 @@ border: 2px solid #43D1AF;}
   display: flex;
   font-size: 20px;
   flex-wrap: wrap;
-  padding: 10px 100px 0 140px;
-  justify-content: center;
+  padding: 50px;
+  justify-content: flex-start;
 
 }
 .categories {
@@ -119,7 +123,7 @@ border: 2px solid #43D1AF;}
 
 }
 .campaignitem {
-  width: 26%;
+  width: 20%;
   height: 450px;
   border: 3px solid #D3D3D3;
   box-shadow: 2px #D3D3D3;
@@ -129,7 +133,7 @@ border: 2px solid #43D1AF;}
   background-color: white;
   box-shadow: 3px 3px 1px #888888;
   transition: all .1s ease-in-out;
-  min-width: 350px;
+  min-width: 300px;
 
 }
 
@@ -153,7 +157,7 @@ border: 2px solid #43D1AF;}
 .header {
   list-style: none;
   font-size: 40px;
-  padding: 100px 0 40px 30px;
+  padding: 50px 0 40px 30px;
   text-align: center;
   color: #484a54;
 }

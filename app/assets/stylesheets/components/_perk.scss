@@ -13,6 +13,22 @@
   position: relative;
 }
 
+.perkform h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.perkform formbutton {
+  width: 100px;
+}
+
+
+.perkform li {
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
 .perk-0 {
   margin: 0 10px 20px 60px;
   padding: 0px 25px 20px 25px;
