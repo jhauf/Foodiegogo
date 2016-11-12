@@ -14,7 +14,7 @@
 
 .campaignBackground {
   background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");;
-  height: 1000px;
+  height: 730px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,10 +29,9 @@
   padding: 40px;
   position: absolute;
   width:500px;
-  top: 100px;
+  top: 50px;
   background-color: #f6efef;
-  right: 0;
-  left: 0;
+  right: -50px;
   box-shadow: 2px 1px 1px gray;
 }
 
@@ -96,7 +95,7 @@ border: 2px solid #43D1AF;}
   display: flex;
   font-size: 20px;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 50px 0px 50px 95px;
   justify-content: flex-start;
 
 }
