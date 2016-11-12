@@ -77,5 +77,11 @@
 
 .edit {
   font-weight: 600;
-  align-self: flex-end;
+  position: relative;
+}
+
+.edit a {
+  position: absolute;
+  top: -185px;
+  right: 5px;
 }

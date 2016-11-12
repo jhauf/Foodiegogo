@@ -26,6 +26,7 @@ class PerkIndexItem extends React.Component {
 
   render() {
     return(
+      <div>
       <li className="perk" onClick={this.openModal}>
         <li className="first"> Pledge ${this.props.perk.donation_amt} </li>
         <li className="second"> {this.props.perk.name}</li>
@@ -37,11 +38,12 @@ class PerkIndexItem extends React.Component {
           style={ModalStyle}>
           <ContributionFormContainer perkKey={this.props.perkKey} campaign={this.props.campaign}/>
         </Modal>
-        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+      </li>
+      {this.props.currentUser.id === this.props.campaign.campaigner_id ?
         <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
-        </li> :
-        <div></div>}
-      </li>);
+      </li> :
+      <div></div>}
+      </div>);
   }
 }
 
