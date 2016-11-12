@@ -3,7 +3,7 @@ import React from 'react';
 const ContributionIndexItem = ({ contribution }) => {
   const calculateDate = (date) => {
 
-    const MONTHS = ["Jan", "Feb", "Mar",
+    const MONTHS = [0, "Jan", "Feb", "Mar",
                     "Apr", "May", "Jun",
                     "Jul", "Aug", "Sep",
                     "Oct", "Nov", "Dec"];

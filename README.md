@@ -18,7 +18,7 @@ foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes R
 ### Perks
   Perks are stored in the database with a name, donation amount, description and campaign_id. Each campaign has a number of perks which users can receive by contributing a pre-specified amount. Clicking on a perk opens the contributions form which on submit creates a new contribution.
 
-    ![contributions screenshot](docs/wireframes/campaign-detail-ii.png)
+  ![contributions screenshot](docs/wireframes/campaign-detail-ii.png)
 
 
 ### Contributions
