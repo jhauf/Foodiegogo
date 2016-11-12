@@ -9,6 +9,8 @@ class CampaignShow extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.days = this.days.bind(this);
     this.amtWithCommas = this.amtWithCommas.bind(this);
+    this.openEdit = this.openEdit.bind(this);
+    this.openPerk = this.openPerk.bind(this);
   }
 
   componentDidMount() {
@@ -69,14 +71,22 @@ class CampaignShow extends React.Component {
     }
   }
 
+  openEdit() {
+    hashHistory.push("/campaigns/" + this.props.campaign.id + "/edit");
+  }
+
+  openPerk() {
+    hashHistory.push("/campaigns/" + this.props.campaign.id + "/perk/new");
+  }
+
   render () {
     return this.props.campaign ?
     (<div className="showcontainer">
         <h3 className="showheader">{this.props.campaign.name}</h3>
         {this.props.currentUser.id === this.props.campaign.campaigner_id ?
           <div className="authorLinks">
-          <Link to={"/campaigns/" + this.props.campaign.id + "/edit"}>Edit Campaign</Link>
-          <Link to={"/campaigns/" + this.props.campaign.id + "/perk/new"}>Add A Perk</Link>
+          <button onClick={this.openEdit}>Update Campaign</button>
+          <button onClick={this.openPerk}>Add a Perk</button>
           <button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete Campaign</button>
           </div>:
             <div></div>}
@@ -85,7 +95,8 @@ class CampaignShow extends React.Component {
           <div>{this.pictureOrVideo()}</div>
             <p className="description">{this.props.campaign.description}</p>
             <ContributionIndex contributions={this.props.contributions}/>
-            <img src={this.props.campaign.picture_url} className="showpic"/>
+            {this.props.campaign.video_url ?
+            <img src={this.props.campaign.picture_url} className="showpic"/> : <div></div>}
             </div>
           <div className="stats">
           <h4 className="big">${this.amtWithCommas(this.props.campaign.current_amt)}</h4>
