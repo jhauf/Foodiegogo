@@ -9,7 +9,7 @@
 .search2 {
   display:flex;
   justify-content: center;
-  padding: 50px;
+  padding: 0 50px 0px 50px;
 }
 
 .campaignBackground {
@@ -44,12 +44,12 @@
 
 input.search-bar {
     width: 900px;
-    height: 60px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 20px;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 60px;
     background-image: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478849027/1478870589_icon-111-search_f0b14j.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
@@ -68,29 +68,6 @@ box-shadow: 0 0 5px #43D1AF;
 border: 2px solid #43D1AF;}
 
 
-.categories button:nth-child(1) {
-  background-color: #fb6d6d;
-}
-
-
-.categories button:nth-child(2) {
-  background-color: #62abfc;
-}
-
-.categories button:nth-child(3) {
-  background-color: #53dd9a;
-}
-
-.categories button:nth-child(4) {
-  background-color: #b079ea;
-}
-.categories button:nth-child(5) {
-  background-color: #4365ef;
-}
-.categories button:nth-child(6) {
-  background-color: #24aeff;
-}
-
 .authorLinks button {
   padding: 12px;
   background-color: #a0b4ff;
@@ -108,18 +85,18 @@ border: 2px solid #43D1AF;}
 .categories {
   display: flex;
   justify-content: center;
-  padding: 0 0 50px 0;
+  padding: 100px 0 0px 0;
 }
 .categories button {
-  height: 80px;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px;
-  border-radius: 7px;
-  margin: 1px;
-  background-color: #6495ed;
-  color: white;
+  margin: 3px;
+  background-color: gainsboro;
+  color: black;
   width: 120px;
   text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .categories button:hover {

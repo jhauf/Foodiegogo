@@ -10,7 +10,6 @@ class CampaignIndex extends React.Component {
 
   render() {
     return <div>
-      <SearchContainer/>
       <div className="categories">
         <button onClick={this.props.applyFilter(BAKED_GOODS)}> Baked Goods </button>
         <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurants </button>
@@ -19,6 +18,7 @@ class CampaignIndex extends React.Component {
         <button onClick={this.props.applyFilter(PHILANTHROPY)}> Philanthropy </button>
         <button onClick={this.props.applyFilter("")}> All Campaigns </button>
       </div>
+      <SearchContainer/>
       <h1 className="header">Campaigns</h1>
       <ul className="campaignIndex">
         {
