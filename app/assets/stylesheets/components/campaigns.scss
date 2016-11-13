@@ -48,8 +48,7 @@ input.search-bar {
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     background-image: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478849027/1478870589_icon-111-search_f0b14j.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
@@ -85,7 +84,7 @@ border: 2px solid #43D1AF;}
 .categories {
   display: flex;
   justify-content: center;
-  padding: 100px 0 0px 0;
+  padding: 30px 0 0px 0;
 }
 .categories button {
   font-size: 16px;
@@ -106,7 +105,7 @@ border: 2px solid #43D1AF;}
 }
 .campaignitem {
   width: 20%;
-  height: 450px;
+  height: 350px;
   border: 3px solid #D3D3D3;
   box-shadow: 2px #D3D3D3;
   margin: 30px 30px;
@@ -139,7 +138,7 @@ border: 2px solid #43D1AF;}
 .header {
   list-style: none;
   font-size: 40px;
-  padding: 50px 0 0px 30px;
+  padding: 100px 0 0px 30px;
   text-align: center;
   color: #484a54;
 }
