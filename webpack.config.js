@@ -1,7 +1,25 @@
+const path = require('path');
 module.exports = {
-  entry: "./lib/foodiegogo.jsx",
+  context: __dirname,
+  entry: './frontend/foodiegogo.jsx',
   output: {
-  	filename: "./lib/bundle.js"
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
+    filename: 'bundle.js'
   },
-  devtool: 'source-map',
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+  module: {
+    loaders: [
+      {
+        test: [/\.jsx?$/, /\.js?$/],
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015']
+        }
+      }
+    ]
+  },
+  devtool: 'source-maps'
 };
