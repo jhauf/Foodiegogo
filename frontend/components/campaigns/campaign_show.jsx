@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import PerkIndexItem from '../perks/perk_index_item';
+import Modal from 'react-modal';
 import ContributionIndex from '../contributions/contribution_index';
+import ModalStyle from './../session/modal_style';
+
 
 class CampaignShow extends React.Component {
   constructor(props) {
@@ -11,6 +14,19 @@ class CampaignShow extends React.Component {
     this.amtWithCommas = this.amtWithCommas.bind(this);
     this.openEdit = this.openEdit.bind(this);
     this.openPerk = this.openPerk.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.onModalClose = this.onModalClose.bind(this);
+    this.state = {
+      modalOpen: false
+    };
+  }
+
+  onModalClose() {
+    this.setState({modalOpen: false});
+  }
+
+  openModal() {
+    this.setState({modalOpen: true});
   }
 
   componentDidMount() {
@@ -87,7 +103,14 @@ class CampaignShow extends React.Component {
           <div className="authorLinks">
           <button onClick={this.openEdit}>Update Campaign</button>
           <button onClick={this.openPerk}>Add a Perk</button>
-          <button onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Delete Campaign</button>
+          <button onClick={this.openModal}>Delete Campaign</button>
+            <Modal
+              isOpen={this.state.modalOpen}
+              onRequestClose={this.onModalClose.bind(this)}
+              style={ModalStyle}>
+                <h2>Are you sure you want to delete this campaign?</h2>
+                <button className="formbutton" onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Yes</button>
+            </Modal>
           </div>:
             <div></div>}
         <div className="show">

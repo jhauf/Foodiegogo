@@ -6,13 +6,15 @@ foodiegogo [live][heroku]
 
 foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.
 
+  ![splash screenshot](docs/wireframes/landing.png)
+
 ## Features & Implementation
 
 
 ### Campaigns
   On the database side, the campaigns are stored in one table in the database. campaigns are rendered in two different components: the Campaign Index as well as the Campaign Show page. The Campaign's Index renders the pictures, titles and descriptions of all the campaigns. The Campaign Show page features a video, days left, current funding, goal funding, as well a Contributions Index Component which renders a list of Contribution Index Items.
 
-  ![campaigns screenshot](docs/wireframes/campaign-detail-i.png)
+  ![campaigns screenshot](docs/wireframes/campaigns.png)
 
 
 ### Perks

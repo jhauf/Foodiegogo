@@ -27,6 +27,10 @@ class PerkIndexItem extends React.Component {
   render() {
     return(
       <div>
+        {this.props.currentUser.id === this.props.campaign.campaigner_id ?
+          <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
+        </li> :
+        <div></div>}
       <li className="perk" onClick={this.openModal}>
         <li className="first"> Pledge ${this.props.perk.donation_amt} </li>
         <li className="second"> {this.props.perk.name}</li>
@@ -43,10 +47,6 @@ class PerkIndexItem extends React.Component {
   }
 }
 
-// {this.props.currentUser.id === this.props.campaign.campaigner_id ?
-//   <li className="edit"><Link to={"/campaigns/" + this.props.perk.campaign_id + "/perk/" + this.props.perk.id + "/edit"}>Edit</Link>
-// </li> :
-// <div></div>}
 
 
 
