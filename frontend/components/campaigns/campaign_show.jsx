@@ -29,9 +29,9 @@ class CampaignShow extends React.Component {
     this.setState({modalOpen: true});
   }
 
-  // this.props.fetchCampaigns(this.props.params.campaignId);
   // this.props.fetchCampaign();
   componentDidMount() {
+    this.props.fetchCampaigns(this.props.params.campaignId);
     this.props.fetchPerks(this.props.params.campaignId);
     this.props.fetchContributions(this.props.params.campaignId);
     window.scrollTo(0, 0);
@@ -107,10 +107,10 @@ class CampaignShow extends React.Component {
             <Modal
               isOpen={this.state.modalOpen}
               onRequestClose={this.onModalClose.bind(this)}
-              style={ModalStyle}>
+              className="perkmodal">
                 <h2>Are you sure you want to delete this campaign?</h2>
-                <button className="formbutton" onClick={this.handleDelete.bind(this, this.props.campaign.id)}>Yes</button>
-            </Modal>
+                <input className="formbutton" type="submit" value="Yes" onClick={this.handleDelete.bind(this, this.props.campaign.id)}/>
+          </Modal>
           </div>:
             <div></div>}
         <div className="show">

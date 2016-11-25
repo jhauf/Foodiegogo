@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import Modal from 'react-modal';
-import ModalStyle from './../session/modal_style';
 import ContributionFormContainer from './../contributions/contribution_form_container.js';
 
 
@@ -39,14 +38,14 @@ class PerkIndexItem extends React.Component {
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose.bind(this)}
-          style={ModalStyle}>
+          className="perkmodal">
           <ContributionFormContainer perkKey={this.props.perkKey} campaign={this.props.campaign}/>
         </Modal>
       </div>
       </div>);
   }
-}
 
+}
 
 
 

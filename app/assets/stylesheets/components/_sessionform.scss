@@ -10,8 +10,24 @@
   align-items: center;
 }
 
-.ReactModal__Content--after-open session {
-  height: 800px;
+.perkmodal {
+    padding: 15px 10px;
+    width: 250px;
+    position: relative;
+    top: 220px;
+    border: 1px solid #586BE9;
+    border-radius: 7px;
+    background-color: #F8F9FD;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.perkmodal h2 {
+  padding: 20px 70px;
 }
 
 .login-form-box {

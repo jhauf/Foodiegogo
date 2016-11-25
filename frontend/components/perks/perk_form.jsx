@@ -48,7 +48,7 @@ class PerkForm extends React.Component {
   render () {
     const text = this.props.route.path === 'campaigns/:campaignId/perk/new' ? "Create A Perk" : "Update A Perk";
     return (
-      <div>
+      <div className="campaignBackground">
         <form className="campaignform" onSubmit={this.handleSubmit}>
         <ul>
         <h1>{text}</h1>

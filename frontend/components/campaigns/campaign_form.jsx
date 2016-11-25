@@ -74,9 +74,9 @@ class CampaignForm extends React.Component {
     }
   }
 
+  // const backLink = this.props.route.path === 'campaigns/new' ? <Link to="/campaigns">All Campaigns</Link> :
   render () {
     const text = this.props.route.path === 'campaigns/new' ? "Create A Campaign" : "Update A Campaign";
-    const backLink = this.props.route.path === 'campaigns/new' ? <Link to="/campaigns">All Campaigns</Link> :
     <Link to={"/campaigns/" + this.props.params.campaignId}>Back</Link>;
     return (
       <div className="campaignBackground">
@@ -129,7 +129,6 @@ class CampaignForm extends React.Component {
           <h4 className="errors"> {this.renderErrors()} </h4>
           <input className="formbutton" type="submit" value="Submit"/>
           <li>
-          {backLink}
           </li>
         </ul>
         </form>
@@ -137,5 +136,6 @@ class CampaignForm extends React.Component {
     );
   }
 }
+// {backLink}
 
 export default CampaignForm;

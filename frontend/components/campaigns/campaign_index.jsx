@@ -8,11 +8,12 @@ class CampaignIndex extends React.Component {
     super(props);
   }
 
+
   render() {
     return <div>
       <h1 className="header">Campaigns</h1>
       <div className="categories">
-        <button onClick={this.props.applyFilter(BAKED_GOODS)}> Baked Goods </button>
+        <button onClick={this.props.applyFilter(BAKED_GOODS)} > Baked Goods </button>
         <button onClick={this.props.applyFilter(RESTAURANT)}> Restaurants </button>
         <button onClick={this.props.applyFilter(ALCOHOLIC)}> Alcohol </button>
         <button onClick={this.props.applyFilter(FOR_THE_HOME)}> For the Home </button>
