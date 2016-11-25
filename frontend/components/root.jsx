@@ -6,6 +6,7 @@ import PerkFormContainer from './perks/perk_form_container.js';
 import CampaignIndexContainer from './campaigns/campaign_index_container';
 import CampaignFormContainer from './campaigns/campaign_form_container';
 import CampaignShowContainer from './campaigns/campaign_show_container';
+import ProfileContainer from './profile/profile_container';
 
 import AppContainer from './app_container';
 import { fetchCampaigns, fetchCampaign } from '../actions/campaign_actions';
@@ -38,6 +39,7 @@ const Root = ({ store }) => {
       <Router history={hashHistory}>
         <Route path="/" component={AppContainer}>
           <Route path="campaigns" component={CampaignIndexContainer} onEnter={fetchCampaignsOnEnter}/>
+          <Route path="profile" component={ProfileContainer}/>
           <Route path="campaigns/new" component={CampaignFormContainer}/>
           <Route path="campaigns/:campaignId" component={CampaignShowContainer}/>
           <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer}/>

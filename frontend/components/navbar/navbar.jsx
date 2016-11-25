@@ -9,6 +9,7 @@ class Navbar extends React.Component {
     this.loggedIn = this.loggedIn.bind(this);
     this.loggedOut = this.loggedOut.bind(this);
     this.onLogOut = this.onLogOut.bind(this);
+    this.profileShow = this.profileShow.bind(this);
   }
 
   onLogOut(logout) {
@@ -28,12 +29,19 @@ class Navbar extends React.Component {
     </nav>);
   }
 
+  profileShow() {
+    hashHistory.push(`/profile`);
+  }
+
   loggedIn(currentUser, logout) {
-    return (<div className="links" >
+    return (
+    <div className="links" >
     <Link to="campaigns/new">Create a Campaign</Link>
-      <div className="name">{currentUser.fname}</div>
+      <div className="name" onClick={this.profileShow}>{currentUser.fname}
+      </div>
       <button className="logout" onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
-    </div>);
+      </div>
+    );
   }
 
 

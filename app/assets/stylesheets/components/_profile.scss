@@ -1,0 +1,50 @@
+.profileTable {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.profileTable h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.profileTable h1 {
+  padding: 20px 40px 0px 0px;
+}
+
+.userCampaigns {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userCampaignItems {
+  background-color: #3535d0;
+  width:300px;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 10px;
+  border-radius: 5px;
+
+
+}
+
+.userContributions {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.userContributionItems {
+  background-color: #51b151;
+  width:300px;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
