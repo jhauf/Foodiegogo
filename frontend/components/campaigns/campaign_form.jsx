@@ -23,8 +23,8 @@ class CampaignForm extends React.Component {
 
   componentDidMount() {
     this.props.clearCampaignErrors();
-    this.props.fetchCampaign(this.props.params.campaignId);
   }
+  // this.props.fetchCampaign(this.props.params.campaignId);
 
 
   upload (e) {
@@ -33,8 +33,6 @@ class CampaignForm extends React.Component {
     cloudinary.openUploadWidget({upload_preset: "a4fzicsk", cloud_name: 'dps0ohgkp'}, (error, results) => {
       if (!error){
         that.setState({picture_url: results[0].url});
-      } else {
-        console.log(error);
       }
     });
   }

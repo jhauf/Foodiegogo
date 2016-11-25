@@ -29,9 +29,9 @@ class CampaignShow extends React.Component {
     this.setState({modalOpen: true});
   }
 
+  // this.props.fetchCampaigns(this.props.params.campaignId);
+  // this.props.fetchCampaign();
   componentDidMount() {
-    this.props.fetchCampaigns(this.props.params.campaignId);
-    this.props.fetchCampaign();
     this.props.fetchPerks(this.props.params.campaignId);
     this.props.fetchContributions(this.props.params.campaignId);
     window.scrollTo(0, 0);
@@ -81,7 +81,7 @@ class CampaignShow extends React.Component {
         return (<img src={this.props.campaign.picture_url}/>);
       }
     } else {
-      return (<video controls autoplay className="video" src={this.props.campaign.video_url}>
+      return (<video controls autoPlay className="video" src={this.props.campaign.video_url}>
         Your user agent does not support the HTML5 Video element.
       </video>);
     }

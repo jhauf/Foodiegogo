@@ -3,7 +3,7 @@ import { Link, hashHistory } from 'react-router';
 
 
 const CampaignIndexItem = ({ campaign, router}) => (
-  <li className="campaignitem">
+  <div className="campaignitem">
     <Link to={`/campaigns/${campaign.id}`}>
       <li className="indexpicture">
       {campaign.picture_url === "" ?
@@ -14,7 +14,7 @@ const CampaignIndexItem = ({ campaign, router}) => (
       <h1>{campaign.name}</h1>
       <h2>{campaign.description}</h2>
     </Link>
-  </li>
+  </div>
 );
 
 export default CampaignIndexItem;

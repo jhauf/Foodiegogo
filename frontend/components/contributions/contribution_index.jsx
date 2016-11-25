@@ -13,11 +13,10 @@ const ContributionIndex = ({ contributions }) => (
         </li>
         {
           contributions.map((contribution, i) => (
-            <li className="contribution">
             <ContributionIndexItem
+              className="contribution"
               key={`contribution-${i}`}
               contribution={contribution} />
-          </li>
           ))
         }
       </ul>

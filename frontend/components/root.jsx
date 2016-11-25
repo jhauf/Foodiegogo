@@ -20,29 +20,29 @@ const Root = ({ store }) => {
      }
    };
 
-   const fetchCampaignOnEnter = (nextState, replace) => {
-     _ensureLoggedIn(nextState, replace);
-     store.dispatch(fetchCampaign(parseInt(nextState.params.campaignId)));
-     store.dispatch(fetchPerks(parseInt(nextState.params.campaignId)));
-     store.dispatch(fetchContributions(parseInt(nextState.params.campaignId)));
-   };
 
    const fetchCampaignsOnEnter = (nextState, replace) => {
      _ensureLoggedIn(nextState, replace);
      store.dispatch(fetchCampaigns());
    };
+  //  const fetchCampaignOnEnter = (nextState, replace) => {
+  //    _ensureLoggedIn(nextState, replace);
+  //    store.dispatch(fetchCampaign(parseInt(nextState.params.campaignId)));
+  //  };
 
+  //  store.dispatch(fetchPerks(parseInt(nextState.params.campaignId)));
+  //  store.dispatch(fetchContributions(parseInt(nextState.params.campaignId)));
 
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={AppContainer}>
           <Route path="campaigns" component={CampaignIndexContainer} onEnter={fetchCampaignsOnEnter}/>
-          <Route path="campaigns/new" component={CampaignFormContainer}  onEnter={fetchCampaignOnEnter} />
-          <Route path="campaigns/:campaignId" component={CampaignShowContainer} onEnter={fetchCampaignOnEnter}/>
-          <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer} onEnter={fetchCampaignOnEnter}/>
-          <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer} onEnter={fetchCampaignOnEnter}/>
-          <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer} onEnter={fetchCampaignOnEnter}/>
+          <Route path="campaigns/new" component={CampaignFormContainer}/>
+          <Route path="campaigns/:campaignId" component={CampaignShowContainer}/>
+          <Route path="campaigns/:campaignId/edit" component={CampaignFormContainer}/>
+          <Route path="campaigns/:campaignId/perk/new" component={PerkFormContainer}/>
+          <Route path="campaigns/:campaignId/perk/:perkId/edit" component={PerkFormContainer}/>
       </Route>
       </Router>
     </Provider>
