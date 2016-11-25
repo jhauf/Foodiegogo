@@ -58,6 +58,7 @@ class CampaignForm extends React.Component {
   }
 
   handleSubmit(e) {
+    this.props.clearCampaignErrors();
     e.preventDefault();
     this.props.route.path === 'campaigns/new' ? this.props.createCampaign(this.state) : this.props.updateCampaign(this.state);
   }
