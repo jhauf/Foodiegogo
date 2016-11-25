@@ -18,26 +18,33 @@
 
 .campaignBackground {
   background: url("http://res.cloudinary.com/dps0ohgkp/image/upload/v1478748931/rsz_4rsz_newsplash_um8u7a_sokarl.jpg");;
-  height: 93vh;
+  height: 89.5vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .campaignform h1{
-  color: #474040
+  color: #474040,inherit;
+  height: 20px;
+  font-size: 26px;
+  margin: 0px;
+  padding: 13px;
+}
+
+.createcampaign {
+  height: 470px;
 }
 
 
 .campaignform ul {
   border: 1px solid gray;
-  padding: 40px;
+  padding: 30px;
   position: absolute;
-  width:500px;
-  top: 50px;
+  width:465px;
+  top: -10px;
   background-color: #f7f7f7;
   right: -50px;
-  box-shadow: 2px 1px 1px gray;
-
+  top: 20px;
 }
 
 .campaignform {
@@ -94,7 +101,19 @@ border: 2px solid #43D1AF;}
   font-size: 16px;
   padding: 10px;
   margin: 3px;
-  background-color: gainsboro;
+  background-color: #e0f2f5;
+  color: black;
+  width: 120px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.categories button:focus {
+  font-size: 16px;
+  padding: 10px;
+  margin: 3px;
+  background-color: #a4e1ea;
   color: black;
   width: 120px;
   text-align: center;

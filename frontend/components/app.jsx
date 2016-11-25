@@ -63,7 +63,7 @@ class App extends React.Component {
       </header>
       <Splash handleGuest={this.handleGuest} handleClickLogin={this.handleClickLogin}/>
 
-        <Modal
+        <Modal className="session"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose.bind(this)}
           style={ModalStyle}>

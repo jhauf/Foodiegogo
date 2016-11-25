@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.ReactModal__Content--after-open session {
+  height: 800px;
+}
+
 .login-form-box {
   display: flex;
   border: 0px;
@@ -29,7 +33,7 @@
 
 .errors {
   color: red;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 input[type=text] {
