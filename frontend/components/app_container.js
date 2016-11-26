@@ -4,7 +4,7 @@ import App from './app';
 import { login } from '../actions/session_actions';
 
 const mapDispatchToProps = dispatch => ({
-  guestLogin: () => dispatch(login({user: {username: "guest", password: "password", fname: "Guest", lname: "lname"}})),
+  guestLogin: () => dispatch(login({user: {username: "guest", password: "password", fname: "Guest", lname: "User"}})),
   clearSessionErrors: () => dispatch(clearSessionErrors()),
 });
 
