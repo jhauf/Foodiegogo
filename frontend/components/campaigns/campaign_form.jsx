@@ -119,7 +119,8 @@ class CampaignForm extends React.Component {
             <input
               type="date"
               value={this.state.end_date}
-              onChange={this.update('end_date')} />
+              onChange={this.update('end_date')}
+              placeholder="MM/DD/YYYY" />
           </label>
           </li>
           <li className="photo">

@@ -29,7 +29,6 @@ class CampaignShow extends React.Component {
     this.setState({modalOpen: true});
   }
 
-  // this.props.fetchCampaign();
   componentDidMount() {
     this.props.fetchCampaigns(this.props.params.campaignId);
     this.props.fetchPerks(this.props.params.campaignId);
@@ -67,11 +66,12 @@ class CampaignShow extends React.Component {
     }
 
     days() {
-    let oneDay = 24*60*60*1000;
-    let firstDate = new Date(Date.now());
-    let secondDate = new Date(this.props.campaign.end_date);
-    return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/oneDay));
+      let today = new Date();
+      let date_to_reply = new Date(this.props.campaign.end_date);
+      let timeinmilisec = date_to_reply.getTime() - today.getTime() ;
+      return ( Math.floor(timeinmilisec / (1000 * 60 * 60 * 24)) + 1);
   }
+
 
   pictureOrVideo () {
     if (this.props.campaign.video_url === "") {
