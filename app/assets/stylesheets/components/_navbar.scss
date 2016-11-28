@@ -20,16 +20,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+.dropdown:hover {
+  cursor:default;
+}
 .dropdown ul {
-  background-color: rgba(163, 82, 173, 0.92);
+  background-color: rgba(163, 82, 173, 0.95);
   padding: 35px;
   padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 22px;
   border-radius: 8px;
 }
 
 .dropdown ul:first-child {
-  background-color: rgba(209, 67, 159, 0.92);
+  background-color: rgba(209, 67, 159, 0.95);
 }
 
 .dropdown li {

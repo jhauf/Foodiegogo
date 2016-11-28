@@ -9,7 +9,6 @@ class Navbar extends React.Component {
     this.loggedIn = this.loggedIn.bind(this);
     this.loggedOut = this.loggedOut.bind(this);
     this.onLogOut = this.onLogOut.bind(this);
-    this.profileShow = this.profileShow.bind(this);
   }
 
   onLogOut(logout) {
@@ -33,10 +32,6 @@ class Navbar extends React.Component {
    $(".dropdown").removeClass("hidden");
    $(".dropdown").mouseleave(() => $(".dropdown").addClass("hidden"));
  }
-
-  profileShow() {
-    hashHistory.push(`/profile`);
-  }
 
   loggedIn(currentUser, logout) {
     return (

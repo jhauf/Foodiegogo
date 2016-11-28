@@ -14,26 +14,35 @@ class ContributionForm extends React.Component {
       perk_id: this.props.perkKey,
       donation_amt: this.props.perks[this.props.perkKey].donation_amt,
     };
+    this.duplicate = this.duplicate.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createContribution(this.state);
   }
+  duplicate() {
+    let contributors = this.props.campaign.contributors;
+    for (var i = 0; i < contributors.length; i++) {
+      if (this.props.currentUser.id === contributors[i].id) {
+        return <h2>You have already made a contribution</h2>;
+      }
+    }
+    return (<div className="formbackground">
+      <form className="perkform" onSubmit={this.handleSubmit}>
+      <ul>
+      <h2>Are you sure you want to make a contribution?</h2>
+        <li>
+        <input className="formbutton" type="submit" value="Yes"/>
+        </li>
+      </ul>
+      </form>
+    </div>);
+  }
+
 
   render () {
-    return (
-      <div className="formbackground">
-        <form className="perkform" onSubmit={this.handleSubmit}>
-        <ul>
-        <h2>Are you sure you want to make a contribution?</h2>
-          <li>
-          <input className="formbutton" type="submit" value="Yes"/>
-          </li>
-        </ul>
-        </form>
-      </div>
-    );
+    return this.duplicate();
   }
 }
 
