@@ -29,6 +29,11 @@ class Navbar extends React.Component {
     </nav>);
   }
 
+  usernameDropdown () {
+   $(".dropdown").removeClass("hidden");
+   $(".dropdown").mouseleave(() => $(".dropdown").addClass("hidden"));
+ }
+
   profileShow() {
     hashHistory.push(`/profile`);
   }
@@ -37,12 +42,34 @@ class Navbar extends React.Component {
     return (
     <div className="links" >
     <Link to="campaigns/new">Create a Campaign</Link>
-      <div className="name" onClick={this.profileShow}>{currentUser.fname}
-      </div>
+      <span className="name" onClick={this.usernameDropdown}>
+              {currentUser.fname}
+              <ul className="dropdown hidden">
+                <div className="test">
+                  <ul>My Campaigns
+                    {
+                      currentUser.campaigns.map(campaign => (
+                        <li key={campaign.id}>{campaign.name}</li>
+                      ))}
+                      </ul>
+                  <ul>My Perks
+                    {
+                      currentUser.perks.map(perk => (
+                        <li key={perk.id}>{perk.name}</li>
+                      ))}
+              </ul>
+            </div>
+              </ul>
+            </span>
+
+
       <button className="logout" onClick={this.onLogOut.bind(this, logout)}>Log Out</button>
       </div>
     );
   }
+
+
+
 
 
   render() {

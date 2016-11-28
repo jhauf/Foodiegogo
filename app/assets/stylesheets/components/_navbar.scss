@@ -10,6 +10,36 @@
   padding: 0px 15px;
 }
 
+.dropdown {
+  position: absolute;
+  width: 450px;
+  height: auto;
+  right: 40px;
+  border-radius: 8px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown ul {
+  background-color: rgba(163, 82, 173, 0.92);
+  padding: 35px;
+  padding-top: 20px;
+  font-size: 22px;
+  border-radius: 8px;
+}
+
+.dropdown ul:first-child {
+  background-color: rgba(209, 67, 159, 0.92);
+}
+
+.dropdown li {
+  font-size: 16px;
+  padding-top: 8px;
+}
+
+.hidden {
+  visibility: hidden;
+}
 
 
 .logout {
@@ -26,6 +56,11 @@
   font-size: 22px;
   font-weight: 300;
   padding: 0 18px;
+}
+
+.test {
+  display: flex;
+  justify-content: space-around;
 }
 
 .name:hover{

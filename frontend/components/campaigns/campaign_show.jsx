@@ -69,7 +69,7 @@ class CampaignShow extends React.Component {
       let today = new Date();
       let date_to_reply = new Date(this.props.campaign.end_date);
       let timeinmilisec = date_to_reply.getTime() - today.getTime() ;
-      return ( Math.floor(timeinmilisec / (1000 * 60 * 60 * 24)) + 1);
+      return ( Math.floor(timeinmilisec / (1000 * 60 * 60 * 24)) + 13);
   }
 
 
