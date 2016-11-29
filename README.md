@@ -18,7 +18,7 @@ foodiegogo is a full-stack web application inspired by indiegogo.  It utilizes R
 
 
 ### Perks
-  Perks are stored in the database with a name, donation amount, description and campaign_id. Each campaign has a number of perks which are fetched from the backend upon entering the `Campaign Show` page by sending a GET request to the Campaigns Index with params of `:campaign_id`. Clicking on a perk opens the contribution form which on submit creates a new contribution.
+  Perks are stored in the database with a name, donation amount, description and campaign_id. Each campaign has a number of perks which are fetched from the backend upon entering the `Campaign Show` page by sending a GET request to the Campaigns index route with params of `:campaign_id`. Clicking on a perk opens the contribution form which on submit creates a new contribution.
 
   ```js
     export const fetchPerks = (id, success) => {
