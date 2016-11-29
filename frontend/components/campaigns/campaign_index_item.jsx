@@ -18,6 +18,3 @@ const CampaignIndexItem = ({ campaign, router}) => (
 );
 
 export default CampaignIndexItem;
-
-// <button onClick={editLink(campaign.id)}>Edit</button>
-// <button onClick={() => deleteCampaign(campaign.id)}>Delete</button>

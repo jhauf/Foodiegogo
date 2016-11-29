@@ -9,7 +9,7 @@ const ContributionIndex = ({ contributions }) => (
         <li className="contributionIndexItem">
           <h1>Date</h1>
           <h1>Name</h1>
-            <h1>Amount</h1>
+          <h1>Amount</h1>
         </li>
         {
           contributions.map((contribution, i) => (

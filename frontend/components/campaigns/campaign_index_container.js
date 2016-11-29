@@ -5,12 +5,12 @@ import { receiveCategory } from '../../actions/category_actions';
 import { filteredCampaigns } from '../../reducers/selector.js';
 
 const mapStateToProps = state => ({
-  campaigns: filteredCampaigns(state) 
+  campaigns: filteredCampaigns(state)
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchCampaigns: () => dispatch(fetchCampaigns()),
-  applyFilter: (filter) => () => { dispatch(receiveCategory(filter));}
+  applyFilter: (filter) => () => {dispatch(receiveCategory(filter));}
 });
 
 export default connect(
