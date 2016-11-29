@@ -28,9 +28,9 @@ class Navbar extends React.Component {
     </nav>);
   }
 
+  // $(".dropdown").removeClass("hidden");
+  // $(".dropdown").mouseleave(() => $(".dropdown").addClass("hidden"));
   usernameDropdown () {
-   $(".dropdown").removeClass("hidden");
-   $(".dropdown").mouseleave(() => $(".dropdown").addClass("hidden"));
  }
 
   loggedIn(currentUser, logout) {
