@@ -55,7 +55,5 @@ In addition to the features already implemented, I plan on adding the following 
 ### Profiles
   Each user will have a profile which will display their basic information, profile picture, the campaigns they have started as well as the campaigns they have contributed to.
 
-  ![tag screenshot](docs/wireframes/profile.png)
-
 ### Google Maps API
   For the restaurants, I plan to integrate my app with Google Maps to allow users to search for new restaurants starting in their area.
