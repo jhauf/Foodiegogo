@@ -9,7 +9,7 @@ const ContributionIndexItem = ({ contribution }) => {
                     "Oct", "Nov", "Dec"];
 
     let year = date.split("-")[0];
-    let month = MONTHS[date.split("-")[1]];
+    let month = MONTHS[parseInt(date.split("-")[1])];
     let day = date.split("-")[2];
     return `${month} ${day}, ${year}`;
   };
